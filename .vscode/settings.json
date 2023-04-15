@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:cities23}/src/assets/EU_travel.db",
+            "name": "EU_Travel"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

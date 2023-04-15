@@ -1,0 +1,29 @@
+{
+    "name": "cheCities23ck",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    },
+    "devDependencies": {
+        "date-picker-svelte": "^2.3.0",
+        "@neoconfetti/svelte": "^1.0.0",
+        "@sveltejs/adapter-static": "^2.0.2",
+        "@sveltejs/kit": "^1.5.0",
+        "@types/cookie": "^0.5.1",
+        "node-sass": "^7.0.1",
+        "sass": "^1.62.0",
+        "svelte": "^3.54.0",
+        "svelte-check": "^3.0.1",
+        "tslib": "^2.4.1",
+        "typescript": "^5.0.0",
+        "vite": "^4.2.0"
+    },
+    "type": "module",
+    "dependencies": {
+        "d3": "^7.0.1"
+    }
+}

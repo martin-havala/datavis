@@ -1,0 +1,50 @@
+html,
+body,
+#svelte {
+    background: #202022;
+    fill: #eef;
+    color: #eef;
+    font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+}
+
+section,
+section * {
+    user-select: none;
+}
+.page {
+    display: grid;
+    grid-template-areas: 'notes plot';
+    margin: 1em;
+}
+svg {
+    grid-area: plot;
+}
+.notes {
+    grid-area: notes;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    padding-top: 15%;
+    justify-content: space-between;
+}
+.notes,
+.comments {
+    max-width: 50em;
+    margin: 1em auto;
+    text-align: left;
+}
+ul {
+    margin-top: 0;
+    list-style: none;
+}
+a {
+    color: white;
+}
