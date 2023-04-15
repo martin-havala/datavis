@@ -346,7 +346,7 @@
                     This chart compares foreign tourist arrivals during the year and compares it to country population;
                 </div>
                 <br />
-                <div>Second part highlights season in each country</div>
+                <div>Second part highlights the season period in each country</div>
             </div>
             <div class="comments">
                 <div>
