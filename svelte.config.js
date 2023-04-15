@@ -21,7 +21,7 @@ const config = {
             path: '',
         }),
         paths: {
-            base: dev ? '' : '/datavis',
+            base: '',
             assets: 'https://martin-havala.github.io/datavis',
         },
         files: {

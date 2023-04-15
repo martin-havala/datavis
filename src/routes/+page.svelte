@@ -1,3 +1,3 @@
 <div>
-    <a href="../tourism">Tourism </a>
+    <a href="./tourism">Tourism </a>
 </div>
