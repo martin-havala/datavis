@@ -1,3 +1,7 @@
+<script>
+    import { base } from '$app/paths';
+</script>
+
 <div>
-    <a href="./tourism">Tourism </a>
+    <a href="{base}/tourism">Tourism </a>
 </div>
