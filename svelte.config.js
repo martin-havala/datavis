@@ -21,8 +21,8 @@ const config = {
             path: '',
         }),
         paths: {
-            base: dev ? '' : '/check-that-mountains',
-            assets: 'https://martin-havala.github.io/check-that-mountains',
+            base: dev ? '' : '/datavis',
+            assets: 'https://martin-havala.github.io/datavis',
         },
         files: {
             assets: 'public',
