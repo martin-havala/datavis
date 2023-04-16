@@ -18,11 +18,11 @@ body,
 section,
 section * {
     user-select: none;
+    padding: 0.5ex;
 }
 .page {
     display: grid;
     grid-template-areas: 'notes plot';
-    margin: 1em;
 }
 svg {
     grid-area: plot;
@@ -31,14 +31,11 @@ svg {
     grid-area: notes;
     display: flex;
     flex-direction: column;
-    height: 70%;
-    padding-top: 15%;
     justify-content: space-between;
 }
 .notes,
 .comments {
     max-width: 50em;
-    margin: 1em auto;
     text-align: left;
 }
 ul {

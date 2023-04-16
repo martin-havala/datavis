@@ -1,0 +1,2312 @@
+{
+    "name": "Elizabeth II",
+    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg/220px-Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg",
+    "father": {
+        "name": "George VI",
+        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+        "father": {
+            "name": "George V",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+            "father": {
+                "name": "Edward VII",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                "father": {
+                    "name": "Albert, Prince Consort",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg/220px-Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg",
+                    "father": {
+                        "name": "Ernest I, Duke of Saxe-Coburg and Gotha",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ernst_I%2C_Duke_of_Saxe-Coburg_and_Gotha_-_Dawe_1818-19.jpg/220px-Ernst_I%2C_Duke_of_Saxe-Coburg_and_Gotha_-_Dawe_1818-19.jpg",
+                        "birthplace": {
+                            "name": "Coburg",
+                            "lat": 50.266667,
+                            "lng": 10.966667
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Louise of Saxe-Gotha-Altenburg (1800–1831)",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Luise_of_Saxe-Gotha-Altenburg.jpg/220px-Luise_of_Saxe-Gotha-Altenburg.jpg",
+                        "birthplace": null
+                    },
+                    "spouse": {
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Schloss Rosenau, Coburg",
+                        "lat": 50.2981,
+                        "lng": 11.0225
+                    }
+                },
+                "mother": {
+                    "name": "Queen Victoria",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/220px-Queen_Victoria_by_Bassano.jpg",
+                    "father": {
+                        "name": "Prince Edward, Duke of Kent and Strathearn",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Edward%2C_Duke_of_Kent_and_Strathearn_by_Sir_William_Beechey.jpg/220px-Edward%2C_Duke_of_Kent_and_Strathearn_by_Sir_William_Beechey.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Victoria of Saxe-Coburg-Saalfeld",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/George_Dawe_%281781-1829%29_-_Victoria%2C_Duchess_of_Kent_%281786-1861%29_-_RCIN_407127_-_Royal_Collection.jpg/220px-George_Dawe_%281781-1829%29_-_Victoria%2C_Duchess_of_Kent_%281786-1861%29_-_RCIN_407127_-_Royal_Collection.jpg",
+                        "birthplace": {
+                            "name": "Coburg",
+                            "lat": 50.266667,
+                            "lng": 10.966667
+                        }
+                    },
+                    "spouse": {
+                        "name": "Albert, Prince Consort",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg/220px-Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg",
+                        "birthplace": {
+                            "name": "Schloss Rosenau, Coburg",
+                            "lat": 50.2981,
+                            "lng": 11.0225
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Kensington Palace",
+                        "lat": 51.505278,
+                        "lng": -0.188333
+                    }
+                },
+                "spouse": {
+                    "name": "Alexandra of Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                    "father": {
+                        "name": "Christian IX of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                        "birthplace": null
+                    },
+                    "mother": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "spouse": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Yellow Mansion, Copenhagen",
+                        "lat": 55.6829,
+                        "lng": 12.5926
+                    }
+                },
+                "birthplace": {
+                    "name": "Buckingham Palace",
+                    "lat": 51.500833,
+                    "lng": -0.141944
+                }
+            },
+            "mother": {
+                "name": "Alexandra of Denmark",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                "father": {
+                    "name": "Christian IX of Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                    "father": {
+                        "name": "Friedrich Wilhelm, Duke of Schleswig-Holstein-Sonderburg-Glücksburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Prins_Vilhelm_1785-1831.jpg/220px-Prins_Vilhelm_1785-1831.jpg",
+                        "birthplace": {
+                            "name": "Lipowina",
+                            "lat": 54.343889,
+                            "lng": 19.981667
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Louise Caroline of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/HertugindeLouise.jpg/220px-HertugindeLouise.jpg",
+                        "birthplace": {
+                            "name": "Gottorf Castle",
+                            "lat": 54.511667,
+                            "lng": 9.541389
+                        }
+                    },
+                    "spouse": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Gottorf Castle",
+                        "lat": 54.511667,
+                        "lng": 9.541389
+                    }
+                },
+                "mother": {
+                    "name": "Louise of Hesse-Kassel",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                    "father": {
+                        "name": "Prince William of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Wilhelmvonhessenkassel.jpg/220px-Wilhelmvonhessenkassel.jpg",
+                        "birthplace": null
+                    },
+                    "mother": {
+                        "name": "Princess Charlotte of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Louise_Charlotte_of_Denmark.jpg/220px-Louise_Charlotte_of_Denmark.jpg",
+                        "birthplace": {
+                            "name": "Christiansborg Palace",
+                            "lat": 55.67565115393437,
+                            "lng": 12.579056698499969
+                        }
+                    },
+                    "spouse": {
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Kassel",
+                        "lat": 51.3158,
+                        "lng": 9.4979
+                    }
+                },
+                "spouse": {
+                    "name": "Edward VII",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Albert, Prince Consort",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg/220px-Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg",
+                        "birthplace": {
+                            "name": "Schloss Rosenau, Coburg",
+                            "lat": 50.2981,
+                            "lng": 11.0225
+                        }
+                    },
+                    "mother": {
+                        "name": "Queen Victoria",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/220px-Queen_Victoria_by_Bassano.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Buckingham Palace",
+                        "lat": 51.500833,
+                        "lng": -0.141944
+                    }
+                },
+                "birthplace": {
+                    "name": "Yellow Mansion, Copenhagen",
+                    "lat": 55.6829,
+                    "lng": 12.5926
+                }
+            },
+            "spouse": {
+                "name": "Mary of Teck",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                "father": {
+                    "name": "Francis, Duke of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                    "father": {
+                        "name": "Duke Alexander of Württemberg (1804–1885)",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg/220px-Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg",
+                        "birthplace": {
+                            "name": "Saint Petersburg",
+                            "lat": 59.9375,
+                            "lng": 30.308611
+                        }
+                    },
+                    "mother": {
+                        "name": "Countess Claudine Rhédey von Kis-Rhéde",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg/220px-Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Kingdom of Hungary (1526–1867)",
+                            "lat": 47.491857,
+                            "lng": 18.991798
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": {
+                            "name": "Hanover",
+                            "lat": 52.366667,
+                            "lng": 9.716667
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Osijek",
+                        "lat": 45.555556,
+                        "lng": 18.694444
+                    }
+                },
+                "mother": {
+                    "name": "Princess Mary Adelaide of Cambridge",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                    "father": {
+                        "name": "Prince Adolphus, Duke of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg/220px-Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Augusta of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg/220px-Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg",
+                        "birthplace": {
+                            "name": "Offenbach am Main",
+                            "lat": 50.1,
+                            "lng": 8.8
+                        }
+                    },
+                    "spouse": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Hanover",
+                        "lat": 52.366667,
+                        "lng": 9.716667
+                    }
+                },
+                "spouse": {
+                    "name": "George V",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "spouse": {
+                        "name": "Mary of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Marlborough House",
+                        "lat": 51.505,
+                        "lng": -0.135833
+                    }
+                },
+                "birthplace": {
+                    "name": "Kensington Palace",
+                    "lat": 51.505278,
+                    "lng": -0.188333
+                }
+            },
+            "birthplace": {
+                "name": "Marlborough House",
+                "lat": 51.505,
+                "lng": -0.135833
+            }
+        },
+        "mother": {
+            "name": "Mary of Teck",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+            "father": {
+                "name": "Francis, Duke of Teck",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                "father": {
+                    "name": "Duke Alexander of Württemberg (1804–1885)",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg/220px-Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg",
+                    "father": {
+                        "name": "Duke Louis of Württemberg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Louis_von_W%C3%BCrttemberg_%281756-1817%29.jpg/220px-Louis_von_W%C3%BCrttemberg_%281756-1817%29.jpg",
+                        "birthplace": {
+                            "name": "Trzebiatów",
+                            "lat": 54.0625,
+                            "lng": 15.265556
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Henriette of Nassau-Weilburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Duchess_Henriette_of_Wuerttemberg%2C_nee_Princess_von_Nassau-Weilburg_%281780%E2%80%931857%29.jpg/220px-Duchess_Henriette_of_Wuerttemberg%2C_nee_Princess_von_Nassau-Weilburg_%281780%E2%80%931857%29.jpg",
+                        "birthplace": {
+                            "name": "Kirchheimbolanden",
+                            "lat": 49.666389,
+                            "lng": 8.011667
+                        }
+                    },
+                    "spouse": {
+                        "name": "Countess Claudine Rhédey von Kis-Rhéde",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg/220px-Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Saint Petersburg",
+                        "lat": 59.9375,
+                        "lng": 30.308611
+                    }
+                },
+                "mother": {
+                    "name": "Countess Claudine Rhédey von Kis-Rhéde",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg/220px-Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Duke Alexander of Württemberg (1804–1885)",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg/220px-Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg",
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Kingdom of Hungary (1526–1867)",
+                        "lat": 47.491857,
+                        "lng": 18.991798
+                    }
+                },
+                "spouse": {
+                    "name": "Princess Mary Adelaide of Cambridge",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                    "father": {
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": null
+                    },
+                    "mother": {
+                        "name": "Princess Augusta of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg/220px-Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg",
+                        "birthplace": {
+                            "name": "Offenbach am Main",
+                            "lat": 50.1,
+                            "lng": 8.8
+                        }
+                    },
+                    "spouse": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Hanover",
+                        "lat": 52.366667,
+                        "lng": 9.716667
+                    }
+                },
+                "birthplace": {
+                    "name": "Osijek",
+                    "lat": 45.555556,
+                    "lng": 18.694444
+                }
+            },
+            "mother": {
+                "name": "Princess Mary Adelaide of Cambridge",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                "father": {
+                    "name": "Prince Adolphus, Duke of Cambridge",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg/220px-Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg",
+                    "father": {
+                        "name": "George III",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg/220px-Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg",
+                        "birthplace": {
+                            "name": "Norfolk House",
+                            "lat": 51.507222,
+                            "lng": -0.133889
+                        }
+                    },
+                    "mother": {
+                        "name": "Charlotte of Mecklenburg-Strelitz",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Charlotte_gainsborough.jpg/220px-Charlotte_gainsborough.jpg",
+                        "birthplace": {
+                            "name": "Mirow",
+                            "lat": 53.266667,
+                            "lng": 12.8
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Augusta of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg/220px-Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg",
+                        "birthplace": {
+                            "name": "Offenbach am Main",
+                            "lat": 50.1,
+                            "lng": 8.8
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Buckingham Palace",
+                        "lat": 51.500833,
+                        "lng": -0.141944
+                    }
+                },
+                "mother": {
+                    "name": "Princess Augusta of Hesse-Kassel",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg/220px-Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg",
+                    "father": {
+                        "name": "Prince Frederick of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Frederick%2C_prince_of_Hesse-Kassel%2C_painted_by_Wilhelm_B%C3%B6ttner%2C_1787.jpg/150px-Frederick%2C_prince_of_Hesse-Kassel%2C_painted_by_Wilhelm_B%C3%B6ttner%2C_1787.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Caroline of Nassau-Usingen",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/c/cf/Caroline_of_Nassau-Usingen.jpg",
+                        "birthplace": {
+                            "name": "Biebrich (Wiesbaden)",
+                            "lat": 50.05,
+                            "lng": 8.233333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Prince Adolphus, Duke of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg/220px-Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Offenbach am Main",
+                        "lat": 50.1,
+                        "lng": 8.8
+                    }
+                },
+                "spouse": {
+                    "name": "Francis, Duke of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                    "father": {
+                        "name": "Duke Alexander of Württemberg (1804–1885)",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg/220px-Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg",
+                        "birthplace": null
+                    },
+                    "mother": {
+                        "name": "Countess Claudine Rhédey von Kis-Rhéde",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg/220px-Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Kingdom of Hungary (1526–1867)",
+                            "lat": 47.491857,
+                            "lng": 18.991798
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Osijek",
+                        "lat": 45.555556,
+                        "lng": 18.694444
+                    }
+                },
+                "birthplace": {
+                    "name": "Hanover",
+                    "lat": 52.366667,
+                    "lng": 9.716667
+                }
+            },
+            "spouse": {
+                "name": "George V",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                "father": {
+                    "name": "Edward VII",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Albert, Prince Consort",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg/220px-Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg",
+                        "birthplace": {
+                            "name": "Schloss Rosenau, Coburg",
+                            "lat": 50.2981,
+                            "lng": 11.0225
+                        }
+                    },
+                    "mother": {
+                        "name": "Queen Victoria",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/220px-Queen_Victoria_by_Bassano.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Buckingham Palace",
+                        "lat": 51.500833,
+                        "lng": -0.141944
+                    }
+                },
+                "mother": {
+                    "name": "Alexandra of Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                    "father": {
+                        "name": "Christian IX of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                        "birthplace": {
+                            "name": "Gottorf Castle",
+                            "lat": 54.511667,
+                            "lng": 9.541389
+                        }
+                    },
+                    "mother": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "spouse": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Yellow Mansion, Copenhagen",
+                        "lat": 55.6829,
+                        "lng": 12.5926
+                    }
+                },
+                "spouse": {
+                    "name": "Mary of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                    "father": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": null
+                    },
+                    "spouse": {
+                        "name": "George V",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Marlborough House",
+                            "lat": 51.505,
+                            "lng": -0.135833
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Kensington Palace",
+                        "lat": 51.505278,
+                        "lng": -0.188333
+                    }
+                },
+                "birthplace": {
+                    "name": "Marlborough House",
+                    "lat": 51.505,
+                    "lng": -0.135833
+                }
+            },
+            "birthplace": {
+                "name": "Kensington Palace",
+                "lat": 51.505278,
+                "lng": -0.188333
+            }
+        },
+        "spouse": {
+            "name": "Queen Elizabeth The Queen Mother",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+            "father": {
+                "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+                "father": {
+                    "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Marylebone",
+                            "lat": 51.5177,
+                            "lng": -0.147
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Redbourn",
+                        "lat": 51.8002,
+                        "lng": -0.3965
+                    }
+                },
+                "mother": {
+                    "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Marylebone",
+                        "lat": 51.5177,
+                        "lng": -0.147
+                    }
+                },
+                "spouse": null,
+                "birthplace": {
+                    "name": "Belgravia",
+                    "lat": 51.49795,
+                    "lng": -0.15453
+                }
+            },
+            "mother": {
+                "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                "father": {
+                    "name": "Charles Cavendish-Bentinck (priest)",
+                    "father": null,
+                    "mother": null,
+                    "spouse": null,
+                    "birthplace": {
+                        "name": "Kensington",
+                        "lat": 51.5,
+                        "lng": -0.19
+                    }
+                },
+                "mother": {
+                    "name": "Louisa Cavendish-Bentinck",
+                    "father": null,
+                    "mother": null,
+                    "spouse": null,
+                    "birthplace": {
+                        "name": "Hungarton",
+                        "lat": 52.659,
+                        "lng": -0.979
+                    }
+                },
+                "spouse": null,
+                "birthplace": {
+                    "name": "Belgravia",
+                    "lat": 51.49795,
+                    "lng": -0.15453
+                }
+            },
+            "spouse": {
+                "name": "George VI",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                "father": {
+                    "name": "George V",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "spouse": {
+                        "name": "Mary of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Marlborough House",
+                        "lat": 51.505,
+                        "lng": -0.135833
+                    }
+                },
+                "mother": {
+                    "name": "Mary of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                    "father": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": {
+                            "name": "Hanover",
+                            "lat": 52.366667,
+                            "lng": 9.716667
+                        }
+                    },
+                    "spouse": {
+                        "name": "George V",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Marlborough House",
+                            "lat": 51.505,
+                            "lng": -0.135833
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Kensington Palace",
+                        "lat": 51.505278,
+                        "lng": -0.188333
+                    }
+                },
+                "spouse": {
+                    "name": "Queen Elizabeth The Queen Mother",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                    "father": {
+                        "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Belgravia",
+                            "lat": 51.49795,
+                            "lng": -0.15453
+                        }
+                    },
+                    "mother": {
+                        "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Belgravia",
+                            "lat": 51.49795,
+                            "lng": -0.15453
+                        }
+                    },
+                    "spouse": {
+                        "name": "George VI",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                        "birthplace": {
+                            "name": "York Cottage",
+                            "lat": 52.8263,
+                            "lng": 0.5162
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Hitchin",
+                        "lat": 51.947,
+                        "lng": -0.283
+                    }
+                },
+                "birthplace": {
+                    "name": "York Cottage",
+                    "lat": 52.8263,
+                    "lng": 0.5162
+                }
+            },
+            "birthplace": {
+                "name": "Hitchin",
+                "lat": 51.947,
+                "lng": -0.283
+            }
+        },
+        "birthplace": {
+            "name": "York Cottage",
+            "lat": 52.8263,
+            "lng": 0.5162
+        }
+    },
+    "mother": {
+        "name": "Queen Elizabeth The Queen Mother",
+        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+        "father": {
+            "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+            "father": {
+                "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                "father": null,
+                "mother": null,
+                "spouse": {
+                    "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Redbourn",
+                            "lat": 51.8002,
+                            "lng": -0.3965
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Marylebone",
+                        "lat": 51.5177,
+                        "lng": -0.147
+                    }
+                },
+                "birthplace": {
+                    "name": "Redbourn",
+                    "lat": 51.8002,
+                    "lng": -0.3965
+                }
+            },
+            "mother": {
+                "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                "father": null,
+                "mother": null,
+                "spouse": {
+                    "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Marylebone",
+                            "lat": 51.5177,
+                            "lng": -0.147
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Redbourn",
+                        "lat": 51.8002,
+                        "lng": -0.3965
+                    }
+                },
+                "birthplace": {
+                    "name": "Marylebone",
+                    "lat": 51.5177,
+                    "lng": -0.147
+                }
+            },
+            "spouse": null,
+            "birthplace": {
+                "name": "Belgravia",
+                "lat": 51.49795,
+                "lng": -0.15453
+            }
+        },
+        "mother": {
+            "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+            "father": {
+                "name": "Charles Cavendish-Bentinck (priest)",
+                "father": null,
+                "mother": null,
+                "spouse": null,
+                "birthplace": {
+                    "name": "Kensington",
+                    "lat": 51.5,
+                    "lng": -0.19
+                }
+            },
+            "mother": {
+                "name": "Louisa Cavendish-Bentinck",
+                "father": null,
+                "mother": null,
+                "spouse": null,
+                "birthplace": {
+                    "name": "Hungarton",
+                    "lat": 52.659,
+                    "lng": -0.979
+                }
+            },
+            "spouse": null,
+            "birthplace": {
+                "name": "Belgravia",
+                "lat": 51.49795,
+                "lng": -0.15453
+            }
+        },
+        "spouse": {
+            "name": "George VI",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+            "father": {
+                "name": "George V",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                "father": {
+                    "name": "Edward VII",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Albert, Prince Consort",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg/220px-Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg",
+                        "birthplace": {
+                            "name": "Schloss Rosenau, Coburg",
+                            "lat": 50.2981,
+                            "lng": 11.0225
+                        }
+                    },
+                    "mother": {
+                        "name": "Queen Victoria",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/220px-Queen_Victoria_by_Bassano.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Buckingham Palace",
+                        "lat": 51.500833,
+                        "lng": -0.141944
+                    }
+                },
+                "mother": {
+                    "name": "Alexandra of Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                    "father": {
+                        "name": "Christian IX of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                        "birthplace": {
+                            "name": "Gottorf Castle",
+                            "lat": 54.511667,
+                            "lng": 9.541389
+                        }
+                    },
+                    "mother": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "spouse": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Yellow Mansion, Copenhagen",
+                        "lat": 55.6829,
+                        "lng": 12.5926
+                    }
+                },
+                "spouse": {
+                    "name": "Mary of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                    "father": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": {
+                            "name": "Hanover",
+                            "lat": 52.366667,
+                            "lng": 9.716667
+                        }
+                    },
+                    "spouse": {
+                        "name": "George V",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Marlborough House",
+                            "lat": 51.505,
+                            "lng": -0.135833
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Kensington Palace",
+                        "lat": 51.505278,
+                        "lng": -0.188333
+                    }
+                },
+                "birthplace": {
+                    "name": "Marlborough House",
+                    "lat": 51.505,
+                    "lng": -0.135833
+                }
+            },
+            "mother": {
+                "name": "Mary of Teck",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                "father": {
+                    "name": "Francis, Duke of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                    "father": {
+                        "name": "Duke Alexander of Württemberg (1804–1885)",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg/220px-Alexander_Paul_Ludwig_Konstantin_von_W%C3%BCrttemberg_Litho.jpg",
+                        "birthplace": {
+                            "name": "Saint Petersburg",
+                            "lat": 59.9375,
+                            "lng": 30.308611
+                        }
+                    },
+                    "mother": {
+                        "name": "Countess Claudine Rhédey von Kis-Rhéde",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg/220px-Countess_Claudine_Rh%C3%A9dey_von_Kis-Rh%C3%A9de%2C_Countess_of_Hohenstein.jpg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Kingdom of Hungary (1526–1867)",
+                            "lat": 47.491857,
+                            "lng": 18.991798
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": {
+                            "name": "Hanover",
+                            "lat": 52.366667,
+                            "lng": 9.716667
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Osijek",
+                        "lat": 45.555556,
+                        "lng": 18.694444
+                    }
+                },
+                "mother": {
+                    "name": "Princess Mary Adelaide of Cambridge",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                    "father": {
+                        "name": "Prince Adolphus, Duke of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg/220px-Prince_Adolphus_Frederick%2C_Duke_of_Cambridge%2C_KG_%281774-1850%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Augusta of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg/220px-Augusta%2C_Duchess_of_Cambridge_-_Beechey_1818.jpg",
+                        "birthplace": {
+                            "name": "Offenbach am Main",
+                            "lat": 50.1,
+                            "lng": 8.8
+                        }
+                    },
+                    "spouse": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Hanover",
+                        "lat": 52.366667,
+                        "lng": 9.716667
+                    }
+                },
+                "spouse": {
+                    "name": "George V",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "spouse": {
+                        "name": "Mary of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Marlborough House",
+                        "lat": 51.505,
+                        "lng": -0.135833
+                    }
+                },
+                "birthplace": {
+                    "name": "Kensington Palace",
+                    "lat": 51.505278,
+                    "lng": -0.188333
+                }
+            },
+            "spouse": {
+                "name": "Queen Elizabeth The Queen Mother",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                "father": {
+                    "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+                    "father": {
+                        "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Redbourn",
+                            "lat": 51.8002,
+                            "lng": -0.3965
+                        }
+                    },
+                    "mother": {
+                        "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Marylebone",
+                            "lat": 51.5177,
+                            "lng": -0.147
+                        }
+                    },
+                    "spouse": null,
+                    "birthplace": {
+                        "name": "Belgravia",
+                        "lat": 51.49795,
+                        "lng": -0.15453
+                    }
+                },
+                "mother": {
+                    "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                    "father": {
+                        "name": "Charles Cavendish-Bentinck (priest)",
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Kensington",
+                            "lat": 51.5,
+                            "lng": -0.19
+                        }
+                    },
+                    "mother": {
+                        "name": "Louisa Cavendish-Bentinck",
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Hungarton",
+                            "lat": 52.659,
+                            "lng": -0.979
+                        }
+                    },
+                    "spouse": null,
+                    "birthplace": {
+                        "name": "Belgravia",
+                        "lat": 51.49795,
+                        "lng": -0.15453
+                    }
+                },
+                "spouse": {
+                    "name": "George VI",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                    "father": {
+                        "name": "George V",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Marlborough House",
+                            "lat": 51.505,
+                            "lng": -0.135833
+                        }
+                    },
+                    "mother": {
+                        "name": "Mary of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Queen Elizabeth The Queen Mother",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                        "birthplace": {
+                            "name": "Hitchin",
+                            "lat": 51.947,
+                            "lng": -0.283
+                        }
+                    },
+                    "birthplace": {
+                        "name": "York Cottage",
+                        "lat": 52.8263,
+                        "lng": 0.5162
+                    }
+                },
+                "birthplace": {
+                    "name": "Hitchin",
+                    "lat": 51.947,
+                    "lng": -0.283
+                }
+            },
+            "birthplace": {
+                "name": "York Cottage",
+                "lat": 52.8263,
+                "lng": 0.5162
+            }
+        },
+        "birthplace": {
+            "name": "Hitchin",
+            "lat": 51.947,
+            "lng": -0.283
+        }
+    },
+    "spouse": {
+        "name": "Prince Philip, Duke of Edinburgh",
+        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Duke_of_Edinburgh_33_Allan_Warren.jpg/220px-Duke_of_Edinburgh_33_Allan_Warren.jpg",
+        "father": {
+            "name": "Prince Andrew of Greece and Denmark",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Prince_Andrew_of_Greece.JPG/220px-Prince_Andrew_of_Greece.JPG",
+            "father": {
+                "name": "George I of Greece",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                "father": {
+                    "name": "Christian IX of Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                    "father": {
+                        "name": "Friedrich Wilhelm, Duke of Schleswig-Holstein-Sonderburg-Glücksburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Prins_Vilhelm_1785-1831.jpg/220px-Prins_Vilhelm_1785-1831.jpg",
+                        "birthplace": {
+                            "name": "Lipowina",
+                            "lat": 54.343889,
+                            "lng": 19.981667
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Louise Caroline of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/HertugindeLouise.jpg/220px-HertugindeLouise.jpg",
+                        "birthplace": {
+                            "name": "Gottorf Castle",
+                            "lat": 54.511667,
+                            "lng": 9.541389
+                        }
+                    },
+                    "spouse": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Gottorf Castle",
+                        "lat": 54.511667,
+                        "lng": 9.541389
+                    }
+                },
+                "mother": {
+                    "name": "Louise of Hesse-Kassel",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                    "father": {
+                        "name": "Prince William of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Wilhelmvonhessenkassel.jpg/220px-Wilhelmvonhessenkassel.jpg",
+                        "birthplace": {
+                            "name": "Biebrich (Wiesbaden)",
+                            "lat": 50.05,
+                            "lng": 8.233333
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Charlotte of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Louise_Charlotte_of_Denmark.jpg/220px-Louise_Charlotte_of_Denmark.jpg",
+                        "birthplace": null
+                    },
+                    "spouse": {
+                        "name": "Christian IX of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                        "birthplace": null
+                    },
+                    "birthplace": {
+                        "name": "Kassel",
+                        "lat": 51.3158,
+                        "lng": 9.4979
+                    }
+                },
+                "spouse": {
+                    "name": "Olga Constantinovna of Russia",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                    "father": {
+                        "name": "Grand Duke Konstantin Nikolayevich of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg/220px-Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg",
+                        "birthplace": {
+                            "name": "Winter Palace",
+                            "lat": 59.9404,
+                            "lng": 30.3139
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Alexandra of Saxe-Altenburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Grand_Duchess_Alexandra_Iosifovna.jpg/220px-Grand_Duchess_Alexandra_Iosifovna.jpg",
+                        "birthplace": {
+                            "name": "Altenburg",
+                            "lat": 50.985,
+                            "lng": 12.433333
+                        }
+                    },
+                    "spouse": {
+                        "name": "George I of Greece",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                        "birthplace": {
+                            "name": "Copenhagen",
+                            "lat": 55.676111,
+                            "lng": 12.568333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Pavlovsk Palace",
+                        "lat": 59.685833,
+                        "lng": 30.453333
+                    }
+                },
+                "birthplace": {
+                    "name": "Copenhagen",
+                    "lat": 55.676111,
+                    "lng": 12.568333
+                }
+            },
+            "mother": {
+                "name": "Olga Constantinovna of Russia",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                "father": {
+                    "name": "Grand Duke Konstantin Nikolayevich of Russia",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg/220px-Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg",
+                    "father": {
+                        "name": "Nicholas I of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Botman_-_Emperor_Nicholas_I_%28cropped%29.jpg/220px-Botman_-_Emperor_Nicholas_I_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Gatchina Palace",
+                            "lat": 59.563333,
+                            "lng": 30.1075
+                        }
+                    },
+                    "mother": {
+                        "name": "Alexandra Feodorovna (Charlotte of Prussia)",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/0/00/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0_%D0%A4%D1%91%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BD%D0%B0_-_%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D0%B8.jpg/220px-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0_%D0%A4%D1%91%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%BD%D0%B0_-_%D0%98%D0%BC%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D1%80%D0%B8%D1%86%D0%B0_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BC%D0%BF%D0%B5%D1%80%D0%B8%D0%B8.jpg",
+                        "birthplace": {
+                            "name": "Schloss Charlottenburg",
+                            "lat": 52.5209,
+                            "lng": 13.2957
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Alexandra of Saxe-Altenburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Grand_Duchess_Alexandra_Iosifovna.jpg/220px-Grand_Duchess_Alexandra_Iosifovna.jpg",
+                        "birthplace": {
+                            "name": "Altenburg",
+                            "lat": 50.985,
+                            "lng": 12.433333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Winter Palace",
+                        "lat": 59.9404,
+                        "lng": 30.3139
+                    }
+                },
+                "mother": {
+                    "name": "Princess Alexandra of Saxe-Altenburg",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Grand_Duchess_Alexandra_Iosifovna.jpg/220px-Grand_Duchess_Alexandra_Iosifovna.jpg",
+                    "father": {
+                        "name": "Joseph, Duke of Saxe-Altenburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Herzog_Joseph_von_Sachsen-Altenburg.jpg/180px-Herzog_Joseph_von_Sachsen-Altenburg.jpg",
+                        "birthplace": {
+                            "name": "Hildburghausen",
+                            "lat": 50.416667,
+                            "lng": 10.75
+                        }
+                    },
+                    "mother": {
+                        "name": "Duchess Amelia of Württemberg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Herzogin_Amalie_von_Sachsen_-_Altenburg.jpg/220px-Herzogin_Amalie_von_Sachsen_-_Altenburg.jpg",
+                        "birthplace": null
+                    },
+                    "spouse": {
+                        "name": "Grand Duke Konstantin Nikolayevich of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg/220px-Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg",
+                        "birthplace": {
+                            "name": "Winter Palace",
+                            "lat": 59.9404,
+                            "lng": 30.3139
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Altenburg",
+                        "lat": 50.985,
+                        "lng": 12.433333
+                    }
+                },
+                "spouse": {
+                    "name": "George I of Greece",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                    "father": {
+                        "name": "Christian IX of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                        "birthplace": {
+                            "name": "Gottorf Castle",
+                            "lat": 54.511667,
+                            "lng": 9.541389
+                        }
+                    },
+                    "mother": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "spouse": {
+                        "name": "Olga Constantinovna of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                        "birthplace": {
+                            "name": "Pavlovsk Palace",
+                            "lat": 59.685833,
+                            "lng": 30.453333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Copenhagen",
+                        "lat": 55.676111,
+                        "lng": 12.568333
+                    }
+                },
+                "birthplace": {
+                    "name": "Pavlovsk Palace",
+                    "lat": 59.685833,
+                    "lng": 30.453333
+                }
+            },
+            "spouse": {
+                "name": "Princess Alice of Battenberg",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Alice_of_Greece.jpg/220px-Alice_of_Greece.jpg",
+                "father": {
+                    "name": "Prince Louis of Battenberg",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Princess Victoria of Hesse and by Rhine",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                        "birthplace": {
+                            "name": "Windsor Castle",
+                            "lat": 51.483333,
+                            "lng": -0.604167
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Graz",
+                        "lat": 47.070833,
+                        "lng": 15.438611
+                    }
+                },
+                "mother": {
+                    "name": "Princess Victoria of Hesse and by Rhine",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                    "father": {
+                        "name": "Louis IV, Grand Duke of Hesse",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Grand_Duke_Ludwig_IV_of_He-1.jpg/220px-Grand_Duke_Ludwig_IV_of_He-1.jpg",
+                        "birthplace": {
+                            "name": "Darmstadt",
+                            "lat": 49.872222,
+                            "lng": 8.652778
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Alice of the United Kingdom",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Alice%2C_Princess_Louis_of_Hesse.jpg/220px-Alice%2C_Princess_Louis_of_Hesse.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "spouse": {
+                        "name": "Prince Louis of Battenberg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Graz",
+                            "lat": 47.070833,
+                            "lng": 15.438611
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Windsor Castle",
+                        "lat": 51.483333,
+                        "lng": -0.604167
+                    }
+                },
+                "spouse": {
+                    "name": "Prince Andrew of Greece and Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Prince_Andrew_of_Greece.JPG/220px-Prince_Andrew_of_Greece.JPG",
+                    "father": {
+                        "name": "George I of Greece",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                        "birthplace": {
+                            "name": "Copenhagen",
+                            "lat": 55.676111,
+                            "lng": 12.568333
+                        }
+                    },
+                    "mother": {
+                        "name": "Olga Constantinovna of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                        "birthplace": {
+                            "name": "Pavlovsk Palace",
+                            "lat": 59.685833,
+                            "lng": 30.453333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Alice of Battenberg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Alice_of_Greece.jpg/220px-Alice_of_Greece.jpg",
+                        "birthplace": {
+                            "name": "Windsor Castle",
+                            "lat": 51.483333,
+                            "lng": -0.604167
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Athens",
+                        "lat": 37.984167,
+                        "lng": 23.728056
+                    }
+                },
+                "birthplace": {
+                    "name": "Windsor Castle",
+                    "lat": 51.483333,
+                    "lng": -0.604167
+                }
+            },
+            "birthplace": {
+                "name": "Athens",
+                "lat": 37.984167,
+                "lng": 23.728056
+            }
+        },
+        "mother": {
+            "name": "Princess Alice of Battenberg",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Alice_of_Greece.jpg/220px-Alice_of_Greece.jpg",
+            "father": {
+                "name": "Prince Louis of Battenberg",
+                "father": null,
+                "mother": null,
+                "spouse": {
+                    "name": "Princess Victoria of Hesse and by Rhine",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                    "father": {
+                        "name": "Louis IV, Grand Duke of Hesse",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Grand_Duke_Ludwig_IV_of_He-1.jpg/220px-Grand_Duke_Ludwig_IV_of_He-1.jpg",
+                        "birthplace": {
+                            "name": "Darmstadt",
+                            "lat": 49.872222,
+                            "lng": 8.652778
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Alice of the United Kingdom",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Alice%2C_Princess_Louis_of_Hesse.jpg/220px-Alice%2C_Princess_Louis_of_Hesse.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "spouse": {
+                        "name": "Prince Louis of Battenberg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Graz",
+                            "lat": 47.070833,
+                            "lng": 15.438611
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Windsor Castle",
+                        "lat": 51.483333,
+                        "lng": -0.604167
+                    }
+                },
+                "birthplace": {
+                    "name": "Graz",
+                    "lat": 47.070833,
+                    "lng": 15.438611
+                }
+            },
+            "mother": {
+                "name": "Princess Victoria of Hesse and by Rhine",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                "father": {
+                    "name": "Louis IV, Grand Duke of Hesse",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Grand_Duke_Ludwig_IV_of_He-1.jpg/220px-Grand_Duke_Ludwig_IV_of_He-1.jpg",
+                    "father": {
+                        "name": "Prince Charles of Hesse and by Rhine",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/6/61/Carl_Prinz_von_Hessen_und_bei_Rhein.png",
+                        "birthplace": {
+                            "name": "Darmstadt",
+                            "lat": 49.872222,
+                            "lng": 8.652778
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Elisabeth of Prussia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/53/Princess_Elisabeth_of_Prussia.jpg/220px-Princess_Elisabeth_of_Prussia.jpg",
+                        "birthplace": {
+                            "name": "Berlin Palace",
+                            "lat": 52.5175,
+                            "lng": 13.402778
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Alice of the United Kingdom",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Alice%2C_Princess_Louis_of_Hesse.jpg/220px-Alice%2C_Princess_Louis_of_Hesse.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Darmstadt",
+                        "lat": 49.872222,
+                        "lng": 8.652778
+                    }
+                },
+                "mother": {
+                    "name": "Princess Alice of the United Kingdom",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Alice%2C_Princess_Louis_of_Hesse.jpg/220px-Alice%2C_Princess_Louis_of_Hesse.jpg",
+                    "father": {
+                        "name": "Albert, Prince Consort",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg/220px-Prince_Albert%2C_bust_length%2C_by_John_Jabez_Edwin_Mayal%2C_1860_%28retouched%29.jpg",
+                        "birthplace": {
+                            "name": "Schloss Rosenau, Coburg",
+                            "lat": 50.2981,
+                            "lng": 11.0225
+                        }
+                    },
+                    "mother": {
+                        "name": "Queen Victoria",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/220px-Queen_Victoria_by_Bassano.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Louis IV, Grand Duke of Hesse",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/8/83/Grand_Duke_Ludwig_IV_of_He-1.jpg/220px-Grand_Duke_Ludwig_IV_of_He-1.jpg",
+                        "birthplace": {
+                            "name": "Darmstadt",
+                            "lat": 49.872222,
+                            "lng": 8.652778
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Buckingham Palace",
+                        "lat": 51.500833,
+                        "lng": -0.141944
+                    }
+                },
+                "spouse": {
+                    "name": "Prince Louis of Battenberg",
+                    "father": null,
+                    "mother": null,
+                    "spouse": {
+                        "name": "Princess Victoria of Hesse and by Rhine",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                        "birthplace": {
+                            "name": "Windsor Castle",
+                            "lat": 51.483333,
+                            "lng": -0.604167
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Graz",
+                        "lat": 47.070833,
+                        "lng": 15.438611
+                    }
+                },
+                "birthplace": {
+                    "name": "Windsor Castle",
+                    "lat": 51.483333,
+                    "lng": -0.604167
+                }
+            },
+            "spouse": {
+                "name": "Prince Andrew of Greece and Denmark",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Prince_Andrew_of_Greece.JPG/220px-Prince_Andrew_of_Greece.JPG",
+                "father": {
+                    "name": "George I of Greece",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                    "father": {
+                        "name": "Christian IX of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Christian_IX_of_Denmark_color_altered.jpg/220px-Christian_IX_of_Denmark_color_altered.jpg",
+                        "birthplace": {
+                            "name": "Gottorf Castle",
+                            "lat": 54.511667,
+                            "lng": 9.541389
+                        }
+                    },
+                    "mother": {
+                        "name": "Louise of Hesse-Kassel",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Louise_of_Hesse-Kassel.jpg/220px-Louise_of_Hesse-Kassel.jpg",
+                        "birthplace": {
+                            "name": "Kassel",
+                            "lat": 51.3158,
+                            "lng": 9.4979
+                        }
+                    },
+                    "spouse": {
+                        "name": "Olga Constantinovna of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                        "birthplace": {
+                            "name": "Pavlovsk Palace",
+                            "lat": 59.685833,
+                            "lng": 30.453333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Copenhagen",
+                        "lat": 55.676111,
+                        "lng": 12.568333
+                    }
+                },
+                "mother": {
+                    "name": "Olga Constantinovna of Russia",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                    "father": {
+                        "name": "Grand Duke Konstantin Nikolayevich of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg/220px-Romanov%2C_Constantin_Nicolaievitch%2C_Grand-Duc_de_Russie%2C_Gallica%2C_Nadar.jpg",
+                        "birthplace": {
+                            "name": "Winter Palace",
+                            "lat": 59.9404,
+                            "lng": 30.3139
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Alexandra of Saxe-Altenburg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Grand_Duchess_Alexandra_Iosifovna.jpg/220px-Grand_Duchess_Alexandra_Iosifovna.jpg",
+                        "birthplace": {
+                            "name": "Altenburg",
+                            "lat": 50.985,
+                            "lng": 12.433333
+                        }
+                    },
+                    "spouse": {
+                        "name": "George I of Greece",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                        "birthplace": {
+                            "name": "Copenhagen",
+                            "lat": 55.676111,
+                            "lng": 12.568333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Pavlovsk Palace",
+                        "lat": 59.685833,
+                        "lng": 30.453333
+                    }
+                },
+                "spouse": {
+                    "name": "Princess Alice of Battenberg",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Alice_of_Greece.jpg/220px-Alice_of_Greece.jpg",
+                    "father": {
+                        "name": "Prince Louis of Battenberg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Graz",
+                            "lat": 47.070833,
+                            "lng": 15.438611
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Victoria of Hesse and by Rhine",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                        "birthplace": {
+                            "name": "Windsor Castle",
+                            "lat": 51.483333,
+                            "lng": -0.604167
+                        }
+                    },
+                    "spouse": {
+                        "name": "Prince Andrew of Greece and Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Prince_Andrew_of_Greece.JPG/220px-Prince_Andrew_of_Greece.JPG",
+                        "birthplace": {
+                            "name": "Athens",
+                            "lat": 37.984167,
+                            "lng": 23.728056
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Windsor Castle",
+                        "lat": 51.483333,
+                        "lng": -0.604167
+                    }
+                },
+                "birthplace": {
+                    "name": "Athens",
+                    "lat": 37.984167,
+                    "lng": 23.728056
+                }
+            },
+            "birthplace": {
+                "name": "Windsor Castle",
+                "lat": 51.483333,
+                "lng": -0.604167
+            }
+        },
+        "spouse": {
+            "name": "Elizabeth II",
+            "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg/220px-Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg",
+            "father": {
+                "name": "George VI",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                "father": {
+                    "name": "George V",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                    "father": {
+                        "name": "Edward VII",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/King-Edward-VII_%28cropped%29.jpg/220px-King-Edward-VII_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Buckingham Palace",
+                            "lat": 51.500833,
+                            "lng": -0.141944
+                        }
+                    },
+                    "mother": {
+                        "name": "Alexandra of Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alexandra_of_Denmark02.jpg/220px-Alexandra_of_Denmark02.jpg",
+                        "birthplace": {
+                            "name": "Yellow Mansion, Copenhagen",
+                            "lat": 55.6829,
+                            "lng": 12.5926
+                        }
+                    },
+                    "spouse": {
+                        "name": "Mary of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Marlborough House",
+                        "lat": 51.505,
+                        "lng": -0.135833
+                    }
+                },
+                "mother": {
+                    "name": "Mary of Teck",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                    "father": {
+                        "name": "Francis, Duke of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Prince_Francis%2C_Duke_of_Teck.jpg/200px-Prince_Francis%2C_Duke_of_Teck.jpg",
+                        "birthplace": {
+                            "name": "Osijek",
+                            "lat": 45.555556,
+                            "lng": 18.694444
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Mary Adelaide of Cambridge",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/5/54/Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png/220px-Princess_Mary_Adelaide%2C_Duchess_of_Teck_%281833%E2%80%931897%29.png",
+                        "birthplace": {
+                            "name": "Hanover",
+                            "lat": 52.366667,
+                            "lng": 9.716667
+                        }
+                    },
+                    "spouse": {
+                        "name": "George V",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Marlborough House",
+                            "lat": 51.505,
+                            "lng": -0.135833
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Kensington Palace",
+                        "lat": 51.505278,
+                        "lng": -0.188333
+                    }
+                },
+                "spouse": {
+                    "name": "Queen Elizabeth The Queen Mother",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                    "father": {
+                        "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Belgravia",
+                            "lat": 51.49795,
+                            "lng": -0.15453
+                        }
+                    },
+                    "mother": {
+                        "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Belgravia",
+                            "lat": 51.49795,
+                            "lng": -0.15453
+                        }
+                    },
+                    "spouse": {
+                        "name": "George VI",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                        "birthplace": {
+                            "name": "York Cottage",
+                            "lat": 52.8263,
+                            "lng": 0.5162
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Hitchin",
+                        "lat": 51.947,
+                        "lng": -0.283
+                    }
+                },
+                "birthplace": {
+                    "name": "York Cottage",
+                    "lat": 52.8263,
+                    "lng": 0.5162
+                }
+            },
+            "mother": {
+                "name": "Queen Elizabeth The Queen Mother",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                "father": {
+                    "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+                    "father": {
+                        "name": "Claude Bowes-Lyon, 13th Earl of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Redbourn",
+                            "lat": 51.8002,
+                            "lng": -0.3965
+                        }
+                    },
+                    "mother": {
+                        "name": "Frances Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Marylebone",
+                            "lat": 51.5177,
+                            "lng": -0.147
+                        }
+                    },
+                    "spouse": null,
+                    "birthplace": {
+                        "name": "Belgravia",
+                        "lat": 51.49795,
+                        "lng": -0.15453
+                    }
+                },
+                "mother": {
+                    "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+                    "father": {
+                        "name": "Charles Cavendish-Bentinck (priest)",
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Kensington",
+                            "lat": 51.5,
+                            "lng": -0.19
+                        }
+                    },
+                    "mother": {
+                        "name": "Louisa Cavendish-Bentinck",
+                        "father": null,
+                        "mother": null,
+                        "spouse": null,
+                        "birthplace": {
+                            "name": "Hungarton",
+                            "lat": 52.659,
+                            "lng": -0.979
+                        }
+                    },
+                    "spouse": null,
+                    "birthplace": {
+                        "name": "Belgravia",
+                        "lat": 51.49795,
+                        "lng": -0.15453
+                    }
+                },
+                "spouse": {
+                    "name": "George VI",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                    "father": {
+                        "name": "George V",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/King_George_1923_LCCN2014715558_%28cropped%29.jpg/220px-King_George_1923_LCCN2014715558_%28cropped%29.jpg",
+                        "birthplace": {
+                            "name": "Marlborough House",
+                            "lat": 51.505,
+                            "lng": -0.135833
+                        }
+                    },
+                    "mother": {
+                        "name": "Mary of Teck",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Queenmaryformalportrait_edit3.jpg/220px-Queenmaryformalportrait_edit3.jpg",
+                        "birthplace": {
+                            "name": "Kensington Palace",
+                            "lat": 51.505278,
+                            "lng": -0.188333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Queen Elizabeth The Queen Mother",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                        "birthplace": {
+                            "name": "Hitchin",
+                            "lat": 51.947,
+                            "lng": -0.283
+                        }
+                    },
+                    "birthplace": {
+                        "name": "York Cottage",
+                        "lat": 52.8263,
+                        "lng": 0.5162
+                    }
+                },
+                "birthplace": {
+                    "name": "Hitchin",
+                    "lat": 51.947,
+                    "lng": -0.283
+                }
+            },
+            "spouse": {
+                "name": "Prince Philip, Duke of Edinburgh",
+                "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Duke_of_Edinburgh_33_Allan_Warren.jpg/220px-Duke_of_Edinburgh_33_Allan_Warren.jpg",
+                "father": {
+                    "name": "Prince Andrew of Greece and Denmark",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Prince_Andrew_of_Greece.JPG/220px-Prince_Andrew_of_Greece.JPG",
+                    "father": {
+                        "name": "George I of Greece",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/d/d8/George_I_of_Greece%2C_c.1912.jpg/220px-George_I_of_Greece%2C_c.1912.jpg",
+                        "birthplace": {
+                            "name": "Copenhagen",
+                            "lat": 55.676111,
+                            "lng": 12.568333
+                        }
+                    },
+                    "mother": {
+                        "name": "Olga Constantinovna of Russia",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Olga_of_Greece_VI_restoration.jpg/220px-Olga_of_Greece_VI_restoration.jpg",
+                        "birthplace": {
+                            "name": "Pavlovsk Palace",
+                            "lat": 59.685833,
+                            "lng": 30.453333
+                        }
+                    },
+                    "spouse": {
+                        "name": "Princess Alice of Battenberg",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Alice_of_Greece.jpg/220px-Alice_of_Greece.jpg",
+                        "birthplace": {
+                            "name": "Windsor Castle",
+                            "lat": 51.483333,
+                            "lng": -0.604167
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Athens",
+                        "lat": 37.984167,
+                        "lng": 23.728056
+                    }
+                },
+                "mother": {
+                    "name": "Princess Alice of Battenberg",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Alice_of_Greece.jpg/220px-Alice_of_Greece.jpg",
+                    "father": {
+                        "name": "Prince Louis of Battenberg",
+                        "father": null,
+                        "mother": null,
+                        "birthplace": {
+                            "name": "Graz",
+                            "lat": 47.070833,
+                            "lng": 15.438611
+                        }
+                    },
+                    "mother": {
+                        "name": "Princess Victoria of Hesse and by Rhine",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg/220px-Victoria_Mountbatten%2C_Marchioness_of_Milford_Haven.jpg",
+                        "birthplace": {
+                            "name": "Windsor Castle",
+                            "lat": 51.483333,
+                            "lng": -0.604167
+                        }
+                    },
+                    "spouse": {
+                        "name": "Prince Andrew of Greece and Denmark",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Prince_Andrew_of_Greece.JPG/220px-Prince_Andrew_of_Greece.JPG",
+                        "birthplace": {
+                            "name": "Athens",
+                            "lat": 37.984167,
+                            "lng": 23.728056
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Windsor Castle",
+                        "lat": 51.483333,
+                        "lng": -0.604167
+                    }
+                },
+                "spouse": {
+                    "name": "Elizabeth II",
+                    "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg/220px-Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg",
+                    "father": {
+                        "name": "George VI",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg",
+                        "birthplace": {
+                            "name": "York Cottage",
+                            "lat": 52.8263,
+                            "lng": 0.5162
+                        }
+                    },
+                    "mother": {
+                        "name": "Queen Elizabeth The Queen Mother",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Queen_Elizabeth_the_Queen_Mother_portrait.jpg/220px-Queen_Elizabeth_the_Queen_Mother_portrait.jpg",
+                        "birthplace": {
+                            "name": "Hitchin",
+                            "lat": 51.947,
+                            "lng": -0.283
+                        }
+                    },
+                    "spouse": {
+                        "name": "Prince Philip, Duke of Edinburgh",
+                        "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Duke_of_Edinburgh_33_Allan_Warren.jpg/220px-Duke_of_Edinburgh_33_Allan_Warren.jpg",
+                        "birthplace": {
+                            "name": "Mon Repos, Corfu",
+                            "lat": 39.606389,
+                            "lng": 19.926111
+                        }
+                    },
+                    "birthplace": {
+                        "name": "Mayfair",
+                        "lat": 51.510278,
+                        "lng": -0.147222
+                    }
+                },
+                "birthplace": {
+                    "name": "Mon Repos, Corfu",
+                    "lat": 39.606389,
+                    "lng": 19.926111
+                }
+            },
+            "birthplace": {
+                "name": "Mayfair",
+                "lat": 51.510278,
+                "lng": -0.147222
+            }
+        },
+        "birthplace": {
+            "name": "Mon Repos, Corfu",
+            "lat": 39.606389,
+            "lng": 19.926111
+        }
+    },
+    "birthplace": {
+        "name": "Mayfair",
+        "lat": 51.510278,
+        "lng": -0.147222
+    }
+}

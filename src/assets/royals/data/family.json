@@ -1,0 +1,145 @@
+{
+    "name": "Elizabeth II",
+    "father": {
+        "name": "George VI",
+        "father": {
+            "name": "George V",
+            "fatherUrl": "/wiki/Edward_VII",
+            "motherUrl": "/wiki/Alexandra_of_Denmark",
+            "spouseUrl": "/wiki/Mary_of_Teck",
+            "birthplace": {
+                "name": "Marlborough House",
+                "lat": 51.505,
+                "lng": -0.135833
+            }
+        },
+        "mother": {
+            "name": "Mary of Teck",
+            "fatherUrl": "/wiki/Francis,_Duke_of_Teck",
+            "motherUrl": "/wiki/Princess_Mary_Adelaide_of_Cambridge",
+            "spouseUrl": "/wiki/George_V",
+            "birthplace": {
+                "name": "Kensington Palace",
+                "lat": 51.505278,
+                "lng": -0.188333
+            }
+        },
+        "spouse": {
+            "name": "Queen Elizabeth The Queen Mother",
+            "fatherUrl": "/wiki/Claude_Bowes-Lyon,_14th_Earl_of_Strathmore_and_Kinghorne",
+            "motherUrl": "/wiki/Cecilia_Cavendish-Bentinck",
+            "spouseUrl": "/wiki/George_VI",
+            "birthplace": {
+                "name": "Hitchin",
+                "lat": 51.947,
+                "lng": -0.283
+            }
+        },
+        "fatherUrl": "/wiki/George_V",
+        "motherUrl": "/wiki/Mary_of_Teck",
+        "spouseUrl": "/wiki/Elizabeth_Bowes-Lyon",
+        "birthplace": {
+            "name": "York Cottage",
+            "lat": 52.8263,
+            "lng": 0.5162
+        }
+    },
+    "mother": {
+        "name": "Queen Elizabeth The Queen Mother",
+        "father": {
+            "name": "Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne",
+            "spouse": null,
+            "fatherUrl": "/wiki/Claude_Bowes-Lyon,_13th_Earl_of_Strathmore_and_Kinghorne",
+            "motherUrl": "/wiki/Frances_Bowes-Lyon,_Countess_of_Strathmore_and_Kinghorne",
+            "spouseUrl": null,
+            "birthplace": {
+                "name": "Belgravia",
+                "lat": 51.49795,
+                "lng": -0.15453
+            }
+        },
+        "mother": {
+            "name": "Cecilia Bowes-Lyon, Countess of Strathmore and Kinghorne",
+            "spouse": null,
+            "fatherUrl": "/wiki/Charles_Cavendish-Bentinck_(priest)",
+            "motherUrl": "/wiki/Caroline_Louisa_Burnaby",
+            "spouseUrl": null,
+            "birthplace": {
+                "name": "Belgravia",
+                "lat": 51.49795,
+                "lng": -0.15453
+            }
+        },
+        "spouse": {
+            "name": "George VI",
+            "fatherUrl": "/wiki/George_V",
+            "motherUrl": "/wiki/Mary_of_Teck",
+            "spouseUrl": "/wiki/Elizabeth_Bowes-Lyon",
+            "birthplace": {
+                "name": "York Cottage",
+                "lat": 52.8263,
+                "lng": 0.5162
+            }
+        },
+        "fatherUrl": "/wiki/Claude_Bowes-Lyon,_14th_Earl_of_Strathmore_and_Kinghorne",
+        "motherUrl": "/wiki/Cecilia_Cavendish-Bentinck",
+        "spouseUrl": "/wiki/George_VI",
+        "birthplace": {
+            "name": "Hitchin",
+            "lat": 51.947,
+            "lng": -0.283
+        }
+    },
+    "spouse": {
+        "name": "Prince Philip, Duke of Edinburgh",
+        "father": {
+            "name": "Prince Andrew of Greece and Denmark",
+            "fatherUrl": "/wiki/George_I_of_Greece",
+            "motherUrl": "/wiki/Olga_Constantinovna_of_Russia",
+            "spouseUrl": "/wiki/Princess_Alice_of_Battenberg",
+            "birthplace": {
+                "name": "Athens",
+                "lat": 37.984167,
+                "lng": 23.728056
+            }
+        },
+        "mother": {
+            "name": "Princess Alice of Battenberg",
+            "fatherUrl": "/wiki/Prince_Louis_of_Battenberg",
+            "motherUrl": "/wiki/Princess_Victoria_of_Hesse_and_by_Rhine",
+            "spouseUrl": "/wiki/Prince_Andrew_of_Greece_and_Denmark",
+            "birthplace": {
+                "name": "Windsor Castle",
+                "lat": 51.483333,
+                "lng": -0.604167
+            }
+        },
+        "spouse": {
+            "name": "Elizabeth II",
+            "fatherUrl": "/wiki/George_VI",
+            "motherUrl": "/wiki/Elizabeth_Bowes-Lyon",
+            "spouseUrl": "/wiki/Prince_Philip,_Duke_of_Edinburgh",
+            "birthplace": {
+                "name": "Mayfair",
+                "lat": 51.510278,
+                "lng": -0.147222
+            }
+        },
+        "fatherUrl": "/wiki/Prince_Andrew_of_Greece_and_Denmark",
+        "motherUrl": "/wiki/Princess_Alice_of_Battenberg",
+        "spouseUrl": "/wiki/Elizabeth_II",
+        "birthplace": {
+            "name": "Mon Repos, Corfu",
+            "lat": 39.606389,
+            "lng": 19.926111
+        }
+    },
+    "fatherUrl": "/wiki/George_VI",
+    "motherUrl": "/wiki/Elizabeth_Bowes-Lyon",
+    "spouseUrl": "/wiki/Prince_Philip,_Duke_of_Edinburgh",
+    "birthplace": {
+        "name": "Mayfair",
+        "lat": 51.510278,
+        "lng": -0.147222
+    }
+}
