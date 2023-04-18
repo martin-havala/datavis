@@ -7,18 +7,19 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.af737597.css" rel="stylesheet">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.1c05fc9a.css" rel="stylesheet">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.c3e4a1c2.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.e81c4694.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.1f5b2163.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.6a6b3b8f.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.ffcc5ad9.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.0a396d99.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/tourism-page.svelte.0e7790f4.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/directors-page.svelte.db8bd3f4.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.d5a6f791.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/linear.139ec05d.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/range.6bc2a9a0.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/tourism-page.ts.9c5eea7e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.e94d8ac7.js"><title>Check those mountains</title><!-- HEAD_svelte-1b91gh3_START --><meta name="description" content="Svelte demo app"><!-- HEAD_svelte-1b91gh3_END -->
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/nodrag.b9231a16.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/directors-page.ts.9c5eea7e.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.fca24c55.js"><title>Check those mountains</title><!-- HEAD_svelte-1b91gh3_START --><meta name="description" content="Svelte demo app"><!-- HEAD_svelte-1b91gh3_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -26,15 +27,13 @@
 
 <div class="body svelte-14furju">
 
-<section><div class="page"><svg></svg>
-        <div class="notes"><div><h1>EU Tourism 2022</h1>
-                <div>This chart compares foreign tourist arrivals during the year and compares it to country population;
+<section><div class="page"><div class="svgContainer svelte-1ben03j"><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="svelte-1ben03j"></svg></div>
+        <div class="notes"><div><h1>Director colaborations </h1>
+                <div>Many films were directed by more than one director, let&#39;s take a look at the top coworking directors at once.
+                      Each director here has collaborated with other director at least on 10 films.
                 </div>
-                <br>
-                <div>Second part highlights the season period in each country</div></div>
-            <div class="comments"><div>data source - EuroStat:
-                    <ul><li><a href="https://ec.europa.eu/eurostat/databrowser/view/TOUR_OCC_ARM__custom_5792777/default/table?lang=en"><i>Arrivals at tourist accommodation establishments - monthly data</i></a></li>
-                        <li><a href="https://ec.europa.eu/eurostat/databrowser/view/TPS00001/default/table?lang=en"><i>Population on 1 January</i></a></li></ul></div></div></div></div></section>
+                <div class="comments">data source: <a href="https://www.imdb.com/interfaces/" target="about:blank">IMDB</a></div></div></div></div>
+</section>
 </div>
 
 
@@ -55,7 +54,7 @@
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.ffcc5ad9.js")
 					]).then(([kit, app]) => {
 						kit.start(app, __sveltekit_1bl97em.element, {
-							node_ids: [0, 5],
+							node_ids: [0, 3],
 							data,
 							form: null,
 							error: null

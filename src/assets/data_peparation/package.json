@@ -1,0 +1,27 @@
+{
+    "name": "medium-website-crawling",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rm -rf dist",
+        "build": "npm run clean && tsc",
+        "royals": "tsnd src/royals.ts",
+        "poetry": "tsnd src/poetry.ts",
+        "start": "node dist/index.js",
+        "lint": "eslint \"src/**/*.ts\"",
+        "lint:write": "eslint \"src/**/*.ts\" --fix"
+    },
+    "devDependencies": {
+        "@types/jsdom": "^16.2.5",
+        "@types/node-fetch": "^2.5.7",
+        "ts-node-dev": "^1.1.1",
+        "typescript": "^4.1.2"
+    },
+    "dependencies": {
+        "jsdom": "^16.4.0",
+        "node-fetch": "^2.6.1"
+    },
+    "author": "",
+    "license": "ISC"
+}

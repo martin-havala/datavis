@@ -3,7 +3,7 @@
     import * as topojson from 'topojson-client';
     import { onMount } from 'svelte';
     import europe from '../../assets/europe.json';
-    import royalFamily from '../../assets/royals/family.json';
+    import royalFamily from '../../assets/data_peparation/family.json';
     import type { FamilyMember } from '../../assets/royals/family.model';
 
     const land = topojson.feature(europe, europe);

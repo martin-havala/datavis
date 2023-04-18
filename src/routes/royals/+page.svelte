@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
     import europe from '../../assets/europe.json';
     import royalFamily from '../../assets/royals/royals.json';
-    import type { FamilyMember } from '../../assets/royals/src/family.model';
+    import type { FamilyMember } from '../../assets/data_peparation/src/family.model';
 
     const graticule = d3.geoGraticule10();
     const outline: d3.GeoSphere = { type: 'Sphere' };

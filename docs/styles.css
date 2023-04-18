@@ -40,7 +40,8 @@ svg {
     max-width: 50em;
     margin: 1em auto;
     text-align: left;
-    padding: 0 2ex;
+    padding: 2ex;
+    overflow: auto;
 
 }
 ul {
