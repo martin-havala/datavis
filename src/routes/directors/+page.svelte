@@ -1,3 +1,4 @@
+
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
@@ -91,9 +92,9 @@
         }
 
         simulation.on('tick', ticked).restart();
-    setTimeout(() => {
+        setTimeout(() => {
         simulation.stop()
-        
+
     }, 5000);
     let tmt:NodeJS.Timeout;
         function drag(simulation: d3.Simulation<any, any>) {
@@ -123,11 +124,11 @@
 </script>
 
 <svelte:head>
-    <title>Check those mountains</title>
-    <meta name="description" content="Svelte demo app" />
+    <title>Movie Director Collaborations</title>
 </svelte:head>
 
 <section>
+    
     <div class="page">
         <div class='svgContainer'>
             <svg bind:this={svgElem}  xmlns:xlink="http://www.w3.org/1999/xlink"/>
