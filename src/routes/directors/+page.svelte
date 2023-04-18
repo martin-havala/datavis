@@ -7,7 +7,7 @@
     import type { Node, Link, ForceModel } from '../../assets/words/book.model';
 
     // set the dimensions and margins of the graph
-    const size = 3000;
+    const size = 2000;
 
     // append the svg object to the body of the page
     let svgElem: SVGElement;
@@ -22,15 +22,16 @@
             .attr('viewBox', [-size / 2, -size / 2, size, size])
             .append('g');
 
+            const zoomHandler = (event: d3.D3ZoomEvent<Element, any>) => {
+            svg.attr('transform', event.transform.toString());
+        };
+        const zoom = d3.zoom().scaleExtent([.1, 10]).on('zoom', zoomHandler);
+
+        d3.select(svgElem).call(zoom);
         makeSinglePlot(movie_nodes,movie_links);
     });
 
     function makeSinglePlot(movie_nodes:Node[], movie_links:Link[]) {
-        const nodeFill = 'currentColor'; // node stroke fill (if not using a group color encoding)
-        const nodeStrokeOpacity = 1; // node stroke opacity
-        const linkStroke = '#999'; // link stroke color
-        const linkStrokeOpacity = 0.6; // link stroke opacity
-        const linkStrokeLinecap = 'round'; // link stroke linecap
 
         const nodes = d3.map(movie_nodes, (b, index) => ({ id: movie_nodes[index].id, count:b.count  }));
         const links = d3.map(movie_links, (b, i) => ({ source: b.source, target: b.target, origin: b }));
@@ -41,30 +42,25 @@
             return Math.max(d.source.count,50)
         });
 
-        const maxCount = d3.max(nodes, n =>n.count);
-        const nodeGroups = d3.sort(movie_nodes.map((n) => n.group));
-        
-  
         const color = d3.scaleSequential().domain([1,20]).interpolator(d3.interpolateViridis);
         const simulation = d3
             .forceSimulation(nodes)
             .force('link', forceLink)
             .force('charge', forceNode)
-            .force('center', d3.forceCenter())
+            .force('center', d3.forceCenter(0,0))
             .stop();
             
 
         const link = svg
             .append('g')
             .attr('stroke', '#555')
-            .attr('stroke-opacity', linkStrokeOpacity)
-            .attr('stroke-linecap', linkStrokeLinecap)
+            .attr('stroke-opacity', '.6')
+            .attr('stroke-linecap', 'round')
             .selectAll('line')
             .data(links)
             .join('line')
             .attr('stroke-width', (d) => 2 + d.origin.count)
-
-            link.append('title').text( (d) => `${d.origin.count}` )
+        link.append('title').text( (d) => `${d.origin.count}` )
 
         const node = svg
             .append('g')
@@ -83,8 +79,8 @@
             .join('title').text( (d) => d.count);
 
         node.call(drag(simulation));
-         node
-         .append('title').text((d) => `${directors[d.id]?.primaryName ?? d.id} - ${d.count} colaborations`);
+        node.append('title')
+            .text((d) => `${directors[d.id]?.primaryName ?? d.id} - ${d.count} colaborations`);
 
         function ticked() {
             link.attr('x1', (d: any) => d.source.x)
@@ -99,9 +95,11 @@
         simulation.stop()
         
     }, 5000);
+    let tmt:NodeJS.Timeout;
         function drag(simulation: d3.Simulation<any, any>) {
             // todo
             function dragstarted(event: d3.D3DragEvent<any, any, any>) {
+                !!tmt && clearTimeout(tmt);
                 if (!event.active) simulation.alphaTarget(0.3).restart();
                 event.subject.fx = event.subject.x;
                 event.subject.fy = event.subject.y;
@@ -116,7 +114,7 @@
                 if (!event.active) simulation.alphaTarget(0);
                 event.subject.fx = null;
                 event.subject.fy = null;
-                setTimeout(()=> simulation.stop(), 500)
+                tmt = setTimeout(()=> simulation.stop(), 5_000)
             }
 
             return d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended);
@@ -151,12 +149,14 @@
 
 <style>
     .svgContainer{
+        position: fixed;
+        top:0;
+        left:0;
         height:100vh;
         width:100vw;
-        overflow:auto;
     }
     svg {
-        width: 120vmin;
-        height: 120vmin;
+        width: 120vw;
+        height: 120vh;
     }
 </style>
