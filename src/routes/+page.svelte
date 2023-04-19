@@ -14,5 +14,8 @@
         <li>
             <a href="{base}/directors">Directors </a>
         </li>
+        <li>
+            <a href="{base}/culture">Culture </a>
+        </li>
     </ul>
 </div>

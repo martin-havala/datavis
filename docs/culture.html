@@ -7,19 +7,20 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.af737597.css" rel="stylesheet">
-		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.e18c4bd8.css" rel="stylesheet">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.934ce382.css" rel="stylesheet">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.3542f723.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.e81c4694.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.e25a427b.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.d202e62c.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.433eeade.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.0a396d99.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/directors-page.svelte.6782d688.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/culture-page.svelte.f8fae9b4.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.d5a6f791.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/zoom.2359328a.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/linear.478695b8.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/directors-page.ts.9c5eea7e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.e94d8ac7.js"><title>Movie Director Collaborations</title><!-- HEAD_svelte-634asr_START --><!-- HEAD_svelte-634asr_END -->
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/mercator.0bbf395f.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/range.6bc2a9a0.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/culture-page.ts.9c5eea7e.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.fca24c55.js"><title>EU cultural employment</title><!-- HEAD_svelte-sjimgu_START --><meta name="description" content="Svelte demo app"><!-- HEAD_svelte-sjimgu_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -27,12 +28,13 @@
 
 <div class="body svelte-14furju">
 
-<section><div class="page"><div class="svgContainer svelte-18cpype"><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="svelte-18cpype"></svg></div>
-        <div class="notes"><div><h1>Director colaborations </h1>
-                <div>Many films were directed by more than one director, let&#39;s take a look at the top coworking directors at once.
-                      Each director here has collaborated with other director at least on 10 films.
-                </div>
-                <div class="comments">data source: <a href="https://www.imdb.com/interfaces/" target="about:blank">IMDB</a></div></div></div></div>
+<section><div class="page"><svg class="svelte-f9yu7z"></svg>
+        <div class="notes svelte-f9yu7z"><div><h1>Culture employment</h1>
+                Slightly weird dataset on how much people work in culture compared to local employment level. Does this say
+                anything? Not really.
+            </div>
+            <div class="comments"><div>data source - <a href="https://ec.europa.eu/eurostat/databrowser/view/CULT_EMP_REG/default/table?lang=en&category=cult.cult_emp">Eurostat</a></div></div></div></div>
+    <div class="bottom_right svelte-f9yu7z">© EuroGeographics for the administrative boundaries</div>
 </section>
 </div>
 
@@ -54,7 +56,7 @@
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.433eeade.js")
 					]).then(([kit, app]) => {
 						kit.start(app, __sveltekit_nr6rel.element, {
-							node_ids: [0, 4],
+							node_ids: [0, 3],
 							data,
 							form: null,
 							error: null
