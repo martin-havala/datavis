@@ -27,9 +27,9 @@
         );
     };
 
-    // const  mouseOverHandler= (d, i) =>{
+    // const mouseOverHandler = (d, i) => {
     //     d3.select(this).attr('fill', 'red');
-    // }
+    // };
 
     // function mouseOutHandler(d, i) {
     //     d3.select(this).attr('fill', 'blue');
@@ -59,9 +59,16 @@
 
         projection = d3
             .geoMercator()
-            .center([12, 57])
-            .scale(700)
-            .translate([width / 2, height / 2]);
+            // .scale(700)
+            .fitSize(
+                [width, height],
+
+                {
+                    type: 'FeatureCollection',
+                    features: europe.features.filter((r) => ['ES6', 'NO07', 'ES70'].includes(r.properties.NUTS_ID)),
+                }
+            )
+            .center([0, 0]);
 
         path = d3.geoPath(projection);
 
@@ -81,7 +88,7 @@
                 }
             })
             .attr('stroke', '#999')
-            .attr('stroke-width', 0.5)
+            .attr('stroke-width', 0.2)
             .append('title')
             .text((d) => d.properties.NUTS_NAME);
 
@@ -169,25 +176,28 @@
             }, {} as { (k: string): { (k: string): dataT } });
 
             svgSelection
-                .insert('g')
-                .selectAll('clip-path')
+                .selectAll('clipPath')
+                .data(europe.features.filter((r) => r.properties.LEVL_CODE == 0))
+                .join('clip-path')
+                .attr('id', (r) => `clip${r.properties.NUTS_ID}`)
+                .append('path')
+                .attr('d', path)
+                .attr('stroke', 'purple')
+                .attr('stroke-width', '4');
+
+            const dataRegions = zoomGroup
+                .append('g')
+                .selectAll('regions')
                 .data(
                     europe.features
                         .sort((a, b) => (a.properties.LEVL_CODE > b.properties.LEVL_CODE ? 1 : -1))
-                        .filter((r) => r.properties.LEVL_CODE == 0)
+                        .filter((r) => regions[r.properties.NUTS_ID])
                 )
-                .join('clip-path')
-                .attr('id', (r) => r.properties.NUTS_ID)
+                .join('g');
+            dataRegions
                 .append('path')
-                .attr('d', path);
-
-            zoomGroup
-                .append('g')
-                .selectAll('path')
-                .data(europe.features.filter((r) => regions[r.properties.NUTS_ID]))
-                .join('path')
                 .attr('d', path)
-                .style('style', (r) => `clip-path:url("#${r.properties.NUTS_ID}")`)
+                .attr('id', (r) => `${r.properties.NUTS_ID}`)
                 .attr('fill', (d) => {
                     try {
                         return data[d.id]['PC_EMP'][activeYear]
@@ -197,15 +207,11 @@
                         return 'black';
                     }
                 })
-                .attr('stroke', (d) => {
-                    try {
-                        return data[d.id]['PC_EMP'][2021]
-                            ? d3.interpolateTurbo(data[d.id]['PC_EMP'][activeYear] / max['PC_EMP'][activeYear])
-                            : 'none';
-                    } catch (e) {
-                        return 'black';
-                    }
-                })
+                .attr('stroke-width', (d) => (d.properties.LEVL_CODE == 0 ? '2' : 0))
+                .attr('stroke', '#444')
+                // .attr('clip-path', (r) => `url(#clip${r.properties.NUTS_ID.substring(0, 2)})`)
+                // .style('--webkit-clip-path', (r) => `url(#clip${r.properties.NUTS_ID.substring(0, 2)})`)
+                // .style('clip-path', (r) => `url(#clip${r.properties.NUTS_ID.substring(0, 2)})`)
                 .append('title')
                 .text((d) => d.properties.NUTS_NAME);
 
@@ -215,8 +221,9 @@
                 .data(europe.features.filter((r) => r.properties.LEVL_CODE == 0))
                 .join('path')
                 .attr('d', path)
-                .attr('stroke', 'black')
-                .attr('stroke-width', '.2')
+                .attr('stroke', '#202022')
+                .attr('stroke-width', '.5')
+                .attr('pointer-events', 'none')
                 .attr('fill', 'transparent');
 
             const legend = svgSelection.append('g');
@@ -228,12 +235,12 @@
                         .map((_, i) => i / 100)
                 )
                 .join('g')
-                .attr('transform', (d) => `translate(40,${750 - d * 300})`);
+                .attr('transform', (d) => `translate(40,${height - 40 - d * 300})`);
 
             legend
                 .append('text')
                 .attr('x', 45)
-                .attr('y', 0)
+                .attr('y', [height - 70 - 300])
                 .attr('dominant-baseline', 'central')
                 .attr('font-size', '.8em')
                 .text('Percentage of total employment')
@@ -269,7 +276,7 @@
 
 <section>
     <div class="page">
-        <svg bind:this={svg} />
+        <svg bind:this={svg} xmlns:xlink="http://www.w3.org/1999/xlink" />
         <div class="notes" bind:this={notesDiv}>
             <div>
                 <h1>Culture employment</h1>
@@ -292,7 +299,10 @@
 <style lang="scss">
     .notes {
         width: 50ex;
+        margin: 0;
         z-index: 1;
+        user-select: none;
+        pointer-events: none;
     }
     .bottom_right {
         text-align: right;
