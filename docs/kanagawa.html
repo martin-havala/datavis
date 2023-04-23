@@ -8,17 +8,17 @@
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.af737597.css" rel="stylesheet">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.6a806611.css" rel="stylesheet">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.3e53309d.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.8be6dd22.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.4a2bdffb.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.2c19afd1.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.93cb6dab.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.3129a401.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.79784673.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.b24559ba.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.999ef0f2.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.d65bf1ff.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/kanagawa-page.svelte.cf4ec75c.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/kanagawa-page.svelte.f9d50022.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.d5a6f791.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/viridis.ba9a4a08.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/kanagawa-page.ts.9c5eea7e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.b95cbc4a.js"><title>Kanagawa sea</title><!-- HEAD_svelte-1a4b4er_START --><!-- HEAD_svelte-1a4b4er_END -->
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.fca24c55.js"><title>Kanagawa sea</title><!-- HEAD_svelte-1a4b4er_START --><!-- HEAD_svelte-1a4b4er_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -27,12 +27,12 @@
 <div class="body svelte-14furju">
 
 <section><div class="page svelte-gnb69w"><div><h1>Kanagawa sea</h1>
-            <div>Maximum sea wave height &amp; wind direction according to lunar calendar.</div>
-            <div>I see what you did there Mr. Hokusai.</div></div>
+            <div>Maximum sea wave height &amp; wind direction aligned to lunar calendar.</div>
+            <div>Under 2 metres? I see what you did there Mr. Hokusai.</div></div>
         <svg class="svelte-gnb69w"></svg>
         <div class="comments"><img src="https://martin-havala.github.io/datavis/app/immutable/assets/legend.5be939c4.svg" class="legend svelte-gnb69w" alt="A legend describing chart values">
             <div><ul>Data sources:
-                    <li>Sea data:<a href="https://open-meteo.com/en/docs/marine-weather-api#latitude=35.47&longitude=139.63&daily=wave_height_max,wave_direction_dominant&timezone=Europe%2FBerlin&start_date=2022-08-01&end_date=2023-04-19">open-meteo.com
+                    <li>Sea data: <a href="https://open-meteo.com/en/docs/marine-weather-api#latitude=35.47&longitude=139.63&daily=wave_height_max,wave_direction_dominant&timezone=Europe%2FBerlin&start_date=2022-08-01&end_date=2023-04-19">open-meteo.com
                         </a></li>
                     <li>Moon phases:
                         <a href="https://aa.usno.navy.mil/calculated/moon/phases?date=2022-08-01&nump=50&format=t&submit=Get+Data"><i>U.S. Naval Observatory</i></a></li></ul></div></div></div>
@@ -43,7 +43,7 @@
 			
 			<script>
 				{
-					__sveltekit_140p1br = {
+					__sveltekit_1t6xice = {
 						env: {},
 						assets: "https://martin-havala.github.io/datavis",
 						base: new URL(".", location).pathname.slice(0, -1),
@@ -53,10 +53,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.3e53309d.js"),
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.3129a401.js")
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.8be6dd22.js"),
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.999ef0f2.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_140p1br.element, {
+						kit.start(app, __sveltekit_1t6xice.element, {
 							node_ids: [0, 5],
 							data,
 							form: null,

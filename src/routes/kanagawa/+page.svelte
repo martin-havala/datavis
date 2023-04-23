@@ -134,8 +134,8 @@
     <div class="page">
         <div>
             <h1>Kanagawa sea</h1>
-            <div>Maximum sea wave height & wind direction according to lunar calendar.</div>
-            <div>I see what you did there Mr. Hokusai.</div>
+            <div>Maximum sea wave height & wind direction aligned to lunar calendar.</div>
+            <div>Under 2 metres? I see what you did there Mr. Hokusai.</div>
         </div>
         <svg bind:this={svgElem} />
         <div class="comments">
@@ -144,7 +144,7 @@
                 <ul>
                     Data sources:
                     <li>
-                        Sea data:<a
+                        Sea data: <a
                             href="https://open-meteo.com/en/docs/marine-weather-api#latitude=35.47&longitude=139.63&daily=wave_height_max,wave_direction_dominant&timezone=Europe%2FBerlin&start_date=2022-08-01&end_date=2023-04-19"
                         >
                             open-meteo.com
