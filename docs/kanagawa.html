@@ -7,21 +7,18 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.af737597.css" rel="stylesheet">
-		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.e3eb4e90.css" rel="stylesheet">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.6a806611.css" rel="stylesheet">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.248553d9.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.4a2bdffb.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.84ca9ade.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.93654da2.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.cd335334.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.d65bf1ff.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/culture-page.svelte.569adf2a.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/kanagawa-page.svelte.eda25f0d.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.d5a6f791.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/zoom.2359328a.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/mercator.0bbf395f.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/range.6bc2a9a0.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/dsv.6b9e725e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/culture-page.ts.9c5eea7e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.2a9d3cfa.js"><title>EU cultural employment</title><!-- HEAD_svelte-sjimgu_START --><meta name="description" content="Svelte demo app"><!-- HEAD_svelte-sjimgu_END -->
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/viridis.ba9a4a08.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/kanagawa-page.ts.9c5eea7e.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.fca24c55.js"><title>Kanagawa sea</title><!-- HEAD_svelte-1a4b4er_START --><!-- HEAD_svelte-1a4b4er_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -29,13 +26,16 @@
 
 <div class="body svelte-14furju">
 
-<section><div class="page"><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="svelte-2d2vev"></svg>
-        <div class="notes svelte-2d2vev"><div><h1>Culture employment</h1>
-                Slightly weird dataset on how much people work in culture compared to local employment level. Does this say
-                anything? Not really.
-            </div>
-            <div class="comments"><div>data source - <a href="https://ec.europa.eu/eurostat/databrowser/view/CULT_EMP_REG/default/table?lang=en&category=cult.cult_emp">Eurostat</a></div></div></div></div>
-    <div class="bottom_right svelte-2d2vev">© EuroGeographics for the administrative boundaries</div>
+<section><div class="page svelte-gnb69w"><div><h1>Kanagawa sea</h1>
+            <div>Maximum sea wave height &amp; wind direction according to lunar calendar.</div>
+            <div>I see what you did there Mr. Hokusai.</div></div>
+        <svg class="svelte-gnb69w"></svg>
+        <div class="comments"><img src="https://martin-havala.github.io/datavis/app/immutable/assets/legend.5be939c4.svg" class="legend svelte-gnb69w">
+            <div><ul>Data sources:
+                    <li>sea data - <a href="https://open-meteo.com/en/docs/marine-weather-api#latitude=35.47&longitude=139.63&daily=wave_height_max,wave_direction_dominant&timezone=Europe%2FBerlin&start_date=2022-08-01&end_date=2023-04-19">open-meteo.com
+                        </a></li>
+                    <li>Moon phases
+                        <a href="https://aa.usno.navy.mil/calculated/moon/phases?date=2022-08-01&nump=50&format=t&submit=Get+Data"><i>U.S. Naval Observatory</i></a></li></ul></div></div></div>
 </section>
 </div>
 
@@ -57,7 +57,7 @@
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.cd335334.js")
 					]).then(([kit, app]) => {
 						kit.start(app, __sveltekit_1bao730.element, {
-							node_ids: [0, 3],
+							node_ids: [0, 5],
 							data,
 							form: null,
 							error: null

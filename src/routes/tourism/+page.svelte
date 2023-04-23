@@ -1,8 +1,8 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-    import allArrivals from '../../lib/assets/tourism/arrivals.json';
-    import countries from '../../lib/assets/tourism/countries.json';
+    import allArrivals from '$lib/assets/tourism/arrivals.json';
+    import countries from '$lib/assets/tourism/countries.json';
 
     // set the dimensions and margins of the graph
     let margin = { top: 30, right: 50, bottom: 10, left: 80 },

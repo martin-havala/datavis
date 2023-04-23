@@ -20,5 +20,8 @@
         <li>
             <a href="{base}/land_use">Land Use & Population</a>
         </li>
+        <li>
+            <a href="{base}/kanagawa">Kanagawa</a>
+        </li>
     </ul>
 </div>

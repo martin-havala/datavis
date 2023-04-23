@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 133 84" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-590.474,-62.1993)">
+        <g transform="matrix(1,0,0,1,589.474,84.2105)">
+            <circle cx="21.553" cy="21.553" r="20.553" style="fill:rgb(48,105,142);" />
+        </g>
+        <g transform="matrix(1,0,0,1,611.026,109.763)">
+            <text x="-9.731px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;">0.58</text>
+        </g>
+        <g transform="matrix(-0.707107,0.707107,-0.707107,-0.707107,634.579,82.2105)">
+            <path d="M21.553,1L26.553,9L16.553,9L21.553,1Z" style="fill-opacity:0.5;fill-rule:nonzero;" />
+        </g>
+        <g transform="matrix(1,0,0,1,2,-20)">
+            <path d="M615.588,112.777L636.225,92.139L651.909,92.139"
+                  style="fill:none;stroke:white;stroke-width:1px;opacity:0.7" />
+        </g>
+        <g transform="matrix(1,0,0,1,2,-20)">
+            <path d="M615.473,130.811L633.828,149.166L651.909,149.166"
+                  style="fill:none;stroke:white;stroke-width:1px;opacity:0.7" />
+        </g>
+        <g transform="matrix(1,0,0,1,-5.11696,-23.1391)">
+            <text x="662.433px" y="92.497px"
+                  style="font-size:10px;fill:white;font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Dominant</text>
+            <text x="708.109px" y="92.497px"
+                  style="font-size:10px;fill:white;font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">wind</text>
+            <text x="662.433px" y="102.824px"
+                  style="font-size:10px;fill:white;font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">direction</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-7.31671,29.3145)">
+            <text x="662.433px" y="92.497px"
+                  style="font-size:10px;fill:white;font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Maximum</text>
+            <text x="662.433px" y="102.824px"
+                  style="font-size:10px;fill:white;font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">wave
+                height</text>
+            <text x="662.433px" y="113.151px"
+                  style="font-size:10px;fill:white;font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                [in metres] </text>
+        </g>
+    </g>
+</svg>
