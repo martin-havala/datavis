@@ -1,8 +1,8 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-    import europe from '../../assets/europe.json';
-    import royalFamily from '../../assets/royals/royals.json';
+    import europe from '../../lib/assets/europe.json';
+    import royalFamily from '../../lib/assets/royals/royals.json';
     import type { FamilyMember } from '../../assets/data_peparation/src/family.model';
 
     const graticule = d3.geoGraticule10();

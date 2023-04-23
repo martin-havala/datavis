@@ -2,10 +2,10 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-    import movie_nodes from '../../assets/network/nodes.json';
-    import movie_links from '../../assets/network/links.json';
-    import directors from '../../assets/network/directors.json';
-    import type { Node, Link, ForceModel } from '../../assets/words/book.model';
+    import movie_nodes from '../../lib/assets/network/nodes.json';
+    import movie_links from '../../lib/assets/network/links.json';
+    import directors from '../../lib/assets/network/directors.json';
+    import type { Node, Link, ForceModel } from '../../lib/assets/network/network.model';
 
     // set the dimensions and margins of the graph
     const size = 2000;

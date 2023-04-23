@@ -1,8 +1,8 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-    import europe from '../../assets/NUTS_RG_60M_2021_4326.json';
-    import culture_ratio from '../../assets/culture/cult_emp_reg_tabular.tsv?url';
+    import europe from '../../lib/assets/NUTS_RG_60M_2021_4326.json';
+    import culture_ratio from '$lib/assets/culture/cult_emp_reg_tabular.tsv?url';
 
     const graticule = d3.geoGraticule10();
     const outline: d3.GeoSphere = { type: 'Sphere' };

@@ -1,13 +1,13 @@
 <script lang="ts">
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
-    import landUseUrl from '../../../assets/land_use/land_use.csv?url';
+    import landUseUrl from '$lib/assets/land_use/land_use.csv?url';
     import {
         LAND_USE_KEYS,
         LandUseLabels,
         LandUseUnits,
         type LandUsePlot,
-    } from '../../../assets/land_use/land_use.model';
+    } from '../../../lib/assets/land_use/land_use.model';
 
     // set the dimensions and margins of the graph
     let margin = { top: 0, right: 0, bottom: 10, left: 25 },
