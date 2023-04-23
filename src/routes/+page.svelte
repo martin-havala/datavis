@@ -17,5 +17,8 @@
         <li>
             <a href="{base}/culture">Culture </a>
         </li>
+        <li>
+            <a href="{base}/land_use">Land Use & Population</a>
+        </li>
     </ul>
 </div>

@@ -332,7 +332,7 @@
 </script>
 
 <svelte:head>
-    <title>Check those mountains</title>
+    <title>Tourism in EU</title>
     <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
