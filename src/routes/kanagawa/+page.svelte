@@ -133,7 +133,7 @@
 <section>
     <div class="page">
         <div>
-            <h1>Kanagawa sea</h1>
+            <h1>Kanagawa sea waves</h1>
             <div>Maximum sea wave height & wind direction aligned to lunar calendar.</div>
             <div>Under 2 metres? I see what you did there Mr. Hokusai.</div>
         </div>
