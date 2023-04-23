@@ -139,19 +139,19 @@
         </div>
         <svg bind:this={svgElem} />
         <div class="comments">
-            <img src={legendSVG} class="legend" />
+            <img src={legendSVG} class="legend" alt="A legend describing chart values" />
             <div>
                 <ul>
                     Data sources:
                     <li>
-                        sea data - <a
+                        Sea data:<a
                             href="https://open-meteo.com/en/docs/marine-weather-api#latitude=35.47&longitude=139.63&daily=wave_height_max,wave_direction_dominant&timezone=Europe%2FBerlin&start_date=2022-08-01&end_date=2023-04-19"
                         >
                             open-meteo.com
                         </a>
                     </li>
                     <li>
-                        Moon phases
+                        Moon phases:
                         <a
                             href="https://aa.usno.navy.mil/calculated/moon/phases?date=2022-08-01&nump=50&format=t&submit=Get+Data"
                         >
