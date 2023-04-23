@@ -13,6 +13,7 @@
 
 <section>
     <div class="page">
+        <h1>Land use and population</h1>
         <svg viewBox="0 0 1400 1000" class="svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
             <g transform="translate(100,100)">
                 <Plot1 />
