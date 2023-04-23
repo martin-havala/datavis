@@ -27,22 +27,6 @@
         );
     };
 
-    // const mouseOverHandler = (d, i) => {
-    //     d3.select(this).attr('fill', 'red');
-    // };
-
-    // function mouseOutHandler(d, i) {
-    //     d3.select(this).attr('fill', 'blue');
-    // }
-
-    // function clickHandler(d, i) {
-    //     d3.select('#map__text').text(`You've selected ${d.properties.name} District`);
-    // }
-
-    // function clickToZoom(zoomStep) {
-    //     svgSelection.transition().call(zoom.scaleBy, zoomStep);
-    // }
-
     const createMap = () => {
         const view = svg.getBoundingClientRect();
         [width, height] = [view.width, view.height];
@@ -316,16 +300,5 @@
         width: 100vw;
         height: 100vh;
         z-index: 0;
-    }
-
-    .mapDiv {
-        position: absolute;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        right: 0;
-        bottom: 0;
-        pointer-events: none;
-        transform-origin: 0 0;
     }
 </style>

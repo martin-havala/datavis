@@ -1,1 +1,0 @@
-var a;const t=((a=globalThis.__sveltekit_axdfi1)==null?void 0:a.base)??"/datavis";var s;const i=((s=globalThis.__sveltekit_axdfi1)==null?void 0:s.assets)??"https://martin-havala.github.io/datavis";export{i as a,t as b};

@@ -1,9 +1,8 @@
 <script lang="ts">
     import * as d3 from 'd3';
 
-    import { onMount } from 'svelte';
-    import { PEOPLE_POSITIONS } from '../../../lib/assets/land_use/people_positions';
     import landUseUrl from '$lib/assets/land_use/land_use.csv?url';
+    import { onMount } from 'svelte';
     import { LandUseLabels, type LandUsePlot } from '../../../lib/assets/land_use/land_use.model';
 
     let grazingGroup: SVGGElement;
@@ -41,8 +40,12 @@
                     .attr('class', 'dataRect')
                     .attr('transform', `scale(${Math.sqrt(a[1] / max)})`)
                     .attr('transform-origin', `776.029 974.891`)
+                    .style('fill', a[0] == 2016 ? 'url("#b")' : 'var(--color)')
+                    .style('fill-opacity', a[0] == 2016 ? 0.6 : 0.02)
+                    .style('--hover-opacity', a[0] == 2016 ? 0.8 : 0.2)
+                    .style('--fill', 'var(--color')
                     .append('title')
-                    .text(`${a[0]} - ${a[1].toPrecision(3)} km²`);
+                    .text(`Grazing area size per person in ${a[0]} was ${a[1].toPrecision(3)} km²`);
             });
 
             res.croplandPC.values.forEach((a) => {
@@ -52,7 +55,12 @@
                     .attr('class', 'dataRect')
                     .attr('transform', `scale(${Math.sqrt(a[1] / max)})`)
                     .attr('transform-origin', `776.029 974.891`)
-                    .append('title');
+                    .style('fill', a[0] == 2016 ? 'url("#a")' : 'var(--color)')
+                    .style('fill-opacity', a[0] == 2016 ? 0.6 : 0.02)
+                    .style('--hover-opacity', a[0] == 2016 ? 0.8 : 0.2)
+                    .style('--fill', 'var(--color')
+                    .append('title')
+                    .text(`Cropland size per person in ${a[0]} was ${a[1].toPrecision(3)} km²`);
             });
         });
     });
@@ -61,65 +69,40 @@
 <g id="land">
     <defs>
         <rect id="rect" x="776.029" y="644.891" width="330" height="330" />
-        <pattern
-            id="a"
-            patternUnits="userSpaceOnUse"
-            width="31.94"
-            height="28.5"
-            patternTransform="scale(1) rotate(45)"
-        >
+        <pattern id="a" patternUnits="userSpaceOnUse" width="31.94" height="28.5">
+            <rect x="0" y="0" width="100%" height="100%" fill="goldenrod" opacity="1" />
             <path
                 d="m7.97 2.5-8 4.64-8-4.64m16-4.5v33m-8-33v9.08m24 9.67-8 4.64-8-4.64m16-9.72-8 4.64v9.66m-8-14.3 8 4.64m24-9.17-8 4.64-8-4.64m0-4.5v33m8-33v9.08m-24 14.2-8 4.64V31m-8-9.72 8 4.64m40-4.64-8 4.64V31m-8-9.72 8 4.64"
                 stroke-linejoin="round"
                 stroke-linecap="round"
-                stroke-width="0.5"
-                stroke="goldenrod"
+                stroke-width="1.5"
+                stroke="white"
+                fill="transparent"
             />
         </pattern>
 
-        <pattern id="b" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(.5) rotate(0)">
-            rect x="0" y="0" width="100%" height="100%" fill="hsla(0,0%,100%,1)" /><path
+        <pattern id="b" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="scale(.75) rotate(0)">
+            <rect x="0" y="0" width="100%" height="100%" fill="olivedrab" opacity="1" />
+            <path
                 d="M0 40h40m-10-5.578v11.156M10 34.422v11.156M30-5.578V5.578M10-5.578V5.578M0 14.987v11.156m40-11.156v11.156M20 14.422v11.156M0 20h40M0 0h40"
                 stroke-width="1"
-                stroke="olivedrab"
+                stroke="white"
             />
         </pattern>
     </defs>
-    <g transform="matrix(1,0,0,1,245.888,0)" bind:this={croplandGroup} class="cropland">
-        <use
-            href="#rect"
-            fill="url(#a)"
-            opacity=".4"
-            transform="scale({scaleCropland})"
-            transform-origin="776.029 974.891"
-        />
-    </g>
-    <g transform="matrix(-1,0,0,1,1793.42,0)" bind:this={grazingGroup} class="grazing">
-        <use
-            href="#rect"
-            fill="url(#b)"
-            opacity=".2"
-            transform="scale({scaleGrazing})"
-            transform-origin="776.029 974.891"
-        />
-    </g>
+    <g transform="matrix(1,0,0,1,245.888,0)" bind:this={croplandGroup} class="cropland" />
+    <g transform="matrix(-1,0,0,1,1793.42,0)" bind:this={grazingGroup} class="grazing" />
 
     <g transform="matrix(1,0,0,1,424.291,459.253)">
         <text x="268.709px" y="534.924px" style="font-size:14px;">
-            Land area to feed one person has actually shrunk.
+            Land area used to feed single person has actually shrunk.
         </text>
     </g>
     <g transform="matrix(1,0,0,1,974.099,104.978)" class="person">
         <g transform="matrix(1,0,0,1,-700,-102)">
             <path
                 d="M762.235,927.928C763.847,916.819 761.793,900.683 745.369,898.328C728.055,900.254 722.953,913.964 725.127,927.928C728.418,921.447 729.947,915.231 733.828,913.062C726.277,926.35 729.408,948.415 733.828,961.543C737.352,941.769 751.703,941.631 754.308,961.543C757.723,954.028 761.079,922.867 754.308,913.062C758.01,915.925 760.097,920.265 762.235,927.928Z"
-                style="fill:rgb(225,225,225);stroke:black;stroke-width:1px;"
-            />
-        </g>
-        <g transform="matrix(1,0,0,1,-700,-102)">
-            <path
-                d="M762.235,927.928C763.847,916.819 761.793,900.683 745.369,898.328C728.055,900.254 722.953,913.964 725.127,927.928C728.418,921.447 729.947,915.231 733.828,913.062C726.277,926.35 729.408,948.415 733.828,961.543C737.352,941.769 751.703,941.631 754.308,961.543C757.723,954.028 761.079,922.867 754.308,913.062C758.01,915.925 760.097,920.265 762.235,927.928Z"
-                style="fill:rgb(225,225,225);stroke:black;stroke-width:1px;"
+                style="fill:#1e9d89;stroke:black;stroke-width:1px;"
             />
         </g>
         <g transform="matrix(1.26777,0,0,1.26777,-309.49,-372.125)">
@@ -134,10 +117,15 @@
     </g>
 </g>
 
-<style>
+<style lang="scss">
     :global(.dataRect) {
         stroke: var(--color);
         stroke-width: 1px;
+        stroke-linejoin: round;
         fill: transparent;
+        &:hover {
+            stroke-width: 3;
+            fill-opacity: var(--hover-opacity, 0.2) !important;
+        }
     }
 </style>

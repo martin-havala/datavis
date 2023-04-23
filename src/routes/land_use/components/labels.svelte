@@ -118,9 +118,6 @@
 </g>
 
 <style>
-    .biggerText {
-        font-size: 14px;
-    }
     path {
         fill: black;
     }

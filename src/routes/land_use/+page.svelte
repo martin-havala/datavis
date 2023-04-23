@@ -92,7 +92,7 @@
     }
 
     :global(.body, a) {
-        background: #eee;
+        background: #fefefa;
         color: darkslategrey;
     }
     :global(.population) {

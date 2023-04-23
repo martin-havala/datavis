@@ -5,6 +5,7 @@
     import { PEOPLE_POSITIONS } from '../../../lib/assets/land_use/people_positions';
     import landUseUrl from '$lib/assets/land_use/land_use.csv?url';
     import { LandUseLabels, type LandUsePlot } from '../../../lib/assets/land_use/land_use.model';
+    let legend: SVGGElement;
     onMount(() => {
         d3.csv(landUseUrl).then((landUse) => {
             let res: LandUsePlot = { key: 'any', values: [], max: 0, today: 0 };
@@ -23,29 +24,52 @@
                 });
             });
 
-            const color = d3.interpolateViridis;
+            const color = (val: number) =>
+                d3.interpolateViridis(1 - val / (res.values[res.values.length - 1][1] - res.values[0][1]));
             const peopleIds = Array(50)
                 .fill(1)
-                .map((_, i) => i)
-                .sort(() => (Math.random() > 0.5 ? 1 : -1));
-            res.values.reverse().forEach((val, i) => {
-                Array(val[1])
+                .map((_, i) => i);
+
+            const legendSelection = d3.select(legend);
+            const scale = d3
+                .scaleLinear()
+                .range([0, 330])
+                .domain([res.values[res.values.length - 1][0], res.values[0][0]]);
+
+            let lastUsed = 0;
+            res.values.forEach((val, i) => {
+                Array(val[1] - lastUsed)
                     .fill(1)
-                    .map((_, i) => peopleIds[i])
+                    .map((_, i) => peopleIds[i + lastUsed])
                     .forEach((id) => {
                         const movedHere = val[0] == 1500 ? 'I live here since ' : "I've moved here in ";
                         document.querySelectorAll(`#p${id}`).forEach((e) => {
-                            (e as SVGGElement).style.setProperty('--color', color(i / res.values.length));
-                            e.classList.add(`y${val[0]}`);
-
+                            (e as SVGGElement).style.setProperty('--color', color(val[1]));
                             d3.select(`#p${id} text`).text(`${movedHere}${val[0]}.`);
                         });
                     });
+                lastUsed = val[1];
+                const legendItem = legendSelection.append('g');
+
+                legendItem
+                    .attr('transform', `translate(300,${330 - scale(val[0])})`)
+                    .append('rect')
+                    .style('fill', color(val[1]))
+                    .attr('width', val[1])
+                    .attr('height', scale(val[0]));
+                if (i == 0 || i == res.values.length - 1) {
+                    legendItem
+                        .append('text')
+                        .attr('x', val[1] + 10)
+                        .text(val[0])
+                        .attr('dominant-baseline', 'middle');
+                }
             });
         });
     });
 </script>
 
+<g bind:this={legend} transform="translate(181,641)" />
 <g transform="matrix(0.788788,0,0,0.788788,577.797,260.419)" class="people">
     <g transform="matrix(1.27825,0,0,1.27825,-789.54,-693.315)">
         <text x="470" y="1250">km²</text>
