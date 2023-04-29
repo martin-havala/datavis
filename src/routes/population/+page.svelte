@@ -133,7 +133,7 @@
 </script>
 
 <svelte:head>
-    <title>Kanagawa sea</title>
+    <title>World population</title>
 </svelte:head>
 
 <section>
@@ -195,7 +195,7 @@
         width: 95vw;
         height: 85vh;
         min-width: 1200px;
-        min-height: 700px;
+        min-height: 650px;
     }
     :global(.cntry) {
         opacity: 0.8;
