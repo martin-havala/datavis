@@ -10,7 +10,6 @@
         <li>
             <a href="{base}/royals">Royals </a>
         </li>
-
         <li>
             <a href="{base}/directors">Directors </a>
         </li>
@@ -22,6 +21,9 @@
         </li>
         <li>
             <a href="{base}/kanagawa">Kanagawa</a>
+        </li>
+        <li>
+            <a href="{base}/population">Population</a>
         </li>
     </ul>
 </div>

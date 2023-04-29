@@ -1,0 +1,1052 @@
+[
+    {
+        "ISO3_code": "CRI",
+        "name": "Costa Rica",
+        "labelX": -84.077922,
+        "labelY": 10.0651
+    },
+    {
+        "ISO3_code": "NIC",
+        "name": "Nicaragua",
+        "labelX": -85.069347,
+        "labelY": 12.670697
+    },
+    {
+        "ISO3_code": "HTI",
+        "name": "Haiti",
+        "labelX": -72.224051,
+        "labelY": 19.263784
+    },
+    {
+        "ISO3_code": "SLV",
+        "name": "El Salvador",
+        "labelX": -88.890124,
+        "labelY": 13.685371
+    },
+    {
+        "ISO3_code": "DOM",
+        "name": "Dominican Republic",
+        "labelX": -70.653998,
+        "labelY": 19.104137
+    },
+    {
+        "ISO3_code": "GTM",
+        "name": "Guatemala",
+        "labelX": -90.497134,
+        "labelY": 14.982133
+    },
+    {
+        "ISO3_code": "CUB",
+        "name": "Cuba",
+        "labelX": -77.975855,
+        "labelY": 21.334024
+    },
+    {
+        "ISO3_code": "HND",
+        "name": "Honduras",
+        "labelX": -86.887604,
+        "labelY": 14.794801
+    },
+    {
+        "ISO3_code": "USA",
+        "name": "United States of America",
+        "labelX": -97.482602,
+        "labelY": 39.538479
+    },
+    {
+        "ISO3_code": "CAN",
+        "name": "Canada",
+        "labelX": -101.9107,
+        "labelY": 60.324287
+    },
+    {
+        "ISO3_code": "BLZ",
+        "name": "Belize",
+        "labelX": -88.712962,
+        "labelY": 17.202068
+    },
+    {
+        "ISO3_code": "MEX",
+        "name": "Mexico",
+        "labelX": -102.289448,
+        "labelY": 23.919988
+    },
+    {
+        "ISO3_code": "PAN",
+        "name": "Panama",
+        "labelX": -80.352106,
+        "labelY": 8.72198
+    },
+    {
+        "ISO3_code": "GRL",
+        "name": "Greenland",
+        "labelX": -39.335251,
+        "labelY": 74.319387
+    },
+    {
+        "ISO3_code": "BHS",
+        "name": "The Bahamas",
+        "labelX": -77.146688,
+        "labelY": 26.401789
+    },
+    {
+        "ISO3_code": "TTO",
+        "name": "Trinidad and Tobago",
+        "labelX": -60.9184,
+        "labelY": 10.9989
+    },
+    {
+        "ISO3_code": "PRI",
+        "name": "Puerto Rico",
+        "labelX": -66.481065,
+        "labelY": 18.234668
+    },
+    {
+        "ISO3_code": "JAM",
+        "name": "Jamaica",
+        "labelX": -77.318767,
+        "labelY": 18.137124
+    },
+    {
+        "ISO3_code": "CHL",
+        "name": "Chile",
+        "labelX": -72.318871,
+        "labelY": -38.151771
+    },
+    {
+        "ISO3_code": "BOL",
+        "name": "Bolivia",
+        "labelX": -64.593433,
+        "labelY": -16.666015
+    },
+    {
+        "ISO3_code": "ARG",
+        "name": "Argentina",
+        "labelX": -64.173331,
+        "labelY": -33.501159
+    },
+    {
+        "ISO3_code": "PER",
+        "name": "Peru",
+        "labelX": -72.90016,
+        "labelY": -12.976679
+    },
+    {
+        "ISO3_code": "SUR",
+        "name": "Suriname",
+        "labelX": -55.91094,
+        "labelY": 4.143987
+    },
+    {
+        "ISO3_code": "GUY",
+        "name": "Guyana",
+        "labelX": -58.942643,
+        "labelY": 5.124317
+    },
+    {
+        "ISO3_code": "BRA",
+        "name": "Brazil",
+        "labelX": -49.55945,
+        "labelY": -12.098687
+    },
+    {
+        "ISO3_code": "URY",
+        "name": "Uruguay",
+        "labelX": -55.966942,
+        "labelY": -32.961127
+    },
+    {
+        "ISO3_code": "ECU",
+        "name": "Ecuador",
+        "labelX": -78.188375,
+        "labelY": -1.259076
+    },
+    {
+        "ISO3_code": "COL",
+        "name": "Colombia",
+        "labelX": -73.174347,
+        "labelY": 3.373111
+    },
+    {
+        "ISO3_code": "PRY",
+        "name": "Paraguay",
+        "labelX": -60.146394,
+        "labelY": -21.674509
+    },
+    {
+        "ISO3_code": "VEN",
+        "name": "Venezuela",
+        "labelX": -64.599381,
+        "labelY": 7.182476
+    },
+    {
+        "ISO3_code": "FLK",
+        "name": "Falkland Islands",
+        "labelX": -58.738602,
+        "labelY": -51.608913
+    },
+    {
+        "ISO3_code": "IDN",
+        "name": "Indonesia",
+        "labelX": 101.892949,
+        "labelY": -0.954404
+    },
+    {
+        "ISO3_code": "MYS",
+        "name": "Malaysia",
+        "labelX": 113.83708,
+        "labelY": 2.528667
+    },
+    {
+        "ISO3_code": "CYP",
+        "name": "Cyprus",
+        "labelX": 33.084182,
+        "labelY": 34.913329
+    },
+    {
+        "ISO3_code": "IND",
+        "name": "India",
+        "labelX": 79.358105,
+        "labelY": 22.686852
+    },
+    {
+        "ISO3_code": "CHN",
+        "name": "People's Republic of China",
+        "labelX": 106.337289,
+        "labelY": 32.498178
+    },
+    {
+        "ISO3_code": "ISR",
+        "name": "Israel",
+        "labelX": 34.847915,
+        "labelY": 30.911148
+    },
+    {
+        "ISO3_code": "LBN",
+        "name": "Lebanon",
+        "labelX": 35.992892,
+        "labelY": 34.133368
+    },
+    {
+        "ISO3_code": "PSE",
+        "name": "Palestine",
+        "labelX": 35.291341,
+        "labelY": 32.047431
+    },
+    {
+        "ISO3_code": "SYR",
+        "name": "Syria",
+        "labelX": 38.277783,
+        "labelY": 35.006636
+    },
+    {
+        "ISO3_code": "KOR",
+        "name": "South Korea",
+        "labelX": 128.129504,
+        "labelY": 36.384924
+    },
+    {
+        "ISO3_code": "PRK",
+        "name": "North Korea",
+        "labelX": 126.444516,
+        "labelY": 39.885252
+    },
+    {
+        "ISO3_code": "BTN",
+        "name": "Bhutan",
+        "labelX": 90.040294,
+        "labelY": 27.536685
+    },
+    {
+        "ISO3_code": "OMN",
+        "name": "Oman",
+        "labelX": 57.336553,
+        "labelY": 22.120427
+    },
+    {
+        "ISO3_code": "UZB",
+        "name": "Uzbekistan",
+        "labelX": 64.005429,
+        "labelY": 41.693603
+    },
+    {
+        "ISO3_code": "KAZ",
+        "name": "Kazakhstan",
+        "labelX": 68.685548,
+        "labelY": 49.054149
+    },
+    {
+        "ISO3_code": "TJK",
+        "name": "Tajikistan",
+        "labelX": 72.587276,
+        "labelY": 38.199835
+    },
+    {
+        "ISO3_code": "KHM",
+        "name": "Cambodia",
+        "labelX": 104.50487,
+        "labelY": 12.647584
+    },
+    {
+        "ISO3_code": "MNG",
+        "name": "Mongolia",
+        "labelX": 104.150405,
+        "labelY": 45.997488
+    },
+    {
+        "ISO3_code": "VNM",
+        "name": "Vietnam",
+        "labelX": 105.387292,
+        "labelY": 21.715416
+    },
+    {
+        "ISO3_code": "ARE",
+        "name": "United Arab Emirates",
+        "labelX": 54.547256,
+        "labelY": 23.466285
+    },
+    {
+        "ISO3_code": "GEO",
+        "name": "Georgia",
+        "labelX": 43.735724,
+        "labelY": 41.870087
+    },
+    {
+        "ISO3_code": "AZE",
+        "name": "Azerbaijan",
+        "labelX": 47.210994,
+        "labelY": 40.402387
+    },
+    {
+        "ISO3_code": "TUR",
+        "name": "Turkey",
+        "labelX": 34.508268,
+        "labelY": 39.345388
+    },
+    {
+        "ISO3_code": "LAO",
+        "name": "Laos",
+        "labelX": 102.533912,
+        "labelY": 19.431821
+    },
+    {
+        "ISO3_code": "KGZ",
+        "name": "Kyrgyzstan",
+        "labelX": 74.532637,
+        "labelY": 41.66854
+    },
+    {
+        "ISO3_code": "ARM",
+        "name": "Armenia",
+        "labelX": 44.800564,
+        "labelY": 40.459077
+    },
+    {
+        "ISO3_code": "IRQ",
+        "name": "Iraq",
+        "labelX": 43.26181,
+        "labelY": 33.09403
+    },
+    {
+        "ISO3_code": "IRN",
+        "name": "Iran",
+        "labelX": 54.931495,
+        "labelY": 32.166225
+    },
+    {
+        "ISO3_code": "QAT",
+        "name": "Qatar",
+        "labelX": 51.143509,
+        "labelY": 25.237383
+    },
+    {
+        "ISO3_code": "SAU",
+        "name": "Saudi Arabia",
+        "labelX": 44.6996,
+        "labelY": 23.806908
+    },
+    {
+        "ISO3_code": "PAK",
+        "name": "Pakistan",
+        "labelX": 68.545632,
+        "labelY": 29.328389
+    },
+    {
+        "ISO3_code": "THA",
+        "name": "Thailand",
+        "labelX": 101.073198,
+        "labelY": 15.45974
+    },
+    {
+        "ISO3_code": "KWT",
+        "name": "Kuwait",
+        "labelX": 47.313999,
+        "labelY": 29.413628
+    },
+    {
+        "ISO3_code": "TLS",
+        "name": "East Timor",
+        "labelX": 125.854679,
+        "labelY": -8.803705
+    },
+    {
+        "ISO3_code": "BRN",
+        "name": "Brunei",
+        "labelX": 114.551943,
+        "labelY": 4.448298
+    },
+    {
+        "ISO3_code": "MMR",
+        "name": "Myanmar",
+        "labelX": 95.804497,
+        "labelY": 21.573855
+    },
+    {
+        "ISO3_code": "BGD",
+        "name": "Bangladesh",
+        "labelX": 89.684963,
+        "labelY": 24.214956
+    },
+    {
+        "ISO3_code": "TKM",
+        "name": "Turkmenistan",
+        "labelX": 58.676647,
+        "labelY": 39.855246
+    },
+    {
+        "ISO3_code": "AFG",
+        "name": "Afghanistan",
+        "labelX": 66.496586,
+        "labelY": 34.164262
+    },
+    {
+        "ISO3_code": "JOR",
+        "name": "Jordan",
+        "labelX": 36.375991,
+        "labelY": 30.805025
+    },
+    {
+        "ISO3_code": "YEM",
+        "name": "Yemen",
+        "labelX": 45.874383,
+        "labelY": 15.328226
+    },
+    {
+        "ISO3_code": "NPL",
+        "name": "Nepal",
+        "labelX": 83.639914,
+        "labelY": 28.297925
+    },
+    {
+        "ISO3_code": "-99",
+        "name": "Turkish Republic of Northern Cyprus",
+        "labelX": 33.692434,
+        "labelY": 35.216071
+    },
+    {
+        "ISO3_code": "LKA",
+        "name": "Sri Lanka",
+        "labelX": 80.704823,
+        "labelY": 7.581097
+    },
+    {
+        "ISO3_code": "PHL",
+        "name": "Philippines",
+        "labelX": 122.465,
+        "labelY": 11.198
+    },
+    {
+        "ISO3_code": "TWN",
+        "name": "Taiwan",
+        "labelX": 120.868204,
+        "labelY": 23.652408
+    },
+    {
+        "ISO3_code": "JPN",
+        "name": "Japan",
+        "labelX": 138.44217,
+        "labelY": 36.142538
+    },
+    {
+        "ISO3_code": "ETH",
+        "name": "Ethiopia",
+        "labelX": 39.0886,
+        "labelY": 8.032795
+    },
+    {
+        "ISO3_code": "SSD",
+        "name": "South Sudan",
+        "labelX": 30.390151,
+        "labelY": 7.230477
+    },
+    {
+        "ISO3_code": "KEN",
+        "name": "Kenya",
+        "labelX": 37.907632,
+        "labelY": 0.549043
+    },
+    {
+        "ISO3_code": "SOM",
+        "name": "Somalia",
+        "labelX": 45.19238,
+        "labelY": 3.568925
+    },
+    {
+        "ISO3_code": "MWI",
+        "name": "Malawi",
+        "labelX": 33.608082,
+        "labelY": -13.386737
+    },
+    {
+        "ISO3_code": "TZA",
+        "name": "Tanzania",
+        "labelX": 34.959183,
+        "labelY": -6.051866
+    },
+    {
+        "ISO3_code": "-99",
+        "name": "Somaliland",
+        "labelX": 46.731595,
+        "labelY": 9.443889
+    },
+    {
+        "ISO3_code": "ESH",
+        "name": "Western Sahara",
+        "labelX": -12.630304,
+        "labelY": 23.967592
+    },
+    {
+        "ISO3_code": "MAR",
+        "name": "Morocco",
+        "labelX": -7.187296,
+        "labelY": 31.650723
+    },
+    {
+        "ISO3_code": "COD",
+        "name": "Democratic Republic of the Congo",
+        "labelX": 23.458829,
+        "labelY": -1.858167
+    },
+    {
+        "ISO3_code": "COG",
+        "name": "Republic of the Congo",
+        "labelX": 15.9005,
+        "labelY": 0.142331
+    },
+    {
+        "ISO3_code": "ZAF",
+        "name": "South Africa",
+        "labelX": 23.665734,
+        "labelY": -29.708776
+    },
+    {
+        "ISO3_code": "NAM",
+        "name": "Namibia",
+        "labelX": 17.108166,
+        "labelY": -20.575298
+    },
+    {
+        "ISO3_code": "LBY",
+        "name": "Libya",
+        "labelX": 18.011015,
+        "labelY": 26.638944
+    },
+    {
+        "ISO3_code": "TUN",
+        "name": "Tunisia",
+        "labelX": 9.007881,
+        "labelY": 33.687263
+    },
+    {
+        "ISO3_code": "ZMB",
+        "name": "Zambia",
+        "labelX": 26.395298,
+        "labelY": -14.660804
+    },
+    {
+        "ISO3_code": "SLE",
+        "name": "Sierra Leone",
+        "labelX": -11.763677,
+        "labelY": 8.617449
+    },
+    {
+        "ISO3_code": "GIN",
+        "name": "Guinea",
+        "labelX": -10.016402,
+        "labelY": 10.618516
+    },
+    {
+        "ISO3_code": "CAF",
+        "name": "Central African Republic",
+        "labelX": 20.906897,
+        "labelY": 6.989681
+    },
+    {
+        "ISO3_code": "LBR",
+        "name": "Liberia",
+        "labelX": -9.460379,
+        "labelY": 6.447177
+    },
+    {
+        "ISO3_code": "SDN",
+        "name": "Sudan",
+        "labelX": 29.260657,
+        "labelY": 16.330746
+    },
+    {
+        "ISO3_code": "DJI",
+        "name": "Djibouti",
+        "labelX": 42.498825,
+        "labelY": 11.976343
+    },
+    {
+        "ISO3_code": "ERI",
+        "name": "Eritrea",
+        "labelX": 38.285566,
+        "labelY": 15.787401
+    },
+    {
+        "ISO3_code": "CIV",
+        "name": "Ivory Coast",
+        "labelX": -5.568618,
+        "labelY": 7.49139
+    },
+    {
+        "ISO3_code": "MLI",
+        "name": "Mali",
+        "labelX": -2.038455,
+        "labelY": 18.692713
+    },
+    {
+        "ISO3_code": "SEN",
+        "name": "Senegal",
+        "labelX": -14.778586,
+        "labelY": 15.138125
+    },
+    {
+        "ISO3_code": "NGA",
+        "name": "Nigeria",
+        "labelX": 7.50322,
+        "labelY": 9.439799
+    },
+    {
+        "ISO3_code": "BEN",
+        "name": "Benin",
+        "labelX": 2.352018,
+        "labelY": 10.324775
+    },
+    {
+        "ISO3_code": "AGO",
+        "name": "Angola",
+        "labelX": 17.984249,
+        "labelY": -12.182762
+    },
+    {
+        "ISO3_code": "BWA",
+        "name": "Botswana",
+        "labelX": 24.179216,
+        "labelY": -22.102634
+    },
+    {
+        "ISO3_code": "TCD",
+        "name": "Chad",
+        "labelX": 18.645041,
+        "labelY": 15.142959
+    },
+    {
+        "ISO3_code": "ZWE",
+        "name": "Zimbabwe",
+        "labelX": 29.925444,
+        "labelY": -18.91164
+    },
+    {
+        "ISO3_code": "DZA",
+        "name": "Algeria",
+        "labelX": 2.808241,
+        "labelY": 27.397406
+    },
+    {
+        "ISO3_code": "SWZ",
+        "name": "Eswatini",
+        "labelX": 31.467264,
+        "labelY": -26.533676
+    },
+    {
+        "ISO3_code": "MOZ",
+        "name": "Mozambique",
+        "labelX": 37.83789,
+        "labelY": -13.94323
+    },
+    {
+        "ISO3_code": "BDI",
+        "name": "Burundi",
+        "labelX": 29.917086,
+        "labelY": -3.332836
+    },
+    {
+        "ISO3_code": "RWA",
+        "name": "Rwanda",
+        "labelX": 30.103894,
+        "labelY": -1.897196
+    },
+    {
+        "ISO3_code": "LSO",
+        "name": "Lesotho",
+        "labelX": 28.246639,
+        "labelY": -29.480158
+    },
+    {
+        "ISO3_code": "UGA",
+        "name": "Uganda",
+        "labelX": 32.948555,
+        "labelY": 1.972589
+    },
+    {
+        "ISO3_code": "CMR",
+        "name": "Cameroon",
+        "labelX": 12.473488,
+        "labelY": 4.585041
+    },
+    {
+        "ISO3_code": "NER",
+        "name": "Niger",
+        "labelX": 9.504356,
+        "labelY": 17.446195
+    },
+    {
+        "ISO3_code": "GAB",
+        "name": "Gabon",
+        "labelX": 11.835939,
+        "labelY": -0.437739
+    },
+    {
+        "ISO3_code": "BFA",
+        "name": "Burkina Faso",
+        "labelX": -1.36388,
+        "labelY": 12.673048
+    },
+    {
+        "ISO3_code": "TGO",
+        "name": "Togo",
+        "labelX": 1.058113,
+        "labelY": 8.80722
+    },
+    {
+        "ISO3_code": "GHA",
+        "name": "Ghana",
+        "labelX": -1.036941,
+        "labelY": 7.717639
+    },
+    {
+        "ISO3_code": "GNB",
+        "name": "Guinea-Bissau",
+        "labelX": -14.52413,
+        "labelY": 12.163712
+    },
+    {
+        "ISO3_code": "EGY",
+        "name": "Egypt",
+        "labelX": 29.445837,
+        "labelY": 26.186173
+    },
+    {
+        "ISO3_code": "MRT",
+        "name": "Mauritania",
+        "labelX": -9.740299,
+        "labelY": 19.587062
+    },
+    {
+        "ISO3_code": "GMB",
+        "name": "The Gambia",
+        "labelX": -14.998318,
+        "labelY": 13.641721
+    },
+    {
+        "ISO3_code": "GNQ",
+        "name": "Equatorial Guinea",
+        "labelX": 8.9902,
+        "labelY": 2.333
+    },
+    {
+        "ISO3_code": "MDG",
+        "name": "Madagascar",
+        "labelX": 46.704241,
+        "labelY": -18.628288
+    },
+    {
+        "ISO3_code": "PNG",
+        "name": "Papua New Guinea",
+        "labelX": 143.910216,
+        "labelY": -5.695285
+    },
+    {
+        "ISO3_code": "AUS",
+        "name": "Australia",
+        "labelX": 134.04972,
+        "labelY": -24.129522
+    },
+    {
+        "ISO3_code": "FJI",
+        "name": "Fiji",
+        "labelX": 177.975427,
+        "labelY": -17.826099
+    },
+    {
+        "ISO3_code": "NZL",
+        "name": "New Zealand",
+        "labelX": 172.787,
+        "labelY": -39.759
+    },
+    {
+        "ISO3_code": "NCL",
+        "name": "New Caledonia",
+        "labelX": 165.084004,
+        "labelY": -21.064697
+    },
+    {
+        "ISO3_code": "SLB",
+        "name": "Solomon Islands",
+        "labelX": 159.170468,
+        "labelY": -8.029548
+    },
+    {
+        "ISO3_code": "VUT",
+        "name": "Vanuatu",
+        "labelX": 166.908762,
+        "labelY": -15.37153
+    },
+    {
+        "ISO3_code": "-99",
+        "name": "France",
+        "labelX": 2.552275,
+        "labelY": 46.696113
+    },
+    {
+        "ISO3_code": "UKR",
+        "name": "Ukraine",
+        "labelX": 32.140865,
+        "labelY": 49.724739
+    },
+    {
+        "ISO3_code": "BLR",
+        "name": "Belarus",
+        "labelX": 28.417701,
+        "labelY": 53.821888
+    },
+    {
+        "ISO3_code": "LTU",
+        "name": "Lithuania",
+        "labelX": 24.089932,
+        "labelY": 55.103703
+    },
+    {
+        "ISO3_code": "RUS",
+        "name": "Russia",
+        "labelX": 44.686469,
+        "labelY": 58.249357
+    },
+    {
+        "ISO3_code": "CZE",
+        "name": "Czech Republic",
+        "labelX": 15.377555,
+        "labelY": 49.882364
+    },
+    {
+        "ISO3_code": "EST",
+        "name": "Estonia",
+        "labelX": 25.867126,
+        "labelY": 58.724865
+    },
+    {
+        "ISO3_code": "DEU",
+        "name": "Germany",
+        "labelX": 9.678348,
+        "labelY": 50.961733
+    },
+    {
+        "ISO3_code": "-99",
+        "name": "Norway",
+        "labelX": 9.679975,
+        "labelY": 61.357092
+    },
+    {
+        "ISO3_code": "LVA",
+        "name": "Latvia",
+        "labelX": 25.458723,
+        "labelY": 57.066872
+    },
+    {
+        "ISO3_code": "FIN",
+        "name": "Finland",
+        "labelX": 27.276449,
+        "labelY": 63.252361
+    },
+    {
+        "ISO3_code": "SWE",
+        "name": "Sweden",
+        "labelX": 19.01705,
+        "labelY": 65.85918
+    },
+    {
+        "ISO3_code": "LUX",
+        "name": "Luxembourg",
+        "labelX": 6.07762,
+        "labelY": 49.733732
+    },
+    {
+        "ISO3_code": "BEL",
+        "name": "Belgium",
+        "labelX": 4.800448,
+        "labelY": 50.785392
+    },
+    {
+        "ISO3_code": "MKD",
+        "name": "North Macedonia",
+        "labelX": 21.555839,
+        "labelY": 41.558223
+    },
+    {
+        "ISO3_code": "ALB",
+        "name": "Albania",
+        "labelX": 20.11384,
+        "labelY": 40.654855
+    },
+    {
+        "ISO3_code": "-99",
+        "name": "Kosovo",
+        "labelX": 20.860719,
+        "labelY": 42.593587
+    },
+    {
+        "ISO3_code": "DNK",
+        "name": "Denmark",
+        "labelX": 9.018163,
+        "labelY": 55.966965
+    },
+    {
+        "ISO3_code": "ESP",
+        "name": "Spain",
+        "labelX": -3.464718,
+        "labelY": 40.090953
+    },
+    {
+        "ISO3_code": "HUN",
+        "name": "Hungary",
+        "labelX": 19.447867,
+        "labelY": 47.086841
+    },
+    {
+        "ISO3_code": "ROU",
+        "name": "Romania",
+        "labelX": 24.972624,
+        "labelY": 45.733237
+    },
+    {
+        "ISO3_code": "SVK",
+        "name": "Slovakia",
+        "labelX": 19.049868,
+        "labelY": 48.734044
+    },
+    {
+        "ISO3_code": "IRL",
+        "name": "Ireland",
+        "labelX": -7.798588,
+        "labelY": 53.078726
+    },
+    {
+        "ISO3_code": "POL",
+        "name": "Poland",
+        "labelX": 19.490468,
+        "labelY": 51.990316
+    },
+    {
+        "ISO3_code": "GBR",
+        "name": "United Kingdom",
+        "labelX": -2.116346,
+        "labelY": 54.402739
+    },
+    {
+        "ISO3_code": "GRC",
+        "name": "Greece",
+        "labelX": 21.72568,
+        "labelY": 39.492763
+    },
+    {
+        "ISO3_code": "AUT",
+        "name": "Austria",
+        "labelX": 14.130515,
+        "labelY": 47.518859
+    },
+    {
+        "ISO3_code": "ITA",
+        "name": "Italy",
+        "labelX": 11.076907,
+        "labelY": 44.732482
+    },
+    {
+        "ISO3_code": "CHE",
+        "name": "Switzerland",
+        "labelX": 7.463965,
+        "labelY": 46.719114
+    },
+    {
+        "ISO3_code": "NLD",
+        "name": "Netherlands",
+        "labelX": 5.61144,
+        "labelY": 52.422211
+    },
+    {
+        "ISO3_code": "SRB",
+        "name": "Serbia",
+        "labelX": 20.787989,
+        "labelY": 44.189919
+    },
+    {
+        "ISO3_code": "SVN",
+        "name": "Slovenia",
+        "labelX": 14.915312,
+        "labelY": 46.06076
+    },
+    {
+        "ISO3_code": "HRV",
+        "name": "Croatia",
+        "labelX": 16.37241,
+        "labelY": 45.805799
+    },
+    {
+        "ISO3_code": "BGR",
+        "name": "Bulgaria",
+        "labelX": 25.15709,
+        "labelY": 42.508785
+    },
+    {
+        "ISO3_code": "MNE",
+        "name": "Montenegro",
+        "labelX": 19.143727,
+        "labelY": 42.803101
+    },
+    {
+        "ISO3_code": "BIH",
+        "name": "Bosnia and Herzegovina",
+        "labelX": 18.06841,
+        "labelY": 44.091051
+    },
+    {
+        "ISO3_code": "PRT",
+        "name": "Portugal",
+        "labelX": -8.271754,
+        "labelY": 39.606675
+    },
+    {
+        "ISO3_code": "MDA",
+        "name": "Moldova",
+        "labelX": 28.487904,
+        "labelY": 47.434999
+    },
+    {
+        "ISO3_code": "ISL",
+        "name": "Iceland",
+        "labelX": -18.673711,
+        "labelY": 64.779286
+    }
+]

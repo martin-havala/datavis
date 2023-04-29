@@ -7,21 +7,21 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.af737597.css" rel="stylesheet">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.a4c95a6a.css" rel="stylesheet">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.f5536a6f.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.e1c5600a.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.af72cfca.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.2f7dceec.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.ece8fcc5.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.488d6e19.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/tourism-page.svelte.0e8cb8d1.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/population-page.svelte.8b71315e.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.d5a6f791.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/linear.85bcb881.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/defaultLocale.c00e5010.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/range.6bc2a9a0.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/line.ff799f91.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/array.bfeb4c0f.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/axis.a25b44c4.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/tourism-page.ts.9c5eea7e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.134a0c63.js"><title>Tourism in EU</title><!-- HEAD_svelte-eljw7s_START --><meta name="description" content="Svelte demo app"><!-- HEAD_svelte-eljw7s_END -->
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/defaultLocale.c00e5010.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/extent.4cf1c809.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/population-page.ts.9c5eea7e.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.b95cbc4a.js"><title>Kanagawa sea</title><!-- HEAD_svelte-1a4b4er_START --><!-- HEAD_svelte-1a4b4er_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -29,15 +29,13 @@
 
 <div class="body svelte-14furju">
 
-<section><div class="page"><svg></svg>
-        <div class="notes"><div><h1>EU Tourism 2022</h1>
-                <div>This chart compares foreign tourist arrivals during the year and compares it to country population;
-                </div>
-                <br>
-                <div>Second part highlights the season period in each country</div></div>
-            <div class="comments"><div>data source - EuroStat:
-                    <ul><li><a href="https://ec.europa.eu/eurostat/databrowser/view/TOUR_OCC_ARM__custom_5792777/default/table?lang=en"><i>Arrivals at tourist accommodation establishments - monthly data</i></a></li>
-                        <li><a href="https://ec.europa.eu/eurostat/databrowser/view/TPS00001/default/table?lang=en"><i>Population on 1 January</i></a></li></ul></div></div></div></div></section>
+<section><div class="page svelte-9g7w2g"><div><h1>Human population in 2100</h1>
+            Data source :
+            <a href="https://population.un.org/wpp/Download/Standard/CSV"><i>United Nations</i></a>
+            <div>Used projections: High / Medium / Low <b>fertility</b></div></div>
+        <div class="charts svelte-9g7w2g"><svg class="map svelte-9g7w2g"><defs><linearGradient id="toWhite" gradientTransform="rotate(-45)" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="50%" stop-color="#FFF0"></stop><stop offset="85%" stop-color="#FFFF"></stop></linearGradient><linearGradient id="toBlack" gradientTransform="rotate(135)" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox"><stop offset="50%" stop-color="#0000"></stop><stop offset="85%" stop-color="#000F"></stop></linearGradient></defs></svg>
+            </div></div>
+</section>
 </div>
 
 
@@ -58,7 +56,7 @@
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.ece8fcc5.js")
 					]).then(([kit, app]) => {
 						kit.start(app, __sveltekit_12zuua8.element, {
-							node_ids: [0, 9],
+							node_ids: [0, 7],
 							data,
 							form: null,
 							error: null
