@@ -140,11 +140,14 @@
     <div class="page">
         <div>
             <h1>Human population in 2100</h1>
-            Data source :
-            <a href="https://population.un.org/wpp/Download/Standard/CSV">
-                <i>United Nations</i>
-            </a>
+            <div>
+                Data source :
+                <a href="https://population.un.org/wpp/Download/Standard/CSV">
+                    <i>United Nations</i>
+                </a>
+            </div>
             <div>Used projections: High / Medium / Low <b>fertility</b></div>
+            <div>Map source: <a href="https://github.com/mustafasaifee42/Tile-Grid-Map">Tile Grid Map</a></div>
         </div>
         <div class="charts">
             <svg bind:this={svgElem} class="map">

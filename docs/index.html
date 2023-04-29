@@ -6,28 +6,53 @@
 		<link rel="stylesheet" href="https://martin-havala.github.io/datavis/styles.css" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.64d6d752.js">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.af737597.css" rel="stylesheet">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.b9a98a4d.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.e1c5600a.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.d5028311.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.3e3c22d0.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.d890075f.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.6efa7339.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.8e628d8a.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.37f2f390.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.488d6e19.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_page.svelte.b27a6cfd.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_page.ts.9c5eea7e.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.da46b06b.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
+
+
+<div class="body svelte-14furju"><div><ul><li><a href="/datavis/tourism">Tourism </a></li>
+        <li><a href="/datavis/royals">Royals </a></li>
+        <li><a href="/datavis/directors">Directors </a></li>
+        <li><a href="/datavis/culture">Culture </a></li>
+        <li><a href="/datavis/land_use">Land Use &amp; Population</a></li>
+        <li><a href="/datavis/kanagawa">Kanagawa</a></li>
+        <li><a href="/datavis/population">Population</a></li></ul></div>
+</div>
+
+
+			
 			<script>
 				{
-					__sveltekit_1xeb1mm = {
+					__sveltekit_cprq7o = {
 						env: {},
 						assets: "https://martin-havala.github.io/datavis",
-						base: "/datavis",
+						base: new URL("./datavis", location).pathname,
 						element: document.currentScript.parentElement
 					};
 
+					const data = [null,null];
+
 					Promise.all([
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.64d6d752.js"),
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.d890075f.js")
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.b9a98a4d.js"),
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.37f2f390.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1xeb1mm.element);
+						kit.start(app, __sveltekit_cprq7o.element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
 					});
 				}
 			</script>
