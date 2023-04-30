@@ -25,5 +25,8 @@
         <li>
             <a href="{base}/population">Population</a>
         </li>
+        <li>
+            <a href="{base}/16personalities">16 personalities</a>
+        </li>
     </ul>
 </div>

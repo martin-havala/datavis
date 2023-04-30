@@ -69,6 +69,11 @@
         overflow-x: hidden;
         overflow-y: auto;
         display: block;
+        background: #fefefa;
+        color: darkslategrey;
+    }
+    a {
+        color: darkslategrey;
     }
     .svg {
         width: 100vw;
@@ -90,11 +95,6 @@
         stroke-width: 2;
         fill: none;
         stroke: var(--color);
-    }
-
-    :global(.body, a) {
-        background: #fefefa;
-        color: darkslategrey;
     }
     :global(.population) {
         --color: blue;
