@@ -139,6 +139,7 @@
         display: block;
         flex-direction: column;
         text-align: center;
+        overflow: auto;
     }
 
     .personalities {
