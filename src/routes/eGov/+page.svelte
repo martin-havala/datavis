@@ -4,7 +4,7 @@
     import eGovURL from '$lib/assets/eGov/e_gov.csv?url';
     import type { eGov } from '$lib/assets/eGov/e_gov.model';
 
-    let margin = { top: 0, right: 60, bottom: 0, left: 50 },
+    let margin = { top: 10, right: 60, bottom: 0, left: 50 },
         width = 1000 - margin.left - margin.right,
         height = 2200 - margin.top - margin.bottom;
 
@@ -77,7 +77,7 @@
             const legend = d3
                 .select('.svgLegend svg')
                 .selectAll('legend')
-                .data(yCols)
+                .data(yCols.sort((a, b) => (data[0][a] > data[0][b] ? 1 : -1)))
                 .join('g')
                 .attr('transform', (d, i) => `translate(10,${20 + i * 20})`);
 
@@ -122,7 +122,8 @@
                     (d) =>
                         `country ${d['DG Systems & Services_Code']} ${d['Country Data_Level']} maturityGroup${d['Data Governance Maturity_Grp']}`
                 )
-                .attr('transform', (d) => `translate(0,${yScale(d['DG Systems & Services_Code'])})`);
+                .attr('transform', (d) => `translate(0,${yScale(d['DG Systems & Services_Code'])})`)
+                .style('animation-duration', (d, i) => `${i * 10}ms`);
 
             countries
                 .append('rect')
@@ -148,6 +149,8 @@
                 .attr('x2', (d) => xScale(d.end))
                 .attr('y1', centerY)
                 .attr('y2', centerY)
+                .attr('animation-delay', `${Math.random() * 5}s`)
+                .attr('animation-duration', `${Math.random() * 2}s`)
                 .on('mouseover', () => tooltip.style('visibility', 'visible'))
                 .on('mousemove', (event, d) => {
                     const level = d['Data Governance Maturity_Grp'];
@@ -197,33 +200,34 @@
         <div id="tooltip" />
         <div class="chart">
             <div class="mainChartWrap">
-                <svg width="100%" height="20" class="topLegend">
+                <svg width="100%" height="15" class="topLegend">
                     <text x={margin.left - 10} y={10}>Country</text>
-                    <text x={width + margin.left + 50} y={10}>GTMI</text>
+                    <text x={width + margin.left + 40} y={10}>GTMI</text>
                 </svg>
                 <svg bind:this={svgElem} />
             </div>
-            <div class="svgLegend">
+            <div class="description">
                 <h1>Data Governance<br /> Maturity Indicators</h1>
                 <i> The State of GovTech Foundational Blocks in 198 economies </i>
                 <br />
+                <div class="svgLegend">
+                    Legend (order for typical scenario)
+                    <svg width="300" height="200">
+                        <g class="maturityGroupA">
+                            <line class="progress line" x1="10" x2="25" y1="185" y2="185" />
+                        </g>
+                        <text x="30" y="190">Digital Governance Maturity</text>
+                    </svg>
 
-                <svg width="400" height="200">
-                    <g class="maturityGroupA">
-                        <line class="progress line" x1="10" x2="25" y1="185" y2="185" />
-                    </g>
-                    <text x="30" y="190">Digital Governance Maturity</text>
-                </svg>
-
-                <div>
-                    Data source: <a
-                        href="https://datacatalog.worldbank.org/search/dataset/0050602/Data-Governance-Maturity-Indicators"
-                        target="_blank"
-                    >
-                        THE WORLD BANK
-                    </a>
+                    <div>
+                        Data source: <a
+                            href="https://datacatalog.worldbank.org/search/dataset/0050602/Data-Governance-Maturity-Indicators"
+                            target="_blank"
+                        >
+                            THE WORLD BANK
+                        </a>
+                    </div>
                 </div>
-                <br />
             </div>
             <svg bind:this={svgXElem} class="svgX" />
         </div>
@@ -231,16 +235,46 @@
 </section>
 
 <style lang="scss">
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes strokePlus {
+        from {
+            stroke-width: 0;
+        }
+        to {
+            stroke-width: 6;
+        }
+    }
+
+    @keyframes strokeDashoffset {
+        from {
+            stroke-dashoffset: 0%;
+        }
+        to {
+            stroke-dashoffset: -100%;
+        }
+    }
+
     .chart {
         position: relative;
         display: grid;
         grid-template-areas:
             'legend chart'
             'legend axis';
+        grid-auto-columns: 350px auto;
+        animation: fadeIn 1s ease-in-out;
         cursor: pointer;
     }
     .mainChartWrap {
         grid-area: chart;
+        text-align: left;
         height: 95vh;
         overflow: scroll;
         overflow-x: hidden;
@@ -251,10 +285,16 @@
         bottom: 0;
         background: #202022;
     }
-    .svgLegend {
+    .description {
+        text-align: left;
+        min-width: 300px;
+        margin: 1em;
         grid-area: legend !important;
+        .svgLegend {
+            margin-top: 6ex;
+        }
         svg {
-            margin: 6ex 0;
+            margin: 0 0 6ex 0;
         }
     }
     .page {
@@ -264,7 +304,8 @@
         display: block;
         :global(.country:hover) {
             :global(rect) {
-                opacity: 1;
+                animation: fadeIn 0.2s ease-out;
+                animation-fill-mode: forwards;
             }
             :global(text) {
                 dominant-baseline: central;
@@ -276,6 +317,8 @@
             }
             :global(circle) {
                 stroke-width: 6;
+                animation: strokePlus 0.2s ease-out;
+                animation-fill-mode: freeze;
             }
             :global(.line.background) {
                 fill-opacity: 1;
@@ -286,23 +329,27 @@
         }
 
         :global(.LIC .line.background) {
-            fill: #222;
+            fill: #433;
+            fill-opacity: 0.6;
         }
 
         :global(.LMIC .line.background) {
-            fill: #333;
+            fill: #343;
         }
 
         :global(.UMIC .line.background) {
-            fill: #444;
+            fill: #545;
         }
 
         :global(.HIC .line.background) {
-            fill: #555;
+            fill: #335;
         }
 
         :global(.progress.line) {
             stroke: #445;
+            stroke-dasharray: 100%;
+            // animation: strokeDashoffset 2s ease-in;
+            // animation-fill-mode: freeze;
         }
         :global(.maturityGroupD .progress.line) {
             opacity: 0.5;
@@ -333,6 +380,10 @@
         :global(.legend) {
             dominant-baseline: central;
             font-size: 0.6em;
+        }
+        :global(.country) {
+            animation: fadeIn 2s ease-in-out;
+            animation-fill-mode: freeze;
         }
 
         #tooltip {
