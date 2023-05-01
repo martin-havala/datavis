@@ -28,5 +28,8 @@
         <li>
             <a href="{base}/16personalities">16 personalities</a>
         </li>
+        <li>
+            <a href="{base}/eGov">Data Governance Maturity Indicators</a>
+        </li>
     </ul>
 </div>
