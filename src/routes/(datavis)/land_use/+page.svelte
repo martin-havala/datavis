@@ -116,7 +116,6 @@
         --color: firebrick;
     }
     :global(text) {
-        font-family: 'Times New Roman', Times, serif;
         font-size: 12px;
     }
 </style>

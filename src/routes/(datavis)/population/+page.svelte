@@ -8,7 +8,7 @@
     import Highlight from './highlight.svelte';
 
     const width = 1600,
-        height = 1000;
+        height = 1200;
 
     let svgElem: SVGGElement;
     let svg: d3.Selection<SVGGElement, unknown, any, any>;
@@ -224,6 +224,7 @@
         :global(text) {
             text-anchor: middle;
             dominant-baseline: middle;
+            font-size: 14pt;
         }
         :global(.changeValue) {
             font-size: 0.8em;

@@ -10,6 +10,7 @@
     } from '$lib/assets/eGov/e_gov.model';
     import { fade } from 'svelte/transition';
     import DisruptiveTechnology from './disruptive_technology.svelte';
+    import TechBuildType from './tech_build_type.svelte';
 
     export let row: eGov | null;
 
@@ -34,7 +35,7 @@
                                 {/if}
                             </span>
                             <div
-                                class="column__circle"
+                                class="column__circle softType{row[EGOV_COL_INFO_CELLS[col.col]?.type]}"
                                 style="background: {COLOR_SCALE[EGOV_COLS.findIndex((c) => c == col.col)]};"
                             />
                             {EGOV_COL_LABELS[col.col]}
@@ -45,6 +46,7 @@
                                     target="_blank">↗</a
                                 >
                             {/if}
+
                             <br />
                         {/each}
                     </div>
@@ -64,6 +66,7 @@
                             </p>
 
                             <DisruptiveTechnology bind:areas={row['I-17.4']} />
+                            <TechBuildType {row} />
                         </div>
                     {/if}
                 </div>

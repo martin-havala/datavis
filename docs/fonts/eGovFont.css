@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'eGovFont';
+  src:  url('./eGovFont.eot?x6yr6r');
+  src:  url('./eGovFont.eot?x6yr6r#iefix') format('embedded-opentype'),
+    url('./eGovFont.ttf?x6yr6r') format('truetype'),
+    url('./eGovFont.woff?x6yr6r') format('woff'),
+    url('./eGovFont.svg?x6yr6r#eGovFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'eGovFont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Undefined:before {
+  content: "\30";
+}
+.icon-AI:before {
+  content: "\31";
+}
+.icon-IoT:before {
+  content: "\33";
+}
+.icon-Drone:before {
+  content: "\34";
+}
+.icon-BC:before {
+  content: "\32";
+}
+.icon-Others:before {
+  content: "\35";
+}

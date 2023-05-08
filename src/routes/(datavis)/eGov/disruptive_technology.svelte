@@ -1,11 +1,14 @@
 <script lang="ts">
+    import { base } from '$app/paths';
     import { I_17_4 } from '$lib/assets/eGov/e_gov.metadata';
-    import font from '$lib/assets/eGov/eGovFont.css';
 
     export let areas: string | number | undefined;
     $: focusAreas = `${areas ?? ''}`?.split(',') || [];
 </script>
 
+<svelte:head>
+    <link rel="stylesheet" href="{base}fonts/eGovFont.css" />
+</svelte:head>
 {#if areas}
     <section>
         Government Disruptive Technology focus:

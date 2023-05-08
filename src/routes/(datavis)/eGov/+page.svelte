@@ -99,7 +99,12 @@
                 .attr('class', (d) => `country ${d['Code']} ${d['Level']} maturityGroup${d['Grp']}`)
                 .attr('transform', (d) => `translate(0,${yScale(d['Code'])})`)
                 .style('animation-duration', (d, i) => `${i * 10}ms`)
-                .on('click', (e, d) => (selectedCountry = d));
+                .on('click', (e, d) => {
+                    selectedCountry &&
+                        document.querySelector(`g.${selectedCountry.Code}`)?.classList.remove('selected');
+                    selectedCountry = d;
+                    document.querySelector(`g.${selectedCountry?.Code}`)?.classList.add('selected');
+                });
 
             countries
                 .append('rect')
@@ -162,9 +167,9 @@
                 .on('mouseout', () => tooltip.style('visibility', 'hidden'))
                 .selectAll('path')
                 .data((d) =>
-                d.values.map((value, index) => {
-                    return { year: d.year, value, index, count: d.values.length };
-                })
+                    d.values.map((value, index) => {
+                        return { year: d.year, value, index, count: d.values.length };
+                    })
                 )
                 .join('path')
                 .filter((d) => d.year > chartBeginYear)
@@ -236,33 +241,6 @@
 </section>
 
 <style lang="scss">
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes scalePlus {
-        from {
-            transform: scale(1);
-        }
-        to {
-            transform: scale(1.7);
-        }
-    }
-
-    @keyframes strokeDashoffset {
-        from {
-            stroke-dashoffset: 0%;
-        }
-        to {
-            stroke-dashoffset: -100%;
-        }
-    }
-
     .chart {
         position: relative;
         display: grid;
@@ -271,7 +249,7 @@
             'legend axis'
             'legend detail';
         grid-auto-columns: 350px auto;
-        grid-auto-rows: 50vh 25px auto;
+        grid-auto-rows: 42vh 25px auto;
         animation: fadeIn 1s ease-in-out;
         cursor: pointer;
         height: calc(100vh - var(--headerHeight, 2em));
@@ -280,7 +258,7 @@
     .mainChartWrap {
         grid-area: chart;
         text-align: left;
-        height: 50vh;
+        height: 42vh;
         overflow-x: hidden;
     }
     .svgX {
@@ -312,7 +290,8 @@
         overflow-x: auto;
         overflow-y: auto;
         display: block;
-        :global(.country:hover) {
+        :global(.country:hover),
+        :global(.country.selected) {
             :global(rect) {
                 animation: fadeIn 0.2s ease-out;
                 animation-fill-mode: forwards;
