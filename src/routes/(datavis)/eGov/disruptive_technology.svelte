@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="{base}fonts/eGovFont.css" />
+    <link rel="stylesheet" href="{base}/fonts/eGovFont.css" />
 </svelte:head>
 {#if areas}
     <section>
