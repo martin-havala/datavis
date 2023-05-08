@@ -1,269 +1,607 @@
+export const EGOV_COLS = [
+    'I-2.3',
+    'I-3.3',
+    'I-5.5',
+    'I-6.4',
+    'I-7.5',
+    'I-8.5',
+    'I-9.3',
+    'I-10.3',
+    'I-11.6',
+    'I-12.3',
+    'I-13.3',
+    'I-14.3',
+    // 'I-33.3',
+    'I-38.3',
+    'I-42.2',
+];
+export const EGOV_COL_LABELS = {
+    'I-2.3': 'Government enterprise architecture framework',
+    'I-3.3': 'Government interoperability framework',
+    'I-5.5': 'Financial Management IS',
+    'I-7.5': 'Tax admin launched',
+    'I-6.4': 'Treasury single account',
+    'I-8.5': 'Customs administration launched',
+    'I-9.3': 'HR launched',
+    'I-10.3': 'Payroll system (MIS) launched',
+    'I-11.6': 'Social Insurance system',
+    'I-12.3': 'E-Procurement',
+    'I-13.3': 'Debt Management System',
+    'I-14.3': 'Public Investment Management System',
+    'I-33.3': 'Establishing GovTech Institution',
+    'I-38.3': 'Data protection Law',
+    'I-42.2': 'Digital signature regulation',
+};
+export const EGOV_COL_INFO_CELLS = {
+    'I-2.3': { url: 'I-2.2', name: 'I-2.1' },
+    'I-3.3': { url: 'I-3.2', name: 'I-3.1' },
+    'I-5.5': { url: 'I-5.4', name: 'I-5.3', type: 'I-5.8' },
+    'I-6.4': { url: 'I-6.3', name: 'I-6.3' },
+    'I-7.5': { url: 'I-7.4', name: 'I-7.3', type: 'I-7.6' },
+    'I-8.5': { url: 'I-8.4', name: 'I-8.3', type: 'I-8.6' },
+    'I-9.3': { url: 'I-9.2', name: 'I-9.1', type: 'I-9.4' },
+    'I-10.3': { url: 'I-10.2', name: 'I-10.1', type: 'I-10.4' },
+    'I-11.6': { url: 'I-11.5', name: 'I-11.4', type: 'I-11.8' },
+    'I-12.3': { url: 'I-12.2', name: 'I-12.1' },
+    'I-13.3': { url: 'I-13.2', name: 'I-13.1', type: 'I-13.4' },
+    'I-14.3': { url: 'I-14.2', name: 'I-14.1', type: 'I-14.4' },
+    'I-33.3': { url: 'I-33.2', name: 'I-33.1' },
+    'I-38.3': { url: 'I-38.2', name: 'I-38.1' },
+    'I-42.2': { url: 'I-42.1', name: 'I-42.1' },
+};
+
+import type {
+    I_10_6,
+    I_11,
+    I_11_10,
+    I_11_11,
+    I_11_13,
+    I_11_14,
+    I_11_15,
+    I_11_7,
+    I_11_8,
+    I_11_9,
+    I_12_5,
+    I_12_6,
+    I_12_8,
+    I_14_6,
+    I_14_7,
+    I_15_3,
+    I_15_4,
+    I_17_5,
+    I_17_6,
+    I_17_7,
+    I_19_2,
+    I_19_3,
+    I_19_4,
+    I_19_5,
+    I_19_6,
+    I_19_7,
+    I_1_4,
+    I_1_6,
+    I_1_7,
+    I_1_8,
+    I_1_9,
+    I_20_2,
+    I_20_3,
+    I_20_4,
+    I_20_5,
+    I_21_2,
+    I_21_3,
+    I_21_4,
+    I_21_5,
+    I_22_2,
+    I_22_3,
+    I_22_4,
+    I_23_2,
+    I_23_3,
+    I_23_4,
+    I_24,
+    I_24_2,
+    I_24_3,
+    I_24_4,
+    I_24_5,
+    I_25,
+    I_25_2,
+    I_25_3,
+    I_25_4,
+    I_25_5,
+    I_28_2,
+    I_28_3,
+    I_29_2,
+    I_29_3,
+    I_29_4,
+    I_2_4,
+    I_2_5,
+    I_2_6,
+    I_2_7,
+    I_2_8,
+    I_30_3,
+    I_30_5,
+    I_31_4,
+    I_31_5,
+    I_31_6,
+    I_32_2,
+    I_32_3,
+    I_32_4,
+    I_33_10,
+    I_33_4,
+    I_33_5,
+    I_33_8,
+    I_33_9,
+    I_34_7,
+    I_36_2,
+    I_36_3,
+    I_36_4,
+    I_37_3,
+    I_37_4,
+    I_38_4,
+    I_38_5,
+    I_39_4,
+    I_3_4,
+    I_3_5,
+    I_3_6,
+    I_3_7,
+    I_3_8,
+    I_3_9,
+    I_42_3,
+    I_42_4,
+    I_42_5,
+    I_42_6,
+    I_45_5,
+    I_45_5_1,
+    I_45_5_3,
+    I_45_6,
+    I_45_7,
+    I_46_4,
+    I_46_4_1,
+    I_46_4_3,
+    I_46_5,
+    I_47_5,
+    I_47_5_1,
+    I_47_6,
+    I_48,
+    I_48_4,
+    I_48_5,
+    I_48_6,
+    I_48_7,
+    I_4_4,
+    I_4_5,
+    I_4_6,
+    I_5_10,
+    I_5_11,
+    I_5_12,
+    I_5_13,
+    I_5_14,
+    I_6_5,
+    I_6_6,
+    I_6_7,
+    I_6_8,
+    I_7_7,
+    I_7_8,
+    I_8_7,
+    I_8_8,
+    I_8_9,
+    I_9_6,
+    I_9_7,
+    I_9_8,
+    I_9_9,
+} from './e_gov.metadata';
+
 export interface eGov {
     begin: number;
     end: number;
-    'DG Systems & Services_#': number;
-    'DG Systems & Services_Flag': string;
-    'DG Systems & Services_Code': string;
-    'DG Systems & Services_Economy': string;
-    'Country Data_Level': string;
-    'Country Data_Population': number;
-    'Digital Government_e-Government': string;
-    'Digital Government_eSrv': number;
-    'Digital Government_e-Services': string;
-    "UN e-Gov Dev Index_eGov'20": number;
-    "UN e-Gov Dev Index_EGDI'20": number;
-    "UN e-Gov Dev Index_eOSI'20": number;
-    "UN e-Gov Dev Index_eTII'20": number;
-    "UN e-Gov Dev Index_eHCI'20": number;
-    "UN e-Gov Dev Index_ePart'20": number;
-    'UN e-Gov Dev Index_DG Yr': number;
-    'Whole of Government_WoG': number;
-    'Whole of Government_Whole of Gov URL': string;
-    GovTech_GT: number;
-    'GovTech_GovTech Institution': string;
-    'GovTech_GovTech URL': string;
-    GovTech_Type: string;
-    'GovTech_GT Org': string;
-    'GovTech_GT since': string;
-    'GovTech_GT focus': string;
-    'GovTech_Other GT Links': string;
-    'GovTech Products and Services_e-Gov': string;
-    'GovTech Products and Services_e-ID': string;
-    'GovTech Products and Services_GSB': string;
-    'GovTech Products and Services_e-Serv': string;
-    'GovTech Products and Services_Innov': string;
-    'GovTech Products and Services_Priv': string;
-    'GovTech Products and Services_DTech': string;
-    'GovTech Products and Services_OSS': string;
-    'GovTech Products and Services_KSL': string;
-    'Finance Ministry web site, Public Finance data, and FMIS links_MoF URL': string;
-    'Finance Ministry web site, Public Finance data, and FMIS links_Org Name': string;
-    'Finance Ministry web site, Public Finance data, and FMIS links_PF': number;
-    'Finance Ministry web site, Public Finance data, and FMIS links_Budget Data URL': string;
-    'Finance Ministry web site, Public Finance data, and FMIS links_MIS': number;
-    'Finance Ministry web site, Public Finance data, and FMIS links_FMIS URL': string;
-    'Financial Management Information System_FMIS / TS': string;
-    'Financial Management Information System_FMIS Name': string;
-    'Financial Management Information System_Tpl': string;
-    'Financial Management Information System_Func': string;
-    'Financial Management Information System_Status': number;
-    'Financial Management Information System_Op Yr': number;
-    'Financial Management Information System_Scope': string;
-    'Financial Management Information System_Type': number;
-    'Financial Management Information System_ASW': number;
-    'Financial Management Information System_ASW Solution': string;
-    'Financial Management Information System_Arch': string;
-    'Treasury Single Account_Treasury website': string;
-    'Treasury Single Account_Tre Yr': number;
-    'Treasury Single Account_TSA website': string;
-    'Treasury Single Account_TSA Yr': number;
-    'Treasury Single Account_TSA Type': number;
-    'Treasury Single Account_TSA Scope': number;
-    'Treasury Single Account_Duration': string;
-    'Treasury Single Account_TSA Benefits': string;
-    'Treasury Single Account_TSA Savings': string;
-    'Treasury Single Account_Sav Yr': string;
-    'Tax Administration_Tax Adm URL': string;
-    'Tax Administration_Tax Yr': number;
-    'Tax Administration_TMIS Abbr': string;
-    'Tax Administration_TMIS Name': string;
-    'Tax Administration_TMIS': number;
-    'Tax Administration_TMIS Soln': string;
-    'Tax Administration_Tax System URL': string;
-    'Tax Administration_TMIS Yr': number;
-    'Tax Administration_TMIS Sta': number;
-    'Tax Administration_Tax Srv': number;
-    'Customs Administration_Customs URL': string;
-    'Customs Administration_Cust Yr': number;
-    'Customs Administration_WCO Mem': number;
-    'Customs Administration_HS Sta': number;
-    'Customs Administration_Customs Abbr': string;
-    'Customs Administration_Customs Name': string;
-    'Customs Administration_CMIS': number;
-    'Customs Administration_CMIS Soln': string;
-    'Customs Administration_Customs Sys URL': string;
-    'Customs Administration_CMIS Yr': number;
-    'Customs Administration_Cust Sta': number;
-    'Customs Administration_Cust Srv': number;
-    'e-Filing_e-Filing URL': string;
-    'e-Filing_eFil Yr': number;
-    'e-Filing_eFil Srv': number;
-    'e-Payment_ePayment': string;
-    'e-Payment_ePay Yr': string;
-    'e-Payment_ePay Srv': number;
-    'Digital Signature_Digital Sign URL': string;
-    'Digital Signature_Dsign Yr': string;
-    'Digital Signature_Dsign Sta': number;
-    'Public Employment_Public Emp': number;
-    'Public Employment_PE Scope': number;
-    'Public Employment_Pub Emp URL': string;
-    'Public Employment_PE Yr': number;
-    'HRMIS_HRMIS Abbr': string;
-    'HRMIS_HRMIS System': string;
-    HRMIS_HRM: number;
-    'HRMIS_HRMIS Soln': string;
-    'HRMIS_HRMIS URL': string;
-    'HRMIS_HRM Yr': number;
-    'HRMIS_HRM Sta': number;
-    'HRMIS_HRM Srv': number;
-    'Payroll System_Payroll Abbr': string;
-    'Payroll System_Payroll System': string;
-    'Payroll System_Payr': number;
-    'Payroll System_Payr Soln': string;
-    'Payroll System_Payroll URL': string;
-    'Payroll System_Payr Yr': string;
-    'Payroll System_Payr Sta': number;
-    'Payroll System_Payr Srv': number;
-    'e-Procurement_eProc System': string;
-    'e-Procurement_eProcurement': string;
-    'e-Procurement_ePrc Yr': number;
-    'e-Procurement_ePrc Sta': number;
-    'e-Procurement_ePr Srv': number;
-    'e-Procurement_Contr Monitoring': string;
-    'Public Debt_Debt Org / URL': string;
-    'Public Debt_DMS': number;
-    'Public Debt_DMS Soln': string;
-    'Public Debt_DMS Yr': number;
-    'Public Debt_DMS Sta': number;
-    'Public Debt_DM Inst': string;
-    'Public Debt_DM OpSt': string;
-    'Public Investment Management Systems_PIM Unit URL': string;
-    'Public Investment Management Systems_PIM Unit Name': string;
-    'Public Investment Management Systems_WB PIR': string;
-    'Public Investment Management Systems_WB PIR URL': string;
-    'Public Investment Management Systems_PIMA': string;
-    'Public Investment Management Systems_PIMS Abbr': string;
-    'Public Investment Management Systems_PIMS Name': string;
-    'Public Investment Management Systems_PIMS': number;
-    'Public Investment Management Systems_PIMS Soln': string;
-    'Public Investment Management Systems_PIMS URL': string;
-    'Public Investment Management Systems_PIMS Yr': string;
-    'Public Investment Management Systems_PIMS Sta': number;
-    'Public Investment Management Systems_PIMS Fun': number;
-    'Aid Mgmt Systems_AMP': string;
-    'Aid Mgmt Systems_DAD': string;
-    'Aid Mgmt Systems_Other': string;
-    'Other Categories_Region': string;
-    'Other Categories_FCS': number;
-    'Other Categories_NRR': number;
-    'Other Categories_Select': number;
-    'Other Categories_Zone': string;
-    'Other Categories_OECD': string;
-    'Other Categories_APEC': string;
-    'Other Categories_LenCat': string;
-    'Data Governance Maturity_Grp': string;
-    'Data Governance Maturity_DGM': number;
-    'Data Governance Maturity_Pol&Reg': number;
-    'Data Governance Maturity_Inst': number;
-    'Data Governance Maturity_Infra': number;
-    'Data Governance Institution, Policy & Regulations_Inst': number;
-    'Data Governance Institution, Policy & Regulations_Inst Yr': string;
-    'Data Governance Institution, Policy & Regulations_DGov Inst Name': string;
-    'Data Governance Institution, Policy & Regulations_DGov Inst URL': string;
-    'Data Governance Institution, Policy & Regulations_Type': number;
-    'Data Governance Institution, Policy & Regulations_Impl': string;
-    'Data Governance Institution, Policy & Regulations_Policy': number;
-    'Data Governance Institution, Policy & Regulations_Pol Yr': string;
-    'Data Governance Institution, Policy & Regulations_DG Policy URL': string;
-    'Data Governance Institution, Policy & Regulations_Regs': number;
-    'Data Governance Institution, Policy & Regulations_Reg Yr': string;
-    'Data Governance Institution, Policy & Regulations_DG Regs URL': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GCL': number;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GCL Yr': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_Gov Cloud Name': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_Gov Cloud URL': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GEA': number;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GEA Yr': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GEA Name': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GEA URL': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GSB': number;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_GSB Yr': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_Interop Platform': string;
-    'Government Cloud, Enterprise Architecture and Interoperability Platform_Interop URL': string;
-    'National CERT or CSIRT_Cyber': number;
-    'National CERT or CSIRT_Cyb Yr': number;
-    'National CERT or CSIRT_Cybersecurity Agency': string;
-    'National CERT or CSIRT_Cybersecurity URL': string;
-    'National website for citizen participation_Part': number;
-    'National website for citizen participation_Participation URL': string;
-    'National website for citizen participation_Petit': number;
-    'National website for citizen participation_Publ': number;
-    'National website for citizen participation_Anym': number;
-    'National website for citizen participation_Resp': number;
-    'National website for citizen feedback / GRM_GRM': number;
-    'National website for citizen feedback / GRM_GRM URL': string;
-    'National website for citizen feedback / GRM_Serv': number;
-    'National website for citizen feedback / GRM_Acce': number;
-    'Government responsiveness_Perf': number;
-    'Government responsiveness_Perf URL': string;
-    'Legal System Type_Legal System Type': string;
-    'Legal System Type_Leg Sys': number;
-    'Data Protection & Privacy Laws_DPL': number;
-    'Data Protection & Privacy Laws_DP Act / Bill': string;
-    'Data Protection & Privacy Laws_Act/Bill URL': string;
-    'Data Protection & Privacy Laws_From': string;
-    'Data Protection & Privacy Laws_Latest': string;
-    'Data Protection Agency_DPA': number;
-    'Data Protection Agency_Data Protection Agency (DPA)': string;
-    'Data Protection Agency_DPA URL': string;
-    'Data Protection Agency_DPA Yr': string;
-    'Right to Information Law_RTI': number;
-    'Right to Information Law_Law URL': string;
-    'Right to Information Law_Law Yr': number;
-    'Is there an Open Government initiative?_OGI': number;
-    'Is there an Open Government initiative?_Open Gov URL': string;
-    'Is there an Open Data portal?_ODP': number;
-    'Is there an Open Data portal?_Open Data URL': string;
-    'Disruptive Technologies_DT': number;
-    'Disruptive Technologies_DT Fo': string;
-    'Disruptive Technologies_DT Strategy': string;
-    'Disruptive Technologies_DT StrategyURL': string;
-    'Disruptive Technologies_DT Yr': string;
-    'PS Digital Skills & Innovation Strategy_DSI': number;
-    'PS Digital Skills & Innovation Strategy_Focus': number;
-    'PS Digital Skills & Innovation Strategy_DSI Strategy Name': string;
-    'PS Digital Skills & Innovation Strategy_DSI URL': string;
-    'PS Digital Skills & Innovation Strategy_DSI Yr': number;
-    'Digital Skills & Innovation_DSI': number;
-    'Digital Skills & Innovation_Prog': string;
-    'Digital Skills & Innovation_Use': string;
-    'Digital Skills & Innovation_DSI Prg Name': string;
-    'Digital Skills & Innovation_DSI Program URL': string;
-    'Digital Skills & Innovation_DSI Yr': string;
-    'PS Digital Skills & Innovation Institution_PSI': number;
-    'PS Digital Skills & Innovation Institution_Focus': string;
-    'PS Digital Skills & Innovation Institution_PSI Institution Name': string;
-    'PS Digital Skills & Innovation Institution_PSI Inst URL': string;
-    'PS Digital Skills & Innovation Institution_PSI Yr': string;
-    'Open Source Policies adopted by the governments_OSS': number;
-    'Open Source Policies adopted by the governments_OSS Policy URL': string;
-    'Open Source Policies adopted by the governments_OSS Yr': number;
-    'Open Source Policies adopted by the governments_OSS Gov': number;
-    'Open Source Policies adopted by the governments_RD': string;
-    'Open Source Policies adopted by the governments_A': number;
-    'Open Source Policies adopted by the governments_P': string;
-    'Open Source Policies adopted by the governments_M': string;
-    'Open Source Policies adopted by the governments_OSS Loc': number;
-    'Open Source Policies adopted by the governments_RD.1': string;
-    'Open Source Policies adopted by the governments_A.1': string;
-    'Open Source Policies adopted by the governments_P.1': string;
-    'Open Source Policies adopted by the governments_M.1': string;
-    'ID4D_Nat ID': number;
-    'ID4D_e-ID': number;
-    'Government Effectiveness_GE': number;
-    'Government Effectiveness_GE est': number;
-    'Government Effectiveness_GE rank': number;
-    'Government Effectiveness_GE src': number;
-    'Control of Corruption_CoC': number;
-    'Control of Corruption_CoC est': number;
-    'Control of Corruption_CoC rank': number;
-    'Control of Corruption_CoC src': number;
-    CPI_CPI: number;
-    'GTMI > Expert opinion for weights_Code': string;
-    'GTMI > Expert opinion for weights_Grp': string;
-    'GTMI > Expert opinion for weights_GTMI': number;
-    'Core Gov Systems_CGSI': number;
-    'Public Services_PSDI': number;
-    'Citizen Engage_CEI': number;
-    'GovTech Enablers_GTEI': number;
+    grouped: { year: number; values: string[] }[];
+    Year: number;
+    Code: string;
+    Economy: string;
+    'I-1': number;
+    'I-1.1': string;
+    'I-1.2': string;
+    'I-1.3': string;
+    'I-1.4': I_1_4;
+    'I-1.5': string;
+    'I-1.6': I_1_6;
+    'I-1.6.1': string;
+    'I-1.7': I_1_7;
+    'I-1.8': I_1_8;
+    'I-1.9': I_1_9;
+    'I-1.9.1': string;
+    'I-2': number;
+    'I-2.1': string;
+    'I-2.2': string;
+    'I-2.3': number;
+    'I-2.4': I_2_4;
+    'I-2.5': I_2_5;
+    'I-2.6': I_2_6;
+    'I-2.7': I_2_7;
+    'I-2.8': I_2_8;
+    'I-2.8.1': string;
+    'I-3': number;
+    'I-3.1': string;
+    'I-3.2': string;
+    'I-3.3': number;
+    'I-3.4': I_3_4;
+    'I-3.5': I_3_5;
+    'I-3.6': I_3_6;
+    'I-3.7': I_3_7;
+    'I-3.8': I_3_8;
+    'I-3.9': I_3_9;
+    'I-3.9.1': string;
+    'I-4': number;
+    'I-4.1': string;
+    'I-4.2': string;
+    'I-4.3': string;
+    'I-4.4': I_4_4;
+    'I-4.5': I_4_5;
+    'I-4.6': I_4_6;
+    'I-4.6.1': string;
+    'I-5': number;
+    'I-5.1': string;
+    'I-5.2': string;
+    'I-5.3': string;
+    'I-5.4': string;
+    'I-5.5': number;
+    'I-5.6': number;
+    'I-5.7': number;
+    'I-5.8': number;
+    'I-5.9': string;
+    'I-5.10': I_5_10;
+    'I-5.11': I_5_11;
+    'I-5.12': I_5_12;
+    'I-5.13': I_5_13;
+    'I-5.14': I_5_14;
+    'I-5.14.1': string;
+    'I-6': number;
+    'I-6.1': string;
+    'I-6.2': number;
+    'I-6.3': string;
+    'I-6.4': number;
+    'I-6.5': I_6_5;
+    'I-6.6': I_6_6;
+    'I-6.7': I_6_7;
+    'I-6.8': I_6_8;
+    'I-6.8.1': string;
+    'I-7': number;
+    'I-7.1': string;
+    'I-7.2': number;
+    'I-7.3': string;
+    'I-7.4': string;
+    'I-7.5': number;
+    'I-7.6': number;
+    'I-7.7': I_7_7;
+    'I-7.8': I_7_8;
+    'I-7.8.1': string;
+    'I-8': number;
+    'I-8.1': string;
+    'I-8.2': number;
+    'I-8.3': string;
+    'I-8.4': string;
+    'I-8.5': number;
+    'I-8.6': number;
+    'I-8.7': I_8_7;
+    'I-8.8': I_8_8;
+    'I-8.9': I_8_9;
+    'I-8.9.1': string;
+    'I-9': number;
+    'I-9.1': string;
+    'I-9.2': string;
+    'I-9.3': number;
+    'I-9.4': number;
+    'I-9.5': number;
+    'I-9.6': I_9_6;
+    'I-9.7': I_9_7;
+    'I-9.8': I_9_8;
+    'I-9.9': I_9_9;
+    'I-9.9.1': string;
+    'I-10': number;
+    'I-10.1': string;
+    'I-10.2': string;
+    'I-10.3': string;
+    'I-10.4': number;
+    'I-10.5': number;
+    'I-10.6': I_10_6;
+    'I-10.6.1': string;
+    'I-11': I_11;
+    'I-11.1': string;
+    'I-11.2': string;
+    'I-11.3': number;
+    'I-11.4': string;
+    'I-11.5': string;
+    'I-11.6': string;
+    'I-11.7': I_11_7;
+    'I-11.8': I_11_8;
+    'I-11.9': I_11_9;
+    'I-11.10': I_11_10;
+    'I-11.11': I_11_11;
+    'I-11.12': string;
+    'I-11.13': I_11_13;
+    'I-11.13.1': string;
+    'I-11.14': I_11_14;
+    'I-11.15': I_11_15;
+    'I-11.15.1': string;
+    'I-12': number;
+    'I-12.1': string;
+    'I-12.2': string;
+    'I-12.3': number;
+    'I-12.4': number;
+    'I-12.5': I_12_5;
+    'I-12.6': I_12_6;
+    'I-12.7': string;
+    'I-12.8': I_12_8;
+    'I-12.8.1': string;
+    'I-13': number;
+    'I-13.1': string;
+    'I-13.2': string;
+    'I-13.3': number;
+    'I-13.4': number;
+    'I-13.5': string;
+    'I-14': number;
+    'I-14.1': string;
+    'I-14.2': string;
+    'I-14.3': string;
+    'I-14.4': number;
+    'I-14.5': number;
+    'I-14.6': I_14_6;
+    'I-14.7': I_14_7;
+    'I-14.7.1': string;
+    'I-15': number;
+    'I-15.1': string;
+    'I-15.2': number;
+    'I-15.3': I_15_3;
+    'I-15.4': I_15_4;
+    'I-15.4.1': string;
+    'I-16': number;
+    'I-17': number;
+    'I-17.1': string;
+    'I-17.2': string;
+    'I-17.3': string;
+    'I-17.4': string;
+    'I-17.5': I_17_5;
+    'I-17.5.1': string;
+    'I-17.6': I_17_6;
+    'I-17.7': I_17_7;
+    'I-17.7.1': string;
+    'I-18': number;
+    'I-19': number;
+    'I-19.1': string;
+    'I-19.2': I_19_2;
+    'I-19.3': I_19_3;
+    'I-19.4': I_19_4;
+    'I-19.5': I_19_5;
+    'I-19.6': I_19_6;
+    'I-19.7': I_19_7;
+    'I-19.7.1': string;
+    'I-20': number;
+    'I-20.1': string;
+    'I-20.2': I_20_2;
+    'I-20.3': I_20_3;
+    'I-20.4': I_20_4;
+    'I-20.5': I_20_5;
+    'I-21': number;
+    'I-21.1': string;
+    'I-21.2': I_21_2;
+    'I-21.3': I_21_3;
+    'I-21.4': I_21_4;
+    'I-21.5': I_21_5;
+    'I-22': number;
+    'I-22.1': string;
+    'I-22.2': I_22_2;
+    'I-22.3': I_22_3;
+    'I-22.4': I_22_4;
+    'I-23': number;
+    'I-23.1': string;
+    'I-23.2': I_23_2;
+    'I-23.3': I_23_3;
+    'I-23.4': I_23_4;
+    'I-24': I_24;
+    'I-24.1': string;
+    'I-24.2': I_24_2;
+    'I-24.3': I_24_3;
+    'I-24.4': I_24_4;
+    'I-24.5': I_24_5;
+    'I-25': I_25;
+    'I-25.1': string;
+    'I-25.2': I_25_2;
+    'I-25.3': I_25_3;
+    'I-25.4': I_25_4;
+    'I-25.5': I_25_5;
+    'I-26': string;
+    'I-27': number;
+    'I-28': number;
+    'I-28.1': string;
+    'I-28.2': I_28_2;
+    'I-28.3': I_28_3;
+    'I-29': number;
+    'I-29.1': string;
+    'I-29.2': I_29_2;
+    'I-29.3': I_29_3;
+    'I-29.4': I_29_4;
+    'I-30': number;
+    'I-30.1': string;
+    'I-30.2': number;
+    'I-30.2.1': string;
+    'I-30.3': I_30_3;
+    'I-30.4': number;
+    'I-30.5': I_30_5;
+    'I-30.6': number;
+    'I-30.6.1': string;
+    'I-31': number;
+    'I-31.1': string;
+    'I-31.2': number;
+    'I-31.3': number;
+    'I-31.4': I_31_4;
+    'I-31.5': I_31_5;
+    'I-31.6': I_31_6;
+    'I-31.6.1': string;
+    'I-32': number;
+    'I-32.1': string;
+    'I-32.2': I_32_2;
+    'I-32.3': I_32_3;
+    'I-32.4': I_32_4;
+    'I-33': number;
+    'I-33.1': string;
+    'I-33.2': string;
+    'I-33.3': string;
+    'I-33.4': I_33_4;
+    'I-33.5': I_33_5;
+    'I-33.6': string;
+    'I-33.7': string;
+    'I-33.8': I_33_8;
+    'I-33.8.1': string;
+    'I-33.9': I_33_9;
+    'I-33.9.1': string;
+    'I-33.10': I_33_10;
+    'I-33.10.1': string;
+    'I-34': number;
+    'I-34.1': string;
+    'I-34.2': string;
+    'I-34.3': string;
+    'I-34.4': number;
+    'I-34.5': number;
+    'I-34.6': number;
+    'I-34.6.1': string;
+    'I-34.7': I_34_7;
+    'I-34.7.1': string;
+    'I-35': number;
+    'I-35.1': string;
+    'I-35.2': number;
+    'I-36': number;
+    'I-36.1': string;
+    'I-36.2': I_36_2;
+    'I-36.2.1': string;
+    'I-36.3': I_36_3;
+    'I-36.3.1': string;
+    'I-36.4': I_36_4;
+    'I-36.4.1': string;
+    'I-37': number;
+    'I-37.1': string;
+    'I-37.2': number;
+    'I-37.3': I_37_3;
+    'I-37.4': I_37_4;
+    'I-37.4.1': string;
+    'I-38': number;
+    'I-38.1': string;
+    'I-38.2': string;
+    'I-38.3': string;
+    'I-38.4': I_38_4;
+    'I-38.5': I_38_5;
+    'I-38.5.1': string;
+    'I-39': number;
+    'I-39.1': string;
+    'I-39.2': string;
+    'I-39.3': string;
+    'I-39.4': I_39_4;
+    'I-39.4.1': string;
+    'I-40': number;
+    'I-41': number;
+    'I-42': number;
+    'I-42.1': string;
+    'I-42.2': number;
+    'I-42.3': I_42_3;
+    'I-42.4': I_42_4;
+    'I-42.5': I_42_5;
+    'I-42.6': I_42_6;
+    'I-42.6.1': string;
+    'I-43': number;
+    'I-44': number;
+    'I-45': number;
+    'I-45.1': string;
+    'I-45.2': string;
+    'I-45.3': number;
+    'I-45.4': number;
+    'I-45.5': I_45_5;
+    'I-45.5.1': I_45_5_1;
+    'I-45.5.2': string;
+    'I-45.5.3': I_45_5_3;
+    'I-45.6': I_45_6;
+    'I-45.7': I_45_7;
+    'I-45.7.1': string;
+    'I-46': number;
+    'I-46.1': string;
+    'I-46.2': string;
+    'I-46.3': number;
+    'I-46.4': I_46_4;
+    'I-46.4.1': I_46_4_1;
+    'I-46.4.2': string;
+    'I-46.4.3': I_46_4_3;
+    'I-46.5': I_46_5;
+    'I-46.5.1': string;
+    'I-47': number;
+    'I-47.1': string;
+    'I-47.2': string;
+    'I-47.3': string;
+    'I-47.4': number;
+    'I-47.5': I_47_5;
+    'I-47.5.1': I_47_5_1;
+    'I-47.6': I_47_6;
+    'I-47.6.1': string;
+    'I-48': I_48;
+    'I-48.1': string;
+    'I-48.2': string;
+    'I-48.3': string;
+    'I-48.4': I_48_4;
+    'I-48.5': I_48_5;
+    'I-48.6': I_48_6;
+    'I-48.6.1': string;
+    'I-48.7': I_48_7;
+    'I-48.7.1': string;
+    Src: string;
+    Reg: string;
+    Level: string;
+    FCS: string;
+    Borr: string;
+    Population: number;
+    Sel: number;
+    'Additional clarification': string;
+    'Attach-1': string;
+    'Attach-2': string;
+    'Attach-3': string;
+    'Attach-4': string;
+    'Attach-5': string;
+    'Attach-6': string;
+    'Attach-7': string;
+    'Attach-8': string;
+    'Attach-9': string;
+    'Attach-10': string;
+    'Supporting documents': string;
+    'Submitted by': string;
+    Organization: string;
+    Position: string;
+    Grp: string;
+    GTMI: number;
+    GT1: string;
+    CGSI: number;
+    GT2: string;
+    PSDI: number;
+    GT3: string;
+    DCEI: number;
+    GT4: string;
+    GTEI: number;
 }
+
+
+export const COLOR_SCALE = [
+    '#e6194b',
+    '#3cb44b',
+    '#ffe119',
+    '#4363d8',
+    '#f58231',
+    '#911eb4',
+    '#46f0f0',
+    '#f032e6',
+    '#bcf60c',
+    '#fabebe',
+    '#008080',
+    '#e6beff',
+    '#9a6324',
+    '#fffac8',
+    '#800000',
+    '#aaffc3',
+    '#808000',
+    '#ffd8b1',
+    '#000075',
+    '#808080',
+    '#ffffff',
+    '#000000',
+];

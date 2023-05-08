@@ -1,6 +1,6 @@
 {
     "name": "Elizabeth II",
-    "url": "https://en.wikipedia.org/wiki/Elizabeth_II",
+    "url": "/wiki/Elizabeth_II",
     "imgSrc": "//upload.wikimedia.org/wikipedia/commons/thumb/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg/220px-Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg",
     "father": {
         "name": "George VI",

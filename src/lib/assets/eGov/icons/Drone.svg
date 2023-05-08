@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 24 24"
+   version="1.1"
+   xml:space="preserve"
+   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
+   id="svg639"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs643" />
+    <g
+   transform="matrix(1,0,0,1,-67.9613,-106.002)"
+   id="g615">
+        <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="m 82.960937,113.50195 a 0.5,0.5 0 0 0 -0.5,0.5 0.5,0.5 0 0 0 0.5,0.5 h 8 a 0.5,0.5 0 0 0 0.5,-0.5 0.5,0.5 0 0 0 -0.5,-0.5 z"
+   id="path613" />
+    </g>
+    <g
+   transform="matrix(1.02051,0,0,0.809257,-90.1989,-83.0185)"
+   id="g619">
+        <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="m 96.224609,115.63477 a 0.54505452,0.54505452 0 0 0 -0.544922,0.54492 v 3.70703 a 0.54505452,0.54505452 0 0 0 0.544922,0.54492 h 7.839841 a 0.54505452,0.54505452 0 0 0 0.54493,-0.54492 v -3.70703 a 0.54505452,0.54505452 0 0 0 -0.54493,-0.54492 z m 0.544922,1.08984 h 6.749999 v 2.61719 h -6.749999 z"
+   id="rect617" />
+    </g>
+    <g
+   transform="matrix(1,0,0,1,-87.9613,-106.002)"
+   id="g623">
+        <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="m 106.96094,115.50195 a 0.5,0.5 0 0 0 -0.5,0.5 v 1.5 h -2.5 a 0.5,0.5 0 0 0 -0.5,0.5 0.5,0.5 0 0 0 0.5,0.5 h 3 a 0.50005,0.50005 0 0 0 0.5,-0.5 v -2 a 0.5,0.5 0 0 0 -0.5,-0.5 z"
+   id="path621" />
+    </g>
+    <g
+   transform="matrix(-1,0,0,1,91.9613,-106.002)"
+   id="g627">
+        <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="m 82.960937,113.50195 a 0.5,0.5 0 0 0 -0.5,0.5 0.5,0.5 0 0 0 0.5,0.5 h 8 a 0.5,0.5 0 0 0 0.5,-0.5 0.5,0.5 0 0 0 -0.5,-0.5 z"
+   id="path625" />
+    </g>
+    <g
+   transform="matrix(-1,0,0,1,111.961,-106.002)"
+   id="g631">
+        <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="m 106.96094,115.50195 a 0.5,0.5 0 0 0 -0.5,0.5 v 1.5 h -2.5 a 0.5,0.5 0 0 0 -0.5,0.5 0.5,0.5 0 0 0 0.5,0.5 h 3 a 0.50005,0.50005 0 0 0 0.5,-0.5 v -2 a 0.5,0.5 0 0 0 -0.5,-0.5 z"
+   id="path629" />
+    </g>
+    <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="M 15,13.5 A 0.5,0.5 0 0 0 14.5,14 v 1 A 0.5,0.5 0 0 0 15,15.5 0.5,0.5 0 0 0 15.5,15 V 14 A 0.5,0.5 0 0 0 15,13.5 Z"
+   id="path633" />
+    <g
+   transform="matrix(1,0,0,1,-6,0)"
+   id="g637">
+        <path
+   style="color:#000000;clip-rule:nonzero;fill:#000000;fill-rule:nonzero;stroke-linecap:butt;stroke-linejoin:miter;-inkscape-stroke:none"
+   d="M 15,13.5 A 0.5,0.5 0 0 0 14.5,14 v 1 A 0.5,0.5 0 0 0 15,15.5 0.5,0.5 0 0 0 15.5,15 V 14 A 0.5,0.5 0 0 0 15,13.5 Z"
+   id="path635" />
+    </g>
+</svg>
