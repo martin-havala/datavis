@@ -5,7 +5,7 @@
 
 <header>
     <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <span on:click={() => goto('/')}>←</span>
+    <span on:click={() => goto(base || '/')}>←</span>
     <a href={base || '/'}>← back home</a>
 </header>
 <div class="body">
