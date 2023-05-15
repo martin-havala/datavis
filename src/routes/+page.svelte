@@ -1,35 +1,31 @@
-<script>
-    import { base } from '$app/paths';
+<script lang="ts">
+    import Cv from '../components/cv/cv.svelte';
+    import Hobbies from '../components/cv/hobbies.svelte';
+    import Tech from '../components/cv/tech.svelte';
+
+    let selectedTech: string | null = null;
 </script>
 
-<div>
-    <ul>
-        <li>
-            <a href="{base}/tourism">Tourism </a>
-        </li>
-        <li>
-            <a href="{base}/royals">Royals </a>
-        </li>
-        <li>
-            <a href="{base}/directors">Directors </a>
-        </li>
-        <li>
-            <a href="{base}/culture">Culture </a>
-        </li>
-        <li>
-            <a href="{base}/land_use">Land Use & Population</a>
-        </li>
-        <li>
-            <a href="{base}/kanagawa">Kanagawa</a>
-        </li>
-        <li>
-            <a href="{base}/population">Population</a>
-        </li>
-        <li>
-            <a href="{base}/16personalities">16 personalities</a>
-        </li>
-        <li>
-            <a href="{base}/eGov">Data Governance Maturity Indicators</a>
-        </li>
-    </ul>
-</div>
+<svelte:head>
+    <title>Martin Havala</title>
+</svelte:head>
+<section>
+    <div class="column"><Cv bind:selectedTech /></div>
+    <div class="column">
+        <Tech bind:selectedTech />
+        <Hobbies bind:selectedTech />
+    </div>
+    <!-- <Datavis /> -->
+</section>
+
+<style>
+    section {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .column {
+        padding: 1em;
+    }
+</style>

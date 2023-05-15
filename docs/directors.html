@@ -7,23 +7,25 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.b9a77c3e.css" rel="stylesheet">
-		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.e18c4bd8.css" rel="stylesheet">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.64a4f6bb.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.0a386e9c.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.14a7e92d.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.9463c494.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.956bc252.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.7a9a0c2c.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-layout.svelte.3dc7bc6f.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-directors-page.svelte.ac657475.js">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.f9d8f005.css" rel="stylesheet">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.e83c7ef9.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.2d938907.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.ddfa1888.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.8748ccf4.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.fd8a4017.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.087f6e6a.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-layout.svelte.a131cb58.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/navigation.c2c04bb0.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-directors-page.svelte.7ef84d1d.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.f0a34255.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/zoom.6f5fd951.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/select.84cbef7e.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/manyBody.af1a469b.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/linear.2f9814ba.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/defaultLocale.b5afb42d.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/viridis.ba9a4a08.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-directors-page.ts.9c5eea7e.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.fca24c55.js"><title>Movie Director Collaborations</title><!-- HEAD_svelte-634asr_START --><!-- HEAD_svelte-634asr_END -->
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/_page.90a7f2f4.js"><title>Movie Director Collaborations</title><!-- HEAD_svelte-634asr_START --><!-- HEAD_svelte-634asr_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -34,10 +36,10 @@
     <a href="/datavis" class="svelte-1fnt0r">← back home</a></header>
 <div class="body svelte-1fnt0r">
 
-<section><div class="page"><div class="svgContainer svelte-18cpype"><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="svelte-18cpype"></svg></div>
-        <div class="notes"><div><h1>Director colaborations </h1>
-                <div>Many films were directed by more than one director, let&#39;s take a look at the top coworking directors at once.
-                      Each director here has collaborated with other director at least on 10 films.
+<section><div class="page"><div class="svgContainer svelte-dyy97s"><svg xmlns:xlink="http://www.w3.org/1999/xlink" class="svelte-dyy97s"></svg></div>
+        <div class="notes"><div><h1>Director colaborations</h1>
+                <div>Many films were directed by more than one director, let&#39;s take a look at the top coworking directors
+                    at once. Each director here has collaborated with other director at least on 10 films.
                 </div>
                 <div class="comments">data source: <a href="https://www.imdb.com/interfaces/" target="about:blank">IMDB</a></div></div></div></div>
 </section>
@@ -47,7 +49,7 @@
 			
 			<script>
 				{
-					__sveltekit_mvmvyy = {
+					__sveltekit_1j83y67 = {
 						env: {},
 						assets: "https://martin-havala.github.io/datavis",
 						base: new URL(".", location).pathname.slice(0, -1),
@@ -57,11 +59,11 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.64a4f6bb.js"),
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.956bc252.js")
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.e83c7ef9.js"),
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.fd8a4017.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_mvmvyy.element, {
-							node_ids: [0, 2, 6],
+						kit.start(app, __sveltekit_1j83y67.element, {
+							node_ids: [0, 2, 8],
 							data,
 							form: null,
 							error: null

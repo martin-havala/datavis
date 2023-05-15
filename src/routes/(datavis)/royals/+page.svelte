@@ -130,7 +130,7 @@
     <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
+<section class="royals">
     <div class="page">
         <div class="map">
             <svg bind:this={svg}>
@@ -238,7 +238,7 @@
     }
 
     /* Create the caret/arrow with a unicode, and style it */
-    :global(li span) {
+    :global(.royals li span) {
         display: inline-block;
         margin-right: 6px;
         transform: rotate(90deg);

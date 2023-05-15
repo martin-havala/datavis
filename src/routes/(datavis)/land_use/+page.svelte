@@ -27,10 +27,6 @@
         </svg>
         <hr style="margin-top:10em" />
         <div class="notes">
-            <div>
-                <h1>Land use & population</h1>
-                <div />
-            </div>
             <div class="comments">
                 <div>
                     data sources:
@@ -63,12 +59,16 @@
     </div>
 </section>
 
-<style>
+<style lang="scss">
     .page {
         width: 100%;
         overflow-x: hidden;
         overflow-y: auto;
         display: block;
+        h1 {
+            margin: auto;
+            text-align: center;
+        }
     }
     .svg {
         width: 100%;

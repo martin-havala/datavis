@@ -7,15 +7,16 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_layout.b9a77c3e.css" rel="stylesheet">
-		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.2c7fe31c.css" rel="stylesheet">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.64a4f6bb.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.0a386e9c.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.14a7e92d.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.9463c494.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.956bc252.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.7a9a0c2c.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-layout.svelte.3dc7bc6f.js">
-		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-royals-page.svelte.9172fc93.js">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/_page.7514b61b.css" rel="stylesheet">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.e83c7ef9.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/index.2d938907.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/singletons.ddfa1888.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/paths.8748ccf4.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/app.fd8a4017.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/_layout.svelte.087f6e6a.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-layout.svelte.a131cb58.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/navigation.c2c04bb0.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/(datavis)-royals-page.svelte.00a0b06c.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/transform.f0a34255.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/zoom.6f5fd951.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/select.84cbef7e.js">
@@ -33,14 +34,14 @@
     <a href="/datavis" class="svelte-1fnt0r">← back home</a></header>
 <div class="body svelte-1fnt0r">
 
-<section><div class="page svelte-2hk1p2"><div class="map svelte-2hk1p2"><svg class="svelte-2hk1p2"><defs><marker id="arrow" markerWidth="2" markerHeight="2" viewBox="-2 -2 4 4" orient="auto"><path d="M-2,-2 L2,0 -2,2 z" style="fill: var(--line-color);"></path></marker></defs></svg>
-            <div class="mapDiv svelte-2hk1p2"></div></div>
+<section class="royals"><div class="page svelte-1gb8vaw"><div class="map svelte-1gb8vaw"><svg class="svelte-1gb8vaw"><defs><marker id="arrow" markerWidth="2" markerHeight="2" viewBox="-2 -2 4 4" orient="auto"><path d="M-2,-2 L2,0 -2,2 z" style="fill: var(--line-color);"></path></marker></defs></svg>
+            <div class="mapDiv svelte-1gb8vaw"></div></div>
 
-        <div class="notes svelte-2hk1p2"><div><h1>Elizabeth 2</h1>
+        <div class="notes svelte-1gb8vaw"><div><h1>Elizabeth 2</h1>
                 Have you ever wondered where each queens predecesor was born?
             </div>
-            <div class="comments svelte-2hk1p2"><div>data source - Wikipedia</div></div>
-            <div class="list svelte-2hk1p2"></div></div></div>
+            <div class="comments svelte-1gb8vaw"><div>data source - Wikipedia</div></div>
+            <div class="list svelte-1gb8vaw"></div></div></div>
 </section>
 </div>
 
@@ -48,7 +49,7 @@
 			
 			<script>
 				{
-					__sveltekit_mvmvyy = {
+					__sveltekit_1j83y67 = {
 						env: {},
 						assets: "https://martin-havala.github.io/datavis",
 						base: new URL(".", location).pathname.slice(0, -1),
@@ -58,11 +59,11 @@
 					const data = [null,null,null];
 
 					Promise.all([
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.64a4f6bb.js"),
-						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.956bc252.js")
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.e83c7ef9.js"),
+						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.fd8a4017.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_mvmvyy.element, {
-							node_ids: [0, 2, 11],
+						kit.start(app, __sveltekit_1j83y67.element, {
+							node_ids: [0, 2, 13],
 							data,
 							form: null,
 							error: null
