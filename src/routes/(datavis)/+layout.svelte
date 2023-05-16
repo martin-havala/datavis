@@ -3,23 +3,25 @@
     import { base } from '$app/paths';
 </script>
 
-<header>
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <span on:click={() => goto(base || '/')}>←</span>
-    <a href={base || '/'}>← back home</a>
-</header>
 <div class="body">
-    <slot />
+    <header>
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <span on:click={() => goto(base || '/datavis')}>←</span>
+        <a href={base || '/datavis'}>← back home</a>
+    </header>
+    <div class="content">
+        <slot />
+    </div>
 </div>
 
 <style lang="scss">
-    :global(body) {
+    .body {
         --headerHeight: 2em;
         display: grid;
-        grid-template-areas: 'header' 'body';
+        grid-template-areas: 'header' 'content';
         height: 100vh;
         overflow: hidden;
-        width: 100vw;
+        width: 100%;
         grid-template-rows: 2em auto;
     }
     header {
@@ -39,8 +41,27 @@
             text-decoration: none;
         }
     }
-    .body {
-        grid-area: body;
+    .content {
+        grid-area: content;
         overflow: auto;
+
+        :global(section) {
+            user-select: none;
+        }
+
+        :global(.notes) {
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+        :global(.notes),
+        :global(.comments) {
+            max-width: 50em;
+            margin: 1ex;
+            text-align: left;
+        }
+        :global(h1) {
+            padding-left: 1ex;
+        }
     }
 </style>

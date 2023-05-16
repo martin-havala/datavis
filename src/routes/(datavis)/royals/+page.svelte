@@ -162,27 +162,42 @@
         grid-template-areas: 'notes plot';
         overflow: hidden;
         width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 0;
+        height: calc(100vh - var(--headerHeight, 2em));
+
+        :global(ul) {
+            padding-left: 1em;
+        }
+        /* Style the caret/arrow */
+        :global(li) {
+            padding: 0;
+            margin: 0 0 0 1em;
+            cursor: pointer;
+            user-select: none; /* Prevent text selection */
+        }
+        /* Create the caret/arrow with a unicode, and style it */
+        :global(.royals li span) {
+            display: inline-block;
+            margin-right: 6px;
+            transform: rotate(90deg);
+        }
+
+        /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+        :global(li.inactive span) {
+            transform: rotate(0deg);
+        }
+
+        /* Hide the nested list */
+        :global(li.inactive ul) {
+            display: none;
+        }
     }
     svg {
         grid-area: plot;
     }
-    .notes,
-    .comments {
-        max-width: 50em;
-        margin: 1em auto;
-        text-align: left;
-        padding: 2ex;
-    }
     .notes {
         grid-area: notes;
-        display: flex;
-        flex-direction: column;
-        padding-top: 2em;
-        overflow: auto;
     }
+    
     .list {
         max-height: 100%;
         overflow: auto;
@@ -227,30 +242,5 @@
         background-size: cover;
         background-position: top center;
         border-radius: 100%;
-    }
-    :global(ul) {
-        padding-left: 1em;
-    }
-    /* Style the caret/arrow */
-    :global(li) {
-        cursor: pointer;
-        user-select: none; /* Prevent text selection */
-    }
-
-    /* Create the caret/arrow with a unicode, and style it */
-    :global(.royals li span) {
-        display: inline-block;
-        margin-right: 6px;
-        transform: rotate(90deg);
-    }
-
-    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-    :global(li.inactive span) {
-        transform: rotate(0deg);
-    }
-
-    /* Hide the nested list */
-    :global(li.inactive ul) {
-        display: none;
     }
 </style>

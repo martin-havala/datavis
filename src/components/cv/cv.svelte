@@ -9,24 +9,24 @@
 <section>
     <h1>Work</h1>
     {#each CV_JOBS as job}
-        <dl>
-            <dt>
+        <ul class="no-padding">
+            <li>
                 {job.employee}
                 <span class="interval">{job.interval[0]} - {job.interval[1] ? job.interval[1] : 'still there'}</span>
                 <span class="parttime">{job.parttime ? `${job.parttime} part-time` : ''}</span>
-            </dt>
-            <dd>
+
                 <div class="tasks">{job.tasks}</div>
                 <div class="tech">
                     {#each job.tech as tech}
                         <span class={allTechs.includes(tech) ? 'selected' : ''}>{tech}</span>
                     {/each}
                 </div>
-            </dd>
-        </dl>
+            </li>
+        </ul>
     {/each}
-
-    <h2>Education</h2>
+</section>
+<section>
+    <h1>Education</h1>
     <ul>
         Faculty of Mathematics, Physics and Informatics Comenius University Bratislava
         <li><i>2008 - 2010</i>: Mathematics - Computer Graphics and Geometry (Mgr.)</li>
@@ -42,9 +42,6 @@
     .parttime {
         font-size: 0.8em;
         opacity: 0.6;
-    }
-    dd {
-        margin: 0 1ex;
     }
     .tech {
         font-size: 0.7em;

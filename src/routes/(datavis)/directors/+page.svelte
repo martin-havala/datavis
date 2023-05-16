@@ -35,7 +35,7 @@
         const nodes = d3.map(movie_nodes, (b, index) => ({ id: movie_nodes[index].id, count: b.count }));
         const links = d3.map(movie_links, (b, i) => ({ source: b.source, target: b.target, origin: b }));
 
-        const forceNode = d3.forceManyBody();
+        const forceNode = d3.forceManyBody().strength(-50);
         const forceLink = d3.forceLink(links).id(({ index }) => movie_nodes[index as number].id);
         forceLink.distance((d) => {
             return Math.max(d.source.count, 50);
@@ -130,8 +130,8 @@
             <svg bind:this={svgElem} xmlns:xlink="http://www.w3.org/1999/xlink" />
         </div>
         <div class="notes">
+            <h1>Director colaborations</h1>
             <div>
-                <h1>Director colaborations</h1>
                 <div>
                     Many films were directed by more than one director, let's take a look at the top coworking directors
                     at once. Each director here has collaborated with other director at least on 10 films.
@@ -153,7 +153,7 @@
         width: 100vw;
     }
     svg {
-        width: 120vw;
-        height: 120vh;
+        width: 100vw;
+        height: 100vh;
     }
 </style>

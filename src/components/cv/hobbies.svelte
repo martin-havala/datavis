@@ -7,16 +7,18 @@
         !!selectedTech && TECH_GRPS[selectedTech] ? [...TECH_GRPS[selectedTech], selectedTech] : [selectedTech];
 </script>
 
-<h1>Hobbies</h1>
-{#each CV_HOBBIES as hobby}
-    <span class={allTechs.filter((t) => hobby.tech.includes(t || '-')).length > 0 ? 'selected' : ''}>
-        {#if hobby.link}
-            <a href={base + hobby.link}>{hobby.group}</a>
-        {:else}
-            {hobby.group}
-        {/if}
-    </span>
-{/each}
+<section>
+    <h1>Hobbies</h1>
+    {#each CV_HOBBIES as hobby}
+        <span class={allTechs.filter((t) => hobby.tech.includes(t || '-')).length > 0 ? 'selected' : ''}>
+            {#if hobby.link}
+                <a href={base + hobby.link}>{hobby.group}</a>
+            {:else}
+                {hobby.group}
+            {/if}
+        </span>
+    {/each}
+</section>
 
 <style lang="scss">
     span + span {

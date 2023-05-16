@@ -15,7 +15,7 @@
     const year = (y: number) => {
         return Math.floor((y - 2030) / 10);
     };
-    let highlight: Population | null = null;
+    let highlight: PopulationPosition | null = null;
 
     onMount(() => {
         svg = d3.select(svgElem).attr('viewBox', `0 0 ${width},${height}`);
@@ -72,7 +72,12 @@
                 .attr('height', innerTileSizeY)
                 .attr('id', (d) => `rect${d.ISO3_code}`)
                 .attr('rx', 3);
-            const clip = grp.append('clipPath').attr('id', (d) => `rect${d.ISO3_code}`);
+            const clip = svg
+                .select('defs')
+                .selectAll('clipPath')
+                .data(popPosData)
+                .join('clipPath')
+                .attr('id', (d) => `rect${d.ISO3_code}`);
             clip.append('rect').attr('width', innerTileSizeX).attr('height', innerTileSizeY).attr('rx', 3);
 
             grp.append('path')
@@ -138,19 +143,7 @@
 
 <section>
     <div class="page">
-        <div>
-            <h1>Human population in 2100</h1>
-            <div class="credits">
-                <div>
-                    Data source :
-                    <a href="https://population.un.org/wpp/Download/Standard/CSV">
-                        <i>United Nations</i>
-                    </a>
-                </div>
-                <div>Used projections: High / Medium / Low <b>fertility</b></div>
-                <div>Map source: <a href="https://github.com/mustafasaifee42/Tile-Grid-Map">Tile Grid Map</a></div>
-            </div>
-        </div>
+        <h1>Human population in 2100</h1>
         <div class="charts">
             <svg bind:this={svgElem} class="map">
                 <defs>
@@ -184,10 +177,22 @@
                 <Highlight bind:highlight />
             {/if}
         </div>
+        <div class="notes">
+            <div>
+                <span>
+                    Data source :
+                    <a href="https://population.un.org/wpp/Download/Standard/CSV">
+                        <i>United Nations</i>
+                    </a>
+                </span>
+                <span>Used projections: High / Medium / Low <b>fertility</b></span>
+                <span>Map source: <a href="https://github.com/mustafasaifee42/Tile-Grid-Map">Tile Grid Map</a></span>
+            </div>
+        </div>
     </div>
 </section>
 
-<style lang="scss" global>
+<style lang="scss">
     .page {
         width: auto;
         overflow: auto;
@@ -200,7 +205,20 @@
         width: 95vw;
         height: 80vh;
         min-width: 800px;
-        min-height: 640px;
+        min-height: 620px;
+    }
+    .notes {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+        max-width: 100%;
+        margin: 1em 0 0 0;
+        span {
+            margin: 0 2em;
+        }
+        overflow: hidden;
     }
     :global(.cntry) {
         opacity: 0.8;
@@ -229,9 +247,6 @@
         :global(.changeValue) {
             font-size: 0.8em;
         }
-    }
-    .credits {
-        font-size: 0.8em;
     }
     :global(.Africa rect.bgr) {
         fill: #9c755f;

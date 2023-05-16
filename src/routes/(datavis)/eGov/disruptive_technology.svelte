@@ -25,6 +25,7 @@
         /* use !important to prevent issues with browser extensions that change fonts */
         font-family: 'eGovFont' !important;
         font-size: 48px;
+        line-height: 48px;
         font-style: normal;
     }
 </style>

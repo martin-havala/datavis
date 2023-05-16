@@ -11,11 +11,10 @@ export const CV_JOBS = [
         tech: [
             'Angular',
             'Angular Material',
-            'Typescript',
+            'RxJs',
             'Sass',
             'Jest',
             'Spectator',
-            'Git',
             'Storybook',
             'Attlasian BB+C+J',
             'D3.js',
@@ -27,7 +26,7 @@ export const CV_JOBS = [
         interval: [2019, 2020],
         parttime: '8h+',
         tasks: 'development of webumenia.sk and occasional micropages',
-        tech: ['VueJS', 'Nuxt JS', 'Laravel', 'PHPUnit', 'JIRA', 'Confluence', 'Git'],
+        tech: ['VueJS', 'NuxtJS', 'Laravel', 'PHPUnit', 'JIRA', 'Confluence', 'Git'],
     },
 
     {
@@ -39,12 +38,11 @@ export const CV_JOBS = [
             'AngularJS',
             'Angular',
             'Angular Material',
-            'Typescript',
+            'TypeScript',
             'Less',
             'Leaflet',
             'Karma',
             'Jasmine',
-            'Git',
             'Attlasian BB+C+J',
         ],
     },
@@ -54,7 +52,7 @@ export const CV_JOBS = [
         location: 'Bratislava',
         interval: [2012, 2016],
         tasks: 'development of internal system for production management customer support, custom design and automation of report generation',
-        tech: ['Java2EE', 'IBM DB2', 'HTML', 'Javascript', 'jQuery', 'CSS', 'JasperReports'],
+        tech: ['Java2EE', 'IBM DB2', 'HTML', 'JavaScript', 'jQuery', 'CSS', 'JasperReports'],
     },
 
     {
@@ -72,12 +70,12 @@ export const CV_HOBBIES = [
         link: '/datavis',
         interval: [2022],
         tasks: 'tiny web for datavis',
-        tech: ['Svelte', 'SvelteKit', 'D3.js', 'Sass', 'Python', 'Git'],
+        tech: ['Svelte', 'SvelteKit', 'D3.js', 'Sass', 'Python', 'Git', 'SQL'],
     },
     {
         link: '/hobbies/tech',
         group: 'Emerging FE Tech',
-        interval: [2021, 2022],
+        interval: [2021],
         tasks: 'CheeseCake by Mona',
         tech: ['Svelte', 'SvelteKit', 'D3.js', 'Sass', 'Git'],
     },
@@ -93,31 +91,43 @@ export const CV_TECH = CV_JOBS.reduce((a, j) => [...a, ...j.tech], [] as string[
     [] as string[]
 );
 
-export const TECHS = [
-    { tech: 'HTML', prax: 11 },
-    { tech: 'CSS', prax: 11 },
-    { tech: 'Javascript', prax: 8 },
-    { tech: 'AngularJS', prax: 2 },
-    { tech: 'Angular', prax: 5 },
-    { tech: 'Angular Material', prax: 4 },
-    { tech: 'Unit Testing', prax: 4 },
-    { tech: 'NgRx', prax: 2 },
-    { tech: 'Less / SASS', prax: 4 },
-    { tech: 'D3.js', prax: 2 },
-    { tech: 'Git', prax: 2 },
-    { tech: 'BitBucket + Jira + Conflucence', prax: 5 },
-    { tech: 'Svelte + SvelteKit', prax: 1 },
-    { tech: 'VueJS + NuxtJS', prax: 2 },
-    { tech: 'Python', prax: 2 },
-    { tech: 'SVG', prax: 4 },
-    { tech: 'Java', prax: 4 },
-    { tech: 'SQL', prax: 4 },
+const techs = [
+    { name: 'HTML / CSS / JS', group: 0 },
+    { name: 'TypeScript', group: 0 },
+    { name: 'AngularJS', group: 0 },
+    { name: 'Angular', group: 0 },
+    { name: 'Angular Material', group: 0 },
+    { name: 'RxJs', group: 0 },
+    { name: 'Less / SASS', group: 0 },
+    { name: 'D3.js', group: 0 },
+    { name: 'Svelte + SvelteKit', group: 0 },
+    { name: 'VueJS + NuxtJS', group: 0 },
+    { name: 'SVG', group: 0 },
+    { name: 'Java', group: 1 },
+    { name: 'SQL', group: 1 },
+    { name: 'Unit Testing', group: 2 },
+    { name: 'BitBucket + Jira + Conflucence', group: 2 },
+    { name: 'Git', group: 2 },
+    { name: 'Python', group: 2 },
 ];
 
 export const TECH_GRPS: { [tech: string]: string[] } = {
     HTML: ['Angular', 'AngularJS', 'jQuery', 'Svelte', 'VueJS', 'D3.js'],
-    CSS: ['Angular', 'AngularJS', 'jQuery', 'Svelte', 'VueJS', 'D3.js'],
-    Javascript: ['Angular', 'AngularJS', 'jQuery', 'Svelte', 'VueJS', 'D3.js'],
+    CSS: ['VueJS', 'D3.js', 'HTML', 'Sass', 'Less'],
+    JavaScript: ['Angular', 'AngularJS', 'jQuery', 'Svelte', 'VueJS', 'D3.js'],
+    'HTML / CSS / JS': [
+        'Angular',
+        'AngularJS',
+        'D3.js',
+        'HTML',
+        'jQuery',
+        'Less',
+        'Sass',
+        'Svelte',
+        'VueJS',
+        'NuxtJS',
+    ],
+    TypeScript: ['Angular', 'AngularJS', 'VueJS', 'NuxtJS', 'Svelte', 'SvelteKit'],
     'Unit Testing': ['Karma', 'Jest', 'Spectator', 'Jasmine', 'PHPUnit'],
     RxJS: ['Angular'],
     'Svelte + SvelteKit': ['Svelte', 'SvelteKit'],
@@ -130,45 +140,51 @@ export const TECH_GRPS: { [tech: string]: string[] } = {
     Jira: ['Attlasian BB+C+J'],
     Conflucence: ['Attlasian BB+C+J'],
     'BitBucket + Jira + Conflucence': ['Attlasian BB+C+J'],
+    Git: ['Attlasian BB+C+J'],
     Java: ['Java', 'Java2EE', 'JasperReports'],
     SQL: ['SQL', 'IBM DB2'],
 };
 
 const year = new Date().getUTCFullYear();
+let hlp = [];
+{
+    const reducer = (jobs: { tech: string[]; interval: number[] }[], tech: string) => {
+        return jobs.reduce((years, job) => {
+            const allTechs = TECH_GRPS[tech] ? [...TECH_GRPS[tech], tech] : [tech];
+            if (job.tech.filter((j) => allTechs.includes(j)).length > 0) {
+                return [
+                    ...Array((job.interval[1] ?? year) - job.interval[0])
+                        .fill(0)
+                        .map((_, i) => i + job.interval[0] + 1),
+                    ...years,
+                ]
+                    .sort()
+                    .filter(onlyUnique);
+            }
+            return years;
+        }, [] as number[]);
+    };
 
-const TECH_YEARS = TECHS.map((tech) =>
-    CV_JOBS.reduce((years, job) => {
-        const allTechs = TECH_GRPS[tech.tech] ? [...TECH_GRPS[tech.tech], tech.tech] : [tech.tech];
-        if (job.tech.filter((j) => allTechs.includes(j)).length > 0) {
-            return [
-                ...Array((job.interval[1] ?? year) - job.interval[0])
-                    .fill(0)
-                    .map((_, i) => i + job.interval[0]),
-                ...years,
-            ]
-                .sort()
-                .filter(onlyUnique);
-        }
-        return years;
-    }, [] as number[])
-);
-const HOBBY_YEARS = TECHS.map((tech) =>
-    CV_HOBBIES.reduce((years, job) => {
-        const allTechs = TECH_GRPS[tech.tech] ? [...TECH_GRPS[tech.tech], tech.tech] : [tech.tech];
-        if (job.tech.filter((j) => allTechs.includes(j)).length > 0) {
-            return [
-                ...Array((job.interval[1] ?? year) - job.interval[0])
-                    .fill(0)
-                    .map((_, i) => i + job.interval[0]),
-                ...years,
-            ]
-                .sort()
-                .filter(onlyUnique);
-        }
-        return years;
-    }, [] as number[])
-);
-export const TECH_YEARS_SQUARES = TECHS.map((_, i) => [
-    ...TECH_YEARS[i].map((_) => '◼'),
-    ...HOBBY_YEARS[i].filter((h) => !TECH_YEARS[i].includes(h)).map((_) => '◻'),
-]);
+    const TECH_YEARS = techs.map((tech) => reducer(CV_JOBS, tech.name));
+    const HOBBY_YEARS = techs.map((tech) => reducer(CV_HOBBIES, tech.name));
+    hlp = techs.map(({ name, group }, i) => ({
+        name,
+        group,
+        workYears: TECH_YEARS[i].length + HOBBY_YEARS[i].filter((h) => !TECH_YEARS[i].includes(h)).length,
+        hobbyYears: HOBBY_YEARS[i].filter((h) => !TECH_YEARS[i].includes(h)).length,
+        lastWorkUsed: Math.max(...TECH_YEARS[i], 0),
+        lastUsed: Math.max(...TECH_YEARS[i], ...HOBBY_YEARS[i], 0),
+    }));
+}
+
+export const TECHS = hlp.sort((a, b) => {
+    if (a.group != b.group) return a.group > b.group ? 1 : -1;
+    if (a.name != b.name) return a.name > b.name ? 1 : -1;
+    return 0;
+});
+
+export const TECH_GRP_NAMES = [
+    { shrt: 'FE', lng: 'front-end' },
+    { shrt: 'BE', lng: 'back-end' },
+    { shrt: 'DEV', lng: 'development' },
+];

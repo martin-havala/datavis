@@ -1,43 +1,65 @@
+@media print {
+    @page {
+        size: A4;
+        orientation: landscape;
+    }
+
+    body,
+    html {
+        size: A4;
+        background: none;
+    }
+
+    .noprint {
+        display: none;
+    }
+}
+@media screen {
+    .print-only {
+        display: none;
+    }
+}
 body {
-    --active-color:#fb8;
+    --fg-color: #dde;
+    --bg-color: #202022;
+    --active-color: #f50;
+    min-height: 100vh;
+    background: var(--bg-color, #202022);
+    fill: var(--fg-color, #ddf);
+    color: var(--fg-color, #ddf);
 }
 html,
 body,
 #svelte {
-    background: #202022;
-    fill: #dde;
-    color: #dde;
     font-family: 'Avenir', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.3em;
     padding: 0;
     margin: 0;
     min-height: 100vh;
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    border: 0;
-}
-section,
-section * {
-    user-select: none;
+    border: 0; */
 }
 
-.notes {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2em;
-}
-.notes,
-.comments {
-    max-width: 50em;
-    margin: 1em auto;
-    text-align: left;
-    padding: 2ex;
-    overflow: auto;
-}
 ul {
-    margin-top: 0;
+    margin: 0 0;
+    padding: 1ex 0;
     list-style: none;
+}
+
+li {
+    margin: 0 1em;
+    padding: 1ex 0;
+}
+
+.no-padding {
+    padding: 0;
+    margin: 0;
+}
+.no-padding li {
+    margin: 0 0em;
 }
 
 a {

@@ -2,8 +2,8 @@
     import type { PopulationPosition } from '$lib/assets/population/population.model';
     import * as d3 from 'd3';
 
-    const chartHeight = 680;
-    const chartHeightCenter = chartHeight - 130;
+    const chartHeight = 650;
+    const chartHeightCenter = chartHeight - 100;
     const chartWidth = 200;
 
     const year = (y: number) => {

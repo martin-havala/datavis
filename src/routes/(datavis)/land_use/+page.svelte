@@ -66,56 +66,60 @@
         overflow-y: auto;
         display: block;
         h1 {
-            margin: auto;
             text-align: center;
+            margin-bottom: 0;
+        }
+        :global(.yScale),
+        :global(.selector) {
+            transition: opacity 400ms ease-in-out;
+        }
+        :global(.yScale text),
+        :global(text) {
+            fill: var(--color, currentColor);
+        }
+
+        :global(path) {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        :global(path.plotline) {
+            stroke-width: 2;
+            fill: none;
+            stroke: var(--color);
+        }
+        :global(.population) {
+            --color: blue;
+        }
+        :global(.built),
+        :global(.builtPC),
+        :global(.builtPC) {
+            --color: gray;
+        }
+        :global(.cropland),
+        :global(.croplandPC) {
+            --color: goldenrod;
+        }
+        :global(.grazing),
+        :global(.grazingPC) {
+            --color: olivedrab;
+        }
+        :global(.arableLand) {
+            --color: darkolivegreen;
+        }
+        :global(.populationDensity) {
+            --color: purple;
+        }
+        :global(.fertilizer),
+        :global(.fertilizerPA),
+        :global(.fertilizerPC) {
+            --color: firebrick;
+        }
+        :global(text) {
+            font-size: 12px;
         }
     }
     .svg {
         width: 100%;
-    }
-
-    :global(.yScale, .selector) {
-        transition: opacity 400ms ease-in-out;
-    }
-    :global(.yScale text, text) {
-        fill: var(--color, currentColor);
-    }
-
-    :global(path) {
-        stroke-linecap: round;
-        stroke-linejoin: round;
-    }
-
-    :global(path.plotline) {
-        stroke-width: 2;
-        fill: none;
-        stroke: var(--color);
-    }
-    :global(.population) {
-        --color: blue;
-    }
-    :global(.built, .builtPC),
-    :global(.builtPC) {
-        --color: gray;
-    }
-    :global(.cropland, .croplandPC) {
-        --color: goldenrod;
-    }
-    :global(.grazing, .grazingPC) {
-        --color: olivedrab;
-    }
-    :global(.arableLand) {
-        --color: darkolivegreen;
-    }
-    :global(.populationDensity) {
-        --color: purple;
-    }
-    :global(.fertilizer),
-    :global(.fertilizerPA),
-    :global(.fertilizerPC) {
-        --color: firebrick;
-    }
-    :global(text) {
-        font-size: 12px;
     }
 </style>
