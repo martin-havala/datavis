@@ -337,47 +337,45 @@
 </svelte:head>
 
 <section>
-    <div class="page">
-        <svg bind:this={svgElem} />
-        <div class="notes">
+    <svg bind:this={svgElem} />
+    <div class="notes">
+        <div>
+            <h1>EU Tourism 2022</h1>
             <div>
-                <h1>EU Tourism 2022</h1>
-                <div>
-                    This chart compares foreign tourist arrivals during the year and compares it to country population;
-                </div>
-                <br />
-                <div>Second part highlights the season period in each country</div>
+                This chart compares foreign tourist arrivals during the year and compares it to country population;
             </div>
-            <div class="comments">
-                <div>
-                    data source - EuroStat:
-                    <ul>
-                        <li>
-                            <a
-                                href="https://ec.europa.eu/eurostat/databrowser/view/TOUR_OCC_ARM__custom_5792777/default/table?lang=en"
-                                ><i>Arrivals at tourist accommodation establishments - monthly data</i></a
-                            >
-                        </li>
-                        <li>
-                            <a href="https://ec.europa.eu/eurostat/databrowser/view/TPS00001/default/table?lang=en">
-                                <i>Population on 1 January</i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <br />
+            <div>Second part highlights the season period in each country</div>
+        </div>
+        <div class="comments">
+            <div>
+                data source - EuroStat:
+                <ul>
+                    <li>
+                        <a
+                            href="https://ec.europa.eu/eurostat/databrowser/view/TOUR_OCC_ARM__custom_5792777/default/table?lang=en"
+                            ><i>Arrivals at tourist accommodation establishments - monthly data</i></a
+                        >
+                    </li>
+                    <li>
+                        <a href="https://ec.europa.eu/eurostat/databrowser/view/TPS00001/default/table?lang=en">
+                            <i>Population on 1 January</i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
 <style>
-    .page {
+    section {
         display: grid;
         grid-template-areas: 'notes plot';
-        height: calc(100vh - var(--headerHeight, 3em) - 1em);
-        overflow: hidden;
         width: 100%;
+        height: calc(100% - 1em);
         padding-top: 1em;
+        overflow: auto;
     }
     svg {
         grid-area: plot;
@@ -387,6 +385,7 @@
         display: flex;
         flex-direction: column;
         padding-top: 2em;
+        min-width: 15em;
     }
     .notes,
     .comments {

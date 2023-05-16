@@ -40,7 +40,6 @@
         forceLink.distance((d) => {
             return Math.max(d.source.count, 50);
         });
-        debugger
 
         const color = d3.scaleSequential().domain([1, 20]).interpolator(d3.interpolateViridis);
         const simulation = d3

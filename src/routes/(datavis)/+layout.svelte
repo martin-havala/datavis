@@ -6,8 +6,8 @@
 <div class="body">
     <header>
         <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <span on:click={() => goto(base || '/datavis')}>←</span>
-        <a href={base || '/datavis'}>← back home</a>
+        <a href={base || '/'}>← back home</a>
+        <a href={base || '/'}>← back home</a>
     </header>
     <div class="content">
         <slot />
