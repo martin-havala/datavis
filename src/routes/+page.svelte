@@ -14,7 +14,13 @@
                 <span>Day 9- High Low:</span> <a href="{base}/tourism">Tourism </a>
             </li>
             <li>
-                <span>Day 13 - Pop culture: </span> <a href="{base}/directors">Directors </a>
+                <span>Day 11- Circular:</span> <a href="{base}/food_consumption">Food Consumption</a>
+            </li>
+            <li>
+                <span>Day 13 - Pop culture: </span> <a href="{base}/director_ratings">Director ratings </a>
+            </li>
+            <li>
+                <span>Day 17 - Networks: </span> <a href="{base}/directors">Directors </a>
             </li>
             <li>
                 <span>Day 16 - Family:</span> <a href="{base}/royals">Royals </a>
