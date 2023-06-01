@@ -1,5 +1,5 @@
 {
-    "name": "cheCities23ck",
+    "name": "datavis",
     "version": "0.0.1",
     "scripts": {
         "dev": "vite dev",
@@ -15,7 +15,6 @@
         "@types/cookie": "^0.5.1",
         "@types/d3": "^7.4.0",
         "@types/topojson-client": "^3.1.1",
-        "date-picker-svelte": "^2.3.0",
         "node-sass": "^7.0.1",
         "sass": "^1.62.0",
         "svelte": "^3.54.0",
@@ -27,6 +26,7 @@
     "type": "module",
     "dependencies": {
         "d3": "^7.8.4",
-        "d3-geo-projection": "4.0.0"
+        "d3-geo-projection": "4.0.0",
+        "dayjs": "^1.11.7"
     }
 }

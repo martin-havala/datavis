@@ -1,41 +1,25 @@
 <script lang="ts">
-    import * as d3 from 'd3';
-
+    import { mean, select, type Selection } from 'd3';
     import { onMount } from 'svelte';
-    import type { Centenarian } from './model';
-    /** @type {import('./$types').PageData} */
-    export let data;
+    import { catmulRomLine, contourIntersection, simpleLine } from './helpers';
+    import type { AvgGroup, Centenarian, DataPageLoad, PeopleDataItem } from './model';
 
-    const centenarians: Centenarian[] = (d3.csvParse(data.centenarians) as unknown as Centenarian[]).map((c) => ({
-        ...c,
-        age: Math.floor(c.age),
-    }));
-    const centenariansReduced = centenarians.reduce((a, c) => {
+    /** @type {import('./$types').PageData} */
+    export let data: DataPageLoad;
+
+    const centenariansReduced = data.centenarians.reduce((a, c) => {
         if (a.find((ac) => ac.age == c.age && ac.gender == c.gender && ac.still_alive == c.still_alive)) {
             return a;
         }
         return [...a, c];
     }, [] as Centenarian[]);
 
-    const polarLine = (center: GeoJSON.Position, angleDeg: number) => {
-        const angle = angleDeg * (Math.PI / 180);
-        const x = center[0] + 5000 * Math.cos(angle);
-        const y = center[1] - 5000 * Math.sin(angle);
-        return [center, [x, y]] as [GeoJSON.Position, GeoJSON.Position];
-    };
-
-    interface AvgGroup {
-        gender: string;
-        age: number;
-        label: string;
-    }
-
     const avgLifespan: AvgGroup[] = [
         { gender: 'male', age: 70, label: 'average' },
         { gender: 'female', age: 75, label: 'average' },
     ];
 
-    function makeLabel(s: d3.Selection<any, any, any, any>, text: null | string | ((a: any) => string), distance = 7) {
+    function makeLabel(s: Selection<any, any, any, any>, text: null | string | ((...a: any) => string), distance = 12) {
         s.append('text').attr('class', 'label').attr('transform', `translate(${distance},0)`).text(text);
         s.append('circle').attr('r', 3);
         distance > 15 &&
@@ -45,237 +29,151 @@
                 .attr('d', `M0,0 h${distance - 5}`);
     }
 
-    const fieldData = [
-        { x: 99, y: 800 },
-        { x: 138, y: 900 },
-        { x: 164, y: 711 },
-        { x: 174, y: 653 },
-        { x: 167, y: 591 },
-        { x: 142, y: 529 },
-        { x: 99, y: 500 },
-        { x: 39, y: 470 },
-        { x: -35, y: 382 },
-        { x: -124, y: 359 },
-        { x: -224, y: 679 },
-    ];
     let svgElem: SVGGElement;
-    let svg: d3.Selection<SVGGElement, unknown, any, any>;
-
-    const lineIntersection = (
-        [[a, b], [c, d]]: [GeoJSON.Position, GeoJSON.Position],
-        [[p, q], [r, s]]: [GeoJSON.Position, GeoJSON.Position]
-    ): null | GeoJSON.Position => {
-        let det, gamma, lambda;
-        det = (c - a) * (s - q) - (r - p) * (d - b);
-        if (det === 0) {
-            return null;
-        } else {
-            lambda = ((s - q) * (r - a) + (p - r) * (s - b)) / det;
-            gamma = ((b - d) * (r - a) + (c - a) * (s - b)) / det;
-
-            if (0 < lambda && lambda < 1 && 0 < gamma && gamma < 1) {
-                return [a + (c - a) * lambda, b + (d - b) * lambda];
-            }
-            return null;
-        }
-    };
+    let svg: Selection<SVGGElement, unknown, any, any>;
 
     onMount(() => {
-        svg = d3.select(svgElem);
-        {
-            const aliveRank = { male: 1, female: 1, abs: 1 };
-            centenarians.forEach((c) => {
-                if (c.still_alive === 'alive') {
-                    c.aliveRank = aliveRank[c.gender]++;
-                    c.aliveRankAbs = aliveRank.abs++;
-                }
-            });
-        }
-
-        const contours = d3
-            .contourDensity<{ x: number; y: number }>()
-            .size([800, 800])
-            .cellSize(30)
-            .bandwidth(186)
-            .thresholds(180)
-            .x(({ x }) => x)
-            .y(({ y }) => y)(fieldData)
-            .reverse()
-            .map((c) => c.coordinates)
-            .flat(2)
-            .slice(0, 160)
-            .map((c) => [...c]);
-
-        const line = d3
-            .line()
-            .curve(d3.curveCatmullRom)
-            .x((d) => d[0])
-            .y((d) => d[1]);
-
+        svg = select(svgElem);
         svg.append('g')
             .attr('class', 'contours')
             .selectAll('g')
-
-            .data(contours.filter((c, i) => i % 5 == 0 && i < 121) as unknown as [number, number][][])
+            .data(data.contours.filter((c, i) => i % 5 == 0 && i < 121) as unknown as [number, number][][])
             .join('path')
             .attr('class', 'contour')
-            .attr('d', line);
+            .attr('d', catmulRomLine);
 
         const centerPoint = [
-            d3.mean(contours[0].map((p) => p[0])),
-            d3.mean(contours[0].map((p) => p[1])),
+            mean(data.contours[0].map((p) => p[0])),
+            mean(data.contours[0].map((p) => p[1])),
         ] as GeoJSON.Position;
-
-        const reduceLine = (contour: GeoJSON.Position[], angle: number = 0) => {
-            const crossLine = polarLine(centerPoint, angle);
-
-            for (let i = 0; i < contour.length - 1; i++) {
-                const line2: [GeoJSON.Position, GeoJSON.Position] = [contour[i], contour[i + 1]];
-                const positions = lineIntersection(crossLine, line2);
-                if (positions) {
-                    return positions;
-                }
-            }
-            return null;
-        };
-
-        interface PeopleDataItem {
-            centenarian: Centenarian;
-            path: [number, number];
-        }
-        const peopleData: PeopleDataItem[] = centenariansReduced.map((centenarian) => ({
-            centenarian,
-            path: contours[Math.floor(centenarian.age)] as unknown as [number, number],
-        }));
 
         const peopleContours = svg
             .append('g')
             .attr('class', 'person_contours')
             .selectAll('g')
-            .data<PeopleDataItem>(peopleData)
+            .data<Centenarian>(centenariansReduced)
             .join('g')
-            .attr(
-                'class',
-                (d) =>
-                    `person_contour ${d.centenarian.still_alive} ${d.centenarian.gender} ${
-                        d.centenarian.aliveRank == 1 ? 'oldest' : ''
-                    }`
-            );
-        peopleContours.append('path').attr('d', (c) => line(c.path));
+            .attr('class', (c) => `person_contour ${c.still_alive} ${c.gender} ${c.aliveRank == 1 ? 'oldest' : ''}`);
+        peopleContours.append('path').attr('d', (c) => catmulRomLine(data.contours[Math.floor(c.age)]));
 
         const avgData = avgLifespan.map((grp) => ({
             grp,
-            path: contours[Math.floor(grp.age)] as unknown as [number, number][],
+            path: data.contours[Math.floor(grp.age)] as unknown as [number, number][],
         }));
         const averageContours = svg
             .selectAll('g.avg_contours')
             .data<{ grp: AvgGroup; path: [number, number][] }>(avgData)
             .join('g')
             .attr('class', (d) => `avg_contour ${d.grp.gender}`);
-        averageContours.append('path').attr('d', (c) => line(c.path));
+        averageContours.append('path').attr('d', (c) => catmulRomLine(c.path));
 
         const peopleLabels = svg
             .append('g')
             .attr('class', 'people_contours_labels')
             .selectAll('g')
-            .data<Centenarian>(centenarians.filter((c) => !!c.aliveRank))
+            .data<{
+                c: Centenarian;
+                pAge: GeoJSON.Position | null;
+                p0: GeoJSON.Position | null;
+                pBE: GeoJSON.Position | null;
+                pRE: GeoJSON.Position | null;
+            }>(
+                data.centenarians
+                    .filter((c) => !!c.aliveRank)
+                    .map((c) => {
+                        const angle = 80 - 8 * (c.aliveRankAbs ?? 0);
+                        return {
+                            c,
+                            pAge: contourIntersection(data.contours[c.age], centerPoint, angle),
+                            p0: contourIntersection(data.contours[0], centerPoint, angle),
+                            pBE: contourIntersection(data.contours[Math.round(c.birth_exp ?? 0)], centerPoint, angle),
+                            pRE: contourIntersection(data.contours[Math.round(c.exp_recent ?? 0)], centerPoint, angle),
+                        };
+                    })
+            )
             .join('g')
-            .attr('class', (d) => `${d.gender} expectation`);
+            .attr('class', ({ c }) => `${c.gender} expectation`);
 
         makeLabel(
-            peopleLabels
-                .append('g')
-                .attr(
-                    'transform',
-                    (c) => `translate(${reduceLine(contours[c.age], 80 - 8 * (c.aliveRankAbs ?? 0))?.join()})`
-                ),
-            (d: Centenarian) => (d.aliveRank ? `${d.name}` : ''),
-            12
+            peopleLabels.append('g').attr('transform', ({ pAge }) => `translate(${pAge?.join()})`),
+            ({ c }) => (c.aliveRank ? `${c.name}` : '')
         );
 
         const peopleLabelsExpectations = peopleLabels.append('g').attr('class', 'expectation');
 
-        peopleLabelsExpectations
-            .append('path')
-            .attr(
-                'd',
-                (c) =>
-                    `M${reduceLine(contours[0], 80 - 8 * (c.aliveRankAbs ?? 0))?.join()} L${reduceLine(
-                        contours[c.age],
-                        80 - 8 * (c.aliveRankAbs ?? 0)
-                    )?.join()}`
-            );
+        peopleLabelsExpectations.append('path').attr('d', (c) => `M${c.p0?.join()} L${c.pAge?.join()}`);
 
         makeLabel(
             peopleLabelsExpectations
                 .append('g')
                 .attr('class', 'expectation birth label')
-                .attr('transform', (c) =>
-                    c.birth_exp
-                        ? `translate(${reduceLine(
-                              contours[Math.round(c.birth_exp)],
-                              80 - 8 * (c.aliveRankAbs ?? 0)
-                          )?.join()})`
-                        : ''
-                ),
-            (d: Centenarian) => `${(+(d.birth_exp ?? 0.0)).toFixed(1)}`,
-            12
+                .attr('transform', (c) => `translate(${c.pBE?.join()})`),
+            ({ c }) => `${(+(c.birth_exp ?? 0.0)).toFixed(1)}`
         );
 
         makeLabel(
             peopleLabelsExpectations
                 .append('g')
                 .attr('class', 'recent label')
-                .attr('transform', (c) =>
-                    c.birth_exp
-                        ? `translate(${reduceLine(
-                              contours[Math.round(c.exp_recent)],
-                              80 - 8 * (c.aliveRankAbs ?? 0)
-                          )?.join()})`
-                        : ''
-                ),
-            (d: Centenarian) => `${(+(d.exp_recent ?? 0.0)).toFixed(1)}`,
-            12
+                .attr('transform', (c) => `translate(${c.pRE?.join()})`),
+            ({ c }) => `${(+(c.exp_recent ?? 0.0)).toFixed(1)}`
         );
 
-        const line2 = d3
-            .line()
-            .x((d) => d[0])
-            .y((d) => d[1]);
         svg.selectAll('path#people_contours_rank')
-            .data<Centenarian[]>([centenarians.filter((c) => !!c.aliveRank)])
+            .data<Centenarian[]>([data.centenarians.filter((c) => !!c.aliveRank)])
             .join('path')
             .attr('id', 'people_contours_rank')
             .style('marker-end', 'url(#triangleMarker)')
             .attr('stroke', 'red')
             .attr('d', (c) =>
-                line2(c.map((i) => reduceLine(contours[130 + 2], 67 - (i.aliveRankAbs ?? 0) * 1.6) as [number, number]))
+                simpleLine(
+                    c.map(
+                        (i) =>
+                            contourIntersection(
+                                data.contours[130 + 2],
+                                centerPoint,
+                                62 - (i.aliveRankAbs ?? 0) * 1.6
+                            ) as [number, number]
+                    )
+                )
             );
 
         svg.selectAll('defs')
-            .data<Centenarian[]>([centenarians.filter((c) => !!c.aliveRank)])
+            .data<Centenarian[]>([data.centenarians.filter((c) => !!c.aliveRank)])
             .join('path')
             .attr('id', 'local_people_contours_rank2')
             .attr('display', 'none')
             .attr('d', (c) =>
-                line2(c.map((i) => reduceLine(contours[131 + 2], 67 - (i.aliveRankAbs ?? 0) * 1.6) as [number, number]))
+                simpleLine(
+                    c.map(
+                        (i) =>
+                            contourIntersection(
+                                data.contours[131 + 2],
+                                centerPoint,
+                                62 - (i.aliveRankAbs ?? 0) * 1.6
+                            ) as [number, number]
+                    )
+                )
             );
 
-        const intersections = contours.filter((_, i) => i % 10 == 0 && i < 130).map((c, i) => reduceLine(c, 86));
+        const intersections = data.contours
+            .filter((_, i) => i % 10 == 0 && i < 130)
+            .map((c) => contourIntersection(c, centerPoint, 86) as GeoJSON.Position);
         const legend = svg
             .append('g')
             .attr('class', 'legend')
             .selectAll('g')
-            .data(intersections)
+            .data<GeoJSON.Position>(intersections)
             .join('g')
             .attr('transform', (d) => `translate(${d?.join()})`)
             .style('display', (d, i) => (i ? 'visible' : 'none'));
-        makeLabel(legend, (d, i) => i * 10);
+
+        makeLabel(legend, (_, i) => `${i * 10}`);
     });
 </script>
 
 <section>
-    <svg viewBox="0 0 800 800" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <marker
                 id="triangleMarker"
@@ -352,13 +250,8 @@
 
 <style global lang="scss">
     svg {
-        width: 100vw;
-        height: 100vmin;
-        position: fixed;
-        left: 50%;
-        top: 0;
+        width: 100%;
         overflow: hidden;
-        transform: translateX(-50%);
     }
     :global(circle) {
         fill: currentColor;
@@ -390,6 +283,8 @@
         animation-timing-function: linear;
         animation-duration: 200s;
         animation-direction: reverse;
+        animation-iteration-count: infinite;
+
         @media (prefers-reduced-motion) {
             animation: none;
         }
@@ -415,12 +310,6 @@
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 1.5;
-        animation: strokeDashoffset;
-        animation-duration: 500s;
-        animation-timing-function: linear;
-        @media (prefers-reduced-motion) {
-            animation: none;
-        }
     }
     :global(#people_contours_rank) {
         stroke: gray;
@@ -448,6 +337,7 @@
     }
 
     :global(g.people_contours_labels) {
+        cursor: pointer;
         :global(circle) {
             stroke-width: 3 !important;
             stroke: var(--bg-color, black);
