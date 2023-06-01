@@ -1,0 +1,1 @@
+import{d as u,c as f}from"./csv.41e40aac.js";var c=u("	"),o=c.parse;function v(t){if(!t.ok)throw new Error(t.status+" "+t.statusText);return t.text()}function d(t,e){return fetch(t,e).then(v)}function a(t){return function(e,r,n){return arguments.length===2&&typeof r=="function"&&(n=r,r=void 0),d(e,r).then(function(s){return t(s,n)})}}var x=a(f),i=a(o);export{x as c,i as t};
