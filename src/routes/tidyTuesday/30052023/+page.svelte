@@ -203,33 +203,33 @@
 
         <g class="side_legend" transform="translate(700, 50)">
             <text x="70" y="0" style="font-size: 3em; text-anchor: end">Oldest living people</text>
-            <text x="70" y="50" style="font-size: .9em; text-anchor: end">
-                Here is the list of people still fighting for the longest lifespan
-            </text>
+            <text x="70" y="50" style="font-size: .9em; text-anchor: end"> Verified list of the oldest people</text>
 
-            <text x="70" y="80" style="font-size: .8em; text-anchor: end">
+            <text x="70" y="110" style="font-size: .8em; text-anchor: end">
                 <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasource: wiki</a>
             </text>
-            <g class="male alive" transform="translate(0, 120)">
-                <path d="M0,0 h20" class="person_contour alive" />
-                <text>male</text>
-            </g>
-            <g class="female alive" transform="translate(0, 140)">
-                <path d="M0,0 h20" class="person_contour alive" />
-                <text>female </text>
-            </g>
-            <g class="alive" transform="translate(0, 180)">
-                <path d="M0,0 h20" class="person_contour alive" />
-                <text>alive</text>
-            </g>
-            <g class="" transform="translate(0, 200)">
-                <path d="M0,0 h20" class="person_contour deceased" />
-                <text>passed away</text>
-            </g>
+            <g transform="translate(0, 40)">
+                <g class="male alive" transform="translate(0, 120)">
+                    <path d="M0,0 h20" class="person_contour alive" />
+                    <text>male</text>
+                </g>
+                <g class="female alive" transform="translate(0, 140)">
+                    <path d="M0,0 h20" class="person_contour alive" />
+                    <text>female </text>
+                </g>
+                <g class="alive" transform="translate(0, 180)">
+                    <path d="M0,0 h20" class="person_contour alive" />
+                    <text>alive</text>
+                </g>
+                <g class="" transform="translate(0, 200)">
+                    <path d="M0,0 h20" class="person_contour deceased" />
+                    <text>deceased</text>
+                </g>
 
-            <g class="avg_contour" transform="translate(0, 240)">
-                <path d="M0,0 h20" class="average" />
-                <text>world average</text>
+                <g class="avg_contour" transform="translate(0, 240)">
+                    <path d="M0,0 h20" class="average" />
+                    <text>world average</text>
+                </g>
             </g>
         </g>
     </svg>
