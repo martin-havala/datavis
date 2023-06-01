@@ -246,7 +246,12 @@
         <g bind:this={svgElem} />
 
         <text style="font-size: 0.7em; opacity:0.5">
-            <textPath href="#people_contours_rank2" startOffset="50%" text-anchor="middle">alive people by rank</textPath>
+            <textPath
+                href="#people_contours_rank2"
+                rel="external"
+                startOffset="50%"
+                text-anchor="middle">alive people by rank</textPath
+            >
         </text>
 
         <g class="side_legend" transform="translate(680, 50)">

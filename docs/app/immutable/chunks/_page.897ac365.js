@@ -1,1 +1,0 @@
-const t=!1;async function n({fetch:e}){return{centenarians:await(await e("https://raw.githubusercontent.com/frankiethull/centenarians/main/centenarians.csv")).text()}}const a=Object.freeze(Object.defineProperty({__proto__:null,load:n,prerender:!1},Symbol.toStringTag,{value:"Module"}));export{a as _,n as l,t as p};
