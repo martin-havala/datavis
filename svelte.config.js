@@ -7,7 +7,6 @@ const config = {
     // Consult https://kit.svelte.dev/docs/integrations#preprocessors
     // for more information about preprocessors
     preprocess: vitePreprocess(),
-
     kit: {
         // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
         // If your environment is not supported or you settled on a specific environment, switch out the adapter.
@@ -20,6 +19,7 @@ const config = {
             fallback: 'index.html',
             path: '',
         }),
+
         paths: {
             base: dev ? '' : '/datavis',
             assets: 'https://martin-havala.github.io/datavis',
@@ -30,7 +30,12 @@ const config = {
         // If you are not using a .nojekyll file, change your appDir to something not starting with an underscore.
         // For example, instead of '_app', use 'app_', 'internal', etc.
         appDir: 'app',
-        prerender: {},
+        prerender: {
+            handleMissingId: (e) => {
+                //fix local hrefs in documents, mostly used in SVGs
+                if (!e.id.startsWith('local')) throw new Error('Check your hrefs');
+            },
+        },
     },
 };
 

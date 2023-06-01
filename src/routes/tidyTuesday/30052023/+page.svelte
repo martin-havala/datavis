@@ -208,7 +208,7 @@
         svg.selectAll('defs')
             .data<Centenarian[]>([centenarians.filter((c) => !!c.aliveRank)])
             .join('path')
-            .attr('id', 'people_contours_rank2')
+            .attr('id', 'local_people_contours_rank2')
             .attr('display', 'none')
             .attr('d', (c) =>
                 line2(c.map((i) => reduceLine(contours[131 + 1], 55 - (i.aliveRankAbs ?? 0)) as [number, number]))
@@ -227,7 +227,7 @@
     });
 </script>
 
-<section>
+<section >
     <svg viewBox="0 0 800 800" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <marker
@@ -246,11 +246,8 @@
         <g bind:this={svgElem} />
 
         <text style="font-size: 0.7em; opacity:0.5">
-            <textPath
-                href="#people_contours_rank2"
-                rel="external"
-                startOffset="50%"
-                text-anchor="middle">alive people by rank</textPath
+            <textPath href="#local_people_contours_rank2" startOffset="50%" text-anchor="middle"
+                >alive people by rank</textPath
             >
         </text>
 
