@@ -20,7 +20,7 @@
     const polarPoint = (radius: number, i: number) => {
         const angle = 2 * Math.PI * Math.random();
 
-        const x = 300 - 10 * i;
+        const x = 250 - 10 * i;
         const y = 700 - radius * Math.sin(angle);
         return { x, y };
     };
@@ -42,11 +42,14 @@
         { gender: 'female', age: 75, label: 'average' },
     ];
 
-    function makeLabel(s: d3.Selection<any, any, any, any>, text: null | string | ((a: any) => string)) {
-        if (!!text) {
-            s.append('text').text(text);
-            s.append('circle').attr('r', 2);
-        }
+    function makeLabel(s: d3.Selection<any, any, any, any>, text: null | string | ((a: any) => string), distance = 7) {
+        s.append('text').attr('class', 'label').attr('transform', `translate(${distance},0)`).text(text);
+        s.append('circle').attr('r', 2);
+        distance > 15 &&
+            s
+                .append('path')
+                .attr('class', 'label__line')
+                .attr('d', `M0,0 h${distance - 5}`);
     }
 
     const fieldData = Array(44)
@@ -101,10 +104,12 @@
             .reverse()
             .map((c) => c.coordinates)
             .flat(2)
-            .slice(0, 125);
+            .slice(0, 160)
+            .map((c) => [...c]);
 
         const line = d3
             .line()
+            .curve(d3.curveCatmullRom)
             .x((d) => d[0])
             .y((d) => d[1]);
 
@@ -112,7 +117,7 @@
             .attr('class', 'contours')
             .selectAll('g')
 
-            .data(contours.filter((c, i) => i % 5 == 0) as unknown as [number, number][][])
+            .data(contours.filter((c, i) => i % 5 == 0 && i < 121) as unknown as [number, number][][])
             .join('path')
             .attr('class', 'contour')
             .attr('d', line);
@@ -177,14 +182,39 @@
                 .selectAll('g')
                 .data<Centenarian>(centenarians.filter((c) => !!c.aliveRank))
                 .join('g')
+                .attr('class', (d) => d.gender)
                 .attr(
                     'transform',
                     (c) => `translate(${reduceLine(contours[c.age], 70 - 5 * (c.aliveRankAbs ?? 0))?.join()})`
                 ),
-            (d: Centenarian) => (d.aliveRank ? `${d.name}` : '')
+            (d: Centenarian) => (d.aliveRank ? `${d.name}` : ''),
+            12
         );
 
-        const intersections = contours.filter((_, i) => i % 10 == 0).map((c, i) => reduceLine(c, 80));
+        const line2 = d3
+            .line()
+            .x((d) => d[0])
+            .y((d) => d[1]);
+        svg.selectAll('path#people_contours_rank')
+            .data<Centenarian[]>([centenarians.filter((c) => !!c.aliveRank)])
+            .join('path')
+            .attr('id', 'people_contours_rank')
+            .style('marker-end', 'url(#triangleMarker)')
+            .attr('stroke', 'red')
+            .attr('d', (c) =>
+                line2(c.map((i) => reduceLine(contours[130 + 1], 55 - (i.aliveRankAbs ?? 0)) as [number, number]))
+            );
+
+        svg.selectAll('defs')
+            .data<Centenarian[]>([centenarians.filter((c) => !!c.aliveRank)])
+            .join('path')
+            .attr('id', 'people_contours_rank2')
+            .attr('display', 'none')
+            .attr('d', (c) =>
+                line2(c.map((i) => reduceLine(contours[131 + 1], 55 - (i.aliveRankAbs ?? 0)) as [number, number]))
+            );
+
+        const intersections = contours.filter((_, i) => i % 10 == 0 && i < 130).map((c, i) => reduceLine(c, 80));
         const legend = svg
             .append('g')
             .attr('class', 'legend')
@@ -199,35 +229,53 @@
 
 <section>
     <svg viewBox="0 0 800 800" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <marker
+                id="triangleMarker"
+                viewBox="0 0 10 10"
+                refX="1"
+                refY="5"
+                markerUnits="strokeWidth"
+                markerWidth="10"
+                markerHeight="10"
+                orient="auto"
+            >
+                <path d="M 0 0 L 10 5 L 0 10 z" style="fill:currentColor; fill-opacity:0.5" />
+            </marker>
+        </defs>
         <g bind:this={svgElem} />
 
-        <g class="side_legend" transform="translate(700, 50)">
+        <text style="font-size: 0.7em; opacity:0.5">
+            <textPath href="#people_contours_rank2" startOffset="50%" text-anchor="middle">alive people by rank</textPath>
+        </text>
+
+        <g class="side_legend" transform="translate(680, 50)">
             <text x="70" y="0" style="font-size: 3em; text-anchor: end">Oldest living people</text>
             <text x="70" y="50" style="font-size: .9em; text-anchor: end"> Verified list of the oldest people</text>
 
-            <text x="70" y="110" style="font-size: .8em; text-anchor: end">
-                <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasource: wiki</a>
+            <text x="70" y="100" style="font-size: .8em; text-anchor: end">
+                <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasource: wikipedia</a>
             </text>
-            <g transform="translate(0, 40)">
+            <g transform="translate(-10, 20)">
                 <g class="male alive" transform="translate(0, 120)">
-                    <path d="M0,0 h20" class="person_contour alive" />
+                    <path d="M0,0 h27" class="person_contour alive" />
                     <text>male</text>
                 </g>
                 <g class="female alive" transform="translate(0, 140)">
-                    <path d="M0,0 h20" class="person_contour alive" />
+                    <path d="M0,0 h27" class="person_contour alive" />
                     <text>female </text>
                 </g>
                 <g class="alive" transform="translate(0, 180)">
-                    <path d="M0,0 h20" class="person_contour alive" />
+                    <path d="M0,0 h27" class="person_contour alive" />
                     <text>alive</text>
                 </g>
                 <g class="" transform="translate(0, 200)">
-                    <path d="M0,0 h20" class="person_contour deceased" />
+                    <path d="M0,0 h27" class="person_contour deceased" />
                     <text>deceased</text>
                 </g>
 
                 <g class="avg_contour" transform="translate(0, 240)">
-                    <path d="M0,0 h20" class="average" />
+                    <path d="M0,0 h27" class="average" />
                     <text>world average</text>
                 </g>
             </g>
@@ -238,13 +286,15 @@
 <style global lang="scss">
     svg {
         width: 100vw;
-        height: 100vh;
+        height: 100vmin;
         position: fixed;
-        left: 0;
+        left: 50%;
         top: 0;
+        overflow: hidden;
+        transform: translateX(-50%);
     }
     :global(circle) {
-        fill: #aac;
+        fill: currentColor;
     }
     :global(path) {
         stroke: #ccc2;
@@ -263,42 +313,83 @@
         stroke: #ccc;
         stroke-opacity: 0.8;
     }
-    :global(.person_contours .alive path) {
+    :global(.person_contour.alive path) {
         stroke-width: 1;
     }
 
-    :global(.person_contour.deceased) {
+    :global(.person_contour.deceased path) {
         stroke-dasharray: 5 5;
+        animation: strokeDashoffset;
+        animation-timing-function: linear;
+        animation-duration: 200s;
+        animation-direction: reverse;
+        @media (prefers-reduced-motion) {
+            animation: none;
+        }
+    }
+    :global(.person_contour.deceased.male path) {
+        animation-direction: normal;
     }
 
-    :global(g.male path) {
+    :global(g.male path, g.male circle) {
         stroke: teal;
+        color: teal;
         stroke-dashoffset: 5;
     }
-    :global(g.female path) {
+    :global(g.female path, g.female circle) {
         stroke: magenta;
+        color: magenta;
     }
     :global(g.oldest path) {
         stroke-width: 2 !important;
     }
     :global(g.avg_contour path) {
-        stroke-dasharray: 1 6;
+        stroke-dasharray: 1 3;
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 1.5;
+        animation: strokeDashoffset;
+        animation-duration: 500s;
+        animation-timing-function: linear;
+        @media (prefers-reduced-motion) {
+            animation: none;
+        }
+    }
+    :global(#people_contours_rank) {
+        stroke: gray;
+    }
+
+    :global(.legend) {
+        opacity: 0.6;
     }
 
     :global(g text, a) {
         font-size: 0.8em;
-        transform: translateX(5px);
         fill: #eee;
         stroke: var(--bg-color, red);
         filter: drop-shadow(4px 4px 1px var(--bg-color, red));
         paint-order: stroke fill;
         stroke-width: 5;
     }
+    :global(.side_legend path) {
+        animation: none !important;
+    }
     :global(g.side_legend text) {
-        transform: translateX(25px);
+        transform: translateX(33px);
+    }
+
+    :global(g.people_contours_labels) {
+        :global(circle) {
+            stroke-width: 3 !important;
+            stroke: var(--bg-color, black);
+            paint-order: stroke fill;
+        }
+    }
+    :global(text) {
         dominant-baseline: middle;
+    }
+
+    :global(.label) {
+        text-anchor: start;
     }
 </style>
