@@ -17,13 +17,6 @@
         return [...a, c];
     }, [] as Centenarian[]);
 
-    const polarPoint = (radius: number, i: number) => {
-        const angle = 2 * Math.PI * Math.random();
-
-        const x = 250 - 10 * i;
-        const y = 700 - radius * Math.sin(angle);
-        return { x, y };
-    };
     const polarLine = (center: GeoJSON.Position, angleDeg: number) => {
         const angle = angleDeg * (Math.PI / 180);
         const x = center[0] + 5000 * Math.cos(angle);
@@ -44,7 +37,7 @@
 
     function makeLabel(s: d3.Selection<any, any, any, any>, text: null | string | ((a: any) => string), distance = 7) {
         s.append('text').attr('class', 'label').attr('transform', `translate(${distance},0)`).text(text);
-        s.append('circle').attr('r', 2);
+        s.append('circle').attr('r', 3);
         distance > 15 &&
             s
                 .append('path')
@@ -52,12 +45,19 @@
                 .attr('d', `M0,0 h${distance - 5}`);
     }
 
-    const fieldData = Array(44)
-        .fill(1)
-        .map((_, i) => {
-            return polarPoint(12 * i - 1, i);
-        });
-
+    const fieldData = [
+        { x: 99, y: 800 },
+        { x: 138, y: 900 },
+        { x: 164, y: 711 },
+        { x: 174, y: 653 },
+        { x: 167, y: 591 },
+        { x: 142, y: 529 },
+        { x: 99, y: 500 },
+        { x: 39, y: 470 },
+        { x: -35, y: 382 },
+        { x: -124, y: 359 },
+        { x: -224, y: 679 },
+    ];
     let svgElem: SVGGElement;
     let svg: d3.Selection<SVGGElement, unknown, any, any>;
 
@@ -82,7 +82,6 @@
 
     onMount(() => {
         svg = d3.select(svgElem);
-
         {
             const aliveRank = { male: 1, female: 1, abs: 1 };
             centenarians.forEach((c) => {
@@ -97,8 +96,8 @@
             .contourDensity<{ x: number; y: number }>()
             .size([800, 800])
             .cellSize(30)
-            .bandwidth(240)
-            .thresholds(150)
+            .bandwidth(186)
+            .thresholds(180)
             .x(({ x }) => x)
             .y(({ y }) => y)(fieldData)
             .reverse()
@@ -175,19 +174,67 @@
             .attr('class', (d) => `avg_contour ${d.grp.gender}`);
         averageContours.append('path').attr('d', (c) => line(c.path));
 
+        const peopleLabels = svg
+            .append('g')
+            .attr('class', 'people_contours_labels')
+            .selectAll('g')
+            .data<Centenarian>(centenarians.filter((c) => !!c.aliveRank))
+            .join('g')
+            .attr('class', (d) => `${d.gender} expectation`);
+
         makeLabel(
-            svg
+            peopleLabels
                 .append('g')
-                .attr('class', 'people_contours_labels')
-                .selectAll('g')
-                .data<Centenarian>(centenarians.filter((c) => !!c.aliveRank))
-                .join('g')
-                .attr('class', (d) => d.gender)
                 .attr(
                     'transform',
-                    (c) => `translate(${reduceLine(contours[c.age], 70 - 5 * (c.aliveRankAbs ?? 0))?.join()})`
+                    (c) => `translate(${reduceLine(contours[c.age], 80 - 8 * (c.aliveRankAbs ?? 0))?.join()})`
                 ),
             (d: Centenarian) => (d.aliveRank ? `${d.name}` : ''),
+            12
+        );
+
+        const peopleLabelsExpectations = peopleLabels.append('g').attr('class', 'expectation');
+
+        peopleLabelsExpectations
+            .append('path')
+            .attr(
+                'd',
+                (c) =>
+                    `M${reduceLine(contours[0], 80 - 8 * (c.aliveRankAbs ?? 0))?.join()} L${reduceLine(
+                        contours[c.age],
+                        80 - 8 * (c.aliveRankAbs ?? 0)
+                    )?.join()}`
+            );
+
+        makeLabel(
+            peopleLabelsExpectations
+                .append('g')
+                .attr('class', 'expectation birth label')
+                .attr('transform', (c) =>
+                    c.birth_exp
+                        ? `translate(${reduceLine(
+                              contours[Math.round(c.birth_exp)],
+                              80 - 8 * (c.aliveRankAbs ?? 0)
+                          )?.join()})`
+                        : ''
+                ),
+            (d: Centenarian) => `${(+(d.birth_exp ?? 0.0)).toFixed(1)}`,
+            12
+        );
+
+        makeLabel(
+            peopleLabelsExpectations
+                .append('g')
+                .attr('class', 'recent label')
+                .attr('transform', (c) =>
+                    c.birth_exp
+                        ? `translate(${reduceLine(
+                              contours[Math.round(c.exp_recent)],
+                              80 - 8 * (c.aliveRankAbs ?? 0)
+                          )?.join()})`
+                        : ''
+                ),
+            (d: Centenarian) => `${(+(d.exp_recent ?? 0.0)).toFixed(1)}`,
             12
         );
 
@@ -202,7 +249,7 @@
             .style('marker-end', 'url(#triangleMarker)')
             .attr('stroke', 'red')
             .attr('d', (c) =>
-                line2(c.map((i) => reduceLine(contours[130 + 1], 55 - (i.aliveRankAbs ?? 0)) as [number, number]))
+                line2(c.map((i) => reduceLine(contours[130 + 2], 67 - (i.aliveRankAbs ?? 0) * 1.6) as [number, number]))
             );
 
         svg.selectAll('defs')
@@ -211,10 +258,10 @@
             .attr('id', 'local_people_contours_rank2')
             .attr('display', 'none')
             .attr('d', (c) =>
-                line2(c.map((i) => reduceLine(contours[131 + 1], 55 - (i.aliveRankAbs ?? 0)) as [number, number]))
+                line2(c.map((i) => reduceLine(contours[131 + 2], 67 - (i.aliveRankAbs ?? 0) * 1.6) as [number, number]))
             );
 
-        const intersections = contours.filter((_, i) => i % 10 == 0 && i < 130).map((c, i) => reduceLine(c, 80));
+        const intersections = contours.filter((_, i) => i % 10 == 0 && i < 130).map((c, i) => reduceLine(c, 86));
         const legend = svg
             .append('g')
             .attr('class', 'legend')
@@ -227,7 +274,7 @@
     });
 </script>
 
-<section >
+<section>
     <svg viewBox="0 0 800 800" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <marker
@@ -245,7 +292,7 @@
         </defs>
         <g bind:this={svgElem} />
 
-        <text style="font-size: 0.7em; opacity:0.5">
+        <text style="font-size:.9em; opacity:0.5">
             <textPath href="#local_people_contours_rank2" startOffset="50%" text-anchor="middle"
                 >alive people by rank</textPath
             >
@@ -256,9 +303,12 @@
             <text x="70" y="50" style="font-size: .9em; text-anchor: end"> Verified list of the oldest people</text>
 
             <text x="70" y="100" style="font-size: .8em; text-anchor: end">
-                <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasource: wikipedia</a>
+                <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasources: wikipedia</a>
             </text>
-            <g transform="translate(-10, 20)">
+            <text x="70" y="120" style="font-size: .8em; text-anchor: end">
+                <a href="https://clio-infra.eu/Indicators/LifeExpectancyatBirthTotal.html">clio-infra</a>
+            </text>
+            <g transform="translate(-10, 50)">
                 <g class="male alive" transform="translate(0, 120)">
                     <path d="M0,0 h27" class="person_contour alive" />
                     <text>male</text>
@@ -271,14 +321,29 @@
                     <path d="M0,0 h27" class="person_contour alive" />
                     <text>alive</text>
                 </g>
-                <g class="" transform="translate(0, 200)">
-                    <path d="M0,0 h27" class="person_contour deceased" />
+                <g class="person_contour deceased" transform="translate(0, 200)">
+                    <path d="M0,0 h27" />
                     <text>deceased</text>
                 </g>
 
                 <g class="avg_contour" transform="translate(0, 240)">
                     <path d="M0,0 h27" class="average" />
                     <text>world average</text>
+                </g>
+
+                <g class="expectation" transform="translate(-35, 280)">
+                    <text>life expectancy</text>
+                </g>
+                <g class="expectation" transform="translate(-35, 295)">
+                    <text>per country:</text>
+                </g>
+                <g class="expectation birth" transform="translate(0, 320)">
+                    <circle cx="13.5" r="3" />
+                    <text>at birth</text>
+                </g>
+                <g class="expectation recent" transform="translate(0, 340)">
+                    <circle cx="13.5" r="3" />
+                    <text>recent</text>
                 </g>
             </g>
         </g>
@@ -366,7 +431,7 @@
     }
 
     :global(g text, a) {
-        font-size: 0.8em;
+        font-size: 0.9em;
         fill: #eee;
         stroke: var(--bg-color, red);
         filter: drop-shadow(4px 4px 1px var(--bg-color, red));
@@ -375,6 +440,8 @@
     }
     :global(.side_legend path) {
         animation: none !important;
+        stroke-width: 3;
+        stroke-linecap: butt;
     }
     :global(g.side_legend text) {
         transform: translateX(33px);
@@ -393,5 +460,27 @@
 
     :global(.label) {
         text-anchor: start;
+    }
+
+    :global(g.expectation .label text) {
+        display: none;
+    }
+    :global(g.expectation:hover .label text) {
+        display: block;
+        opacity: 0.8;
+    }
+
+    :global(g.expectation > path) {
+        opacity: 0.4;
+    }
+
+    :global(g.expectation > path, .expectation.birth circle) {
+        stroke: #fffa;
+        stroke-width: 1 !important;
+        fill: var(--bg-color, none);
+    }
+    :global(g.expectation .recent circle, .expectation.recent circle) {
+        stroke: none;
+        fill: #fff6;
     }
 </style>

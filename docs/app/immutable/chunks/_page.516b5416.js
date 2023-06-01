@@ -1,0 +1,1 @@
+const t=""+new URL("../assets/centenarians_with_expectations.44cf5dd6.csv",import.meta.url).href,n=!0;async function a({fetch:e}){return{centenarians:await(await e(t)).text()}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:a,prerender:n},Symbol.toStringTag,{value:"Module"}));export{r as _,a as l,n as p};

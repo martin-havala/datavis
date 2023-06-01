@@ -9,3 +9,4 @@ node_modules
 vite.config.ts.timestamp-*
 src/routes/population/+page.svelte
 resources/data/**/*.xlsx
+resources/data/oldest_people/centenarians.csv
