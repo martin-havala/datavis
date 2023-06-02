@@ -190,20 +190,23 @@
         </defs>
         <g bind:this={svgElem} />
 
-        <text style="font-size:.9em; opacity:0.5">
+        <text style="font-size:.8em; opacity:0.5">
             <textPath href="#local_people_contours_rank2" startOffset="50%" text-anchor="middle"
-                >alive people by rank</textPath
+                >alive people in each group</textPath
             >
         </text>
 
         <g class="side_legend" transform="translate(680, 50)">
             <text x="70" y="0" style="font-size: 3em; text-anchor: end">Oldest living people</text>
-            <text x="70" y="50" style="font-size: .9em; text-anchor: end"> Verified list of the oldest people</text>
+            <text x="70" y="50" style="font-size: .9em; text-anchor: end">
+                Verified list of the top 100 oldest people per gender</text
+            >
+            <text x="70" y="75" style="font-size: .7em; text-anchor: end; opacity:0.7">* to 1st June 2023</text>
 
-            <text x="70" y="100" style="font-size: .8em; text-anchor: end">
+            <text x="70" y="110" style="font-size: .8em; text-anchor: end">
                 <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasources: wikipedia</a>
             </text>
-            <text x="70" y="120" style="font-size: .8em; text-anchor: end">
+            <text x="70" y="130" style="font-size: .8em; text-anchor: end">
                 <a href="https://clio-infra.eu/Indicators/LifeExpectancyatBirthTotal.html">clio-infra</a>
             </text>
             <g transform="translate(-10, 50)">
