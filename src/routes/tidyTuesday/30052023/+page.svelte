@@ -173,7 +173,7 @@
 </script>
 
 <section>
-    <svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="800" height="800" viewBox="0 0 800 800" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
             <marker
                 id="triangleMarker"
