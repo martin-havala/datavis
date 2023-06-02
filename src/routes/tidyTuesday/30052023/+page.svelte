@@ -2,11 +2,12 @@
     import { mean, select, type Selection } from 'd3';
     import { onMount } from 'svelte';
     import { catmulRomLine, contourIntersection, simpleLine } from './helpers';
-    import type { AvgGroup, Centenarian, DataPageLoad, PeopleDataItem } from './model';
+    import type { AvgGroup, Centenarian, DataPageLoad } from './model';
 
     /** @type {import('./$types').PageData} */
     export let data: DataPageLoad;
 
+    export const aliveCentenarians = data.centenarians.filter((c) => c.still_alive === 'alive');
     const centenariansReduced = data.centenarians.reduce((a, c) => {
         if (a.find((ac) => ac.age == c.age && ac.gender == c.gender && ac.still_alive == c.still_alive)) {
             return a;
@@ -19,14 +20,21 @@
         { gender: 'female', age: 75, label: 'average' },
     ];
 
-    function makeLabel(s: Selection<any, any, any, any>, text: null | string | ((...a: any) => string), distance = 12) {
-        s.append('text').attr('class', 'label').attr('transform', `translate(${distance},0)`).text(text);
-        s.append('circle').attr('r', 3);
-        distance > 15 &&
-            s
-                .append('path')
-                .attr('class', 'label__line')
-                .attr('d', `M0,0 h${distance - 5}`);
+    function makeLabel(
+        s: Selection<any, any, any, any>,
+        text: null | string | ((...a: any) => string),
+        cssClass = '',
+        distance = 12,
+        useMark = true
+    ) {
+        s.attr('class', `${cssClass}`);
+        s.append('text').attr('transform', `translate(${distance},0)`).text(text);
+        useMark && s.append('circle').attr('r', 3);
+        // distance > 15 &&
+        //     s
+        //         .append('path')
+        //         .attr('class', 'label__line')
+        //         .attr('d', `M0,0 h${distance - 5}`);
     }
 
     let svgElem: SVGGElement;
@@ -73,6 +81,7 @@
             .selectAll('g')
             .data<{
                 c: Centenarian;
+                angle: number;
                 pAge: GeoJSON.Position | null;
                 p0: GeoJSON.Position | null;
                 pBE: GeoJSON.Position | null;
@@ -84,6 +93,7 @@
                         const angle = 80 - 8 * (c.aliveRankAbs ?? 0);
                         return {
                             c,
+                            angle,
                             pAge: contourIntersection(data.contours[c.age], centerPoint, angle),
                             p0: contourIntersection(data.contours[0], centerPoint, angle),
                             pBE: contourIntersection(data.contours[Math.round(c.birth_exp ?? 0)], centerPoint, angle),
@@ -106,17 +116,38 @@
         makeLabel(
             peopleLabelsExpectations
                 .append('g')
-                .attr('class', 'expectation birth label')
-                .attr('transform', (c) => `translate(${c.pBE?.join()})`),
-            ({ c }) => `${(+(c.birth_exp ?? 0.0)).toFixed(1)}`
+                .attr('transform', (c) => `translate(${c.pBE?.join()}) rotate(${-c.angle})`),
+            ({ c }) => `${(+(c.birth_exp ?? 0.0)).toFixed(1)}`,
+            'expectation birth label',
+            5
         );
 
         makeLabel(
             peopleLabelsExpectations
                 .append('g')
-                .attr('class', 'recent label')
-                .attr('transform', (c) => `translate(${c.pRE?.join()})`),
-            ({ c }) => `${(+(c.exp_recent ?? 0.0)).toFixed(1)}`
+                .attr('transform', (c) => `translate(${c.pRE?.join()}) rotate(${-c.angle})`),
+            ({ c }) => `${(+(c.exp_recent ?? 0.0)).toFixed(1)}`,
+            'recent label',5
+        );
+
+        makeLabel(
+            peopleLabelsExpectations
+                .append('g')
+                .attr('transform', (c) => `translate(${c.pAge?.join()}) rotate(${-c.angle})`),
+            ({ c }) => `${(c as Centenarian).place_of_death_or_residence}`,
+            'recent label country',
+            -60,
+            false
+        );
+
+        makeLabel(
+            peopleLabelsExpectations
+                .append('g')
+                .attr('transform', (c) => `translate(${c.p0?.join()}) rotate(${-c.angle})`),
+            ({ c }) => `${(c as Centenarian).birth_date}`,
+            'recent label bday',
+            10,
+            false
         );
 
         svg.selectAll('path#people_contours_rank')
@@ -132,7 +163,7 @@
                             contourIntersection(
                                 data.contours[130 + 2],
                                 centerPoint,
-                                62 - (i.aliveRankAbs ?? 0) * 1.6
+                                57 - (i.aliveRankAbs ?? 0) * 1.6
                             ) as [number, number]
                     )
                 )
@@ -150,7 +181,7 @@
                             contourIntersection(
                                 data.contours[131 + 2],
                                 centerPoint,
-                                62 - (i.aliveRankAbs ?? 0) * 1.6
+                                57 - (i.aliveRankAbs ?? 0) * 1.6
                             ) as [number, number]
                     )
                 )
@@ -168,7 +199,7 @@
             .attr('transform', (d) => `translate(${d?.join()})`)
             .style('display', (d, i) => (i ? 'visible' : 'none'));
 
-        makeLabel(legend, (_, i) => `${i * 10}`);
+        makeLabel(legend, (_, i) => `${i * 10}`,'label');
     });
 </script>
 
@@ -198,18 +229,12 @@
 
         <g class="side_legend" transform="translate(680, 50)">
             <text x="70" y="0" style="font-size: 3em; text-anchor: end">Oldest living people</text>
-            <text x="70" y="50" style="font-size: .9em; text-anchor: end">
-                Verified list of the top 100 oldest people per gender</text
+            <text x="70" y="40" style="font-size: .9em; text-anchor: end">
+                These {aliveCentenarians.length} people are the living part of the top 100 oldest people lists</text
             >
-            <text x="70" y="75" style="font-size: .7em; text-anchor: end; opacity:0.7">* to 1st June 2023</text>
+            <text x="70" y="60" style="font-size: .7em; text-anchor: end; opacity:0.7">* as of 1st June 2023</text>
 
-            <text x="70" y="110" style="font-size: .8em; text-anchor: end">
-                <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasources: wikipedia</a>
-            </text>
-            <text x="70" y="130" style="font-size: .8em; text-anchor: end">
-                <a href="https://clio-infra.eu/Indicators/LifeExpectancyatBirthTotal.html">clio-infra</a>
-            </text>
-            <g transform="translate(-10, 50)">
+            <g transform="translate(-10, 0)">
                 <g class="male alive" transform="translate(0, 120)">
                     <path d="M0,0 h27" class="person_contour alive" />
                     <text>male</text>
@@ -247,14 +272,25 @@
                     <text>recent</text>
                 </g>
             </g>
+
+            <text x="70" y="710" style="font-size: .8em; text-anchor: end">
+                <a href="https://en.wikipedia.org/wiki/List_of_verified_oldest_people">datasources: wikipedia</a>
+            </text>
+            <text x="70" y="730" style="font-size: .8em; text-anchor: end">
+                <a href="https://clio-infra.eu/Indicators/LifeExpectancyatBirthTotal.html">clio-infra</a>
+            </text>
         </g>
     </svg>
 </section>
 
 <style global lang="scss">
     svg {
-        width: 100%;
-        overflow: hidden;
+        width: 100vmin;
+        height: 100vmin;
+        overflow: visible;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     :global(circle) {
         fill: currentColor;
@@ -326,7 +362,6 @@
         font-size: 0.9em;
         fill: #eee;
         stroke: var(--bg-color, red);
-        filter: drop-shadow(4px 4px 1px var(--bg-color, red));
         paint-order: stroke fill;
         stroke-width: 5;
     }
@@ -353,9 +388,11 @@
 
     :global(.label) {
         text-anchor: start;
+        font-size: 0.8em;
     }
 
     :global(g.expectation .label text) {
+        dominant-baseline: ideographic;
         display: none;
     }
     :global(g.expectation:hover .label text) {
@@ -375,5 +412,9 @@
     :global(g.expectation .recent circle, .expectation.recent circle) {
         stroke: none;
         fill: #fff6;
+    }
+    :global(.label.country text) {
+        // BEWARE text-anchor:end  causes stroke-fill troubles in safari
+        transform: translateX(-100%) translateX(-10px);
     }
 </style>
