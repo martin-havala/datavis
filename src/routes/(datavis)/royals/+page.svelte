@@ -190,6 +190,25 @@
         :global(li.inactive ul) {
             display: none;
         }
+        :global(.notes > ul) {
+            padding-left: 1em;
+        }
+        :global(.family-link) {
+            fill: transparent;
+            stroke: var(--line-color);
+        }
+        :global(.family-member) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 1.5em;
+            height: 1.5em;
+            margin: -1em 0 0 -1em;
+            background-size: cover;
+            background-position: top center;
+            border-radius: 100%;
+        }
     }
     svg {
         grid-area: plot;
@@ -197,7 +216,7 @@
     .notes {
         grid-area: notes;
     }
-    
+
     .list {
         max-height: 100%;
         overflow: auto;
@@ -223,24 +242,5 @@
         bottom: 0;
         pointer-events: none;
         transform-origin: 0 0;
-    }
-    :global(.notes > ul) {
-        padding-left: 1em;
-    }
-    :global(.family-link) {
-        fill: transparent;
-        stroke: var(--line-color);
-    }
-    :global(.family-member) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 1.5em;
-        height: 1.5em;
-        margin: -1em 0 0 -1em;
-        background-size: cover;
-        background-position: top center;
-        border-radius: 100%;
     }
 </style>

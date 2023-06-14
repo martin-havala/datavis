@@ -220,64 +220,67 @@
         }
         overflow: hidden;
     }
-    :global(.cntry) {
-        opacity: 0.8;
-        &:hover {
-            opacity: 1;
-        }
-        :global(rect.bgr) {
-            fill: #eee;
-        }
-        :global(path.medium) {
-            mix-blend-mode: overlay;
-            stroke: black;
-            stroke-width: 0.5;
-            fill: none;
-        }
-        :global(path.range) {
-            fill: gray;
-            mix-blend-mode: difference;
-            opacity: 0.2;
-        }
-        :global(text) {
-            text-anchor: middle;
-            dominant-baseline: middle;
-            font-size: 14pt;
-        }
-        :global(.changeValue) {
-            font-size: 0.8em;
-        }
-    }
-    :global(.Africa rect.bgr) {
-        fill: #9c755f;
-    }
 
-    :global(.Northern.America rect.bgr) {
-        fill: #af7aa1;
-    }
-    :global(.Central.America rect.bgr) {
-        fill: #e15759;
-    }
+    section {
+        :global(.cntry) {
+            opacity: 0.8;
+            &:hover {
+                opacity: 1;
+            }
+            :global(rect.bgr) {
+                fill: #eee;
+            }
+            :global(path.medium) {
+                mix-blend-mode: overlay;
+                stroke: black;
+                stroke-width: 0.5;
+                fill: none;
+            }
+            :global(path.range) {
+                fill: gray;
+                mix-blend-mode: difference;
+                opacity: 0.2;
+            }
+            :global(text) {
+                text-anchor: middle;
+                dominant-baseline: middle;
+                font-size: 14pt;
+            }
+            :global(.changeValue) {
+                font-size: 0.8em;
+            }
+        }
+        :global(.Africa rect.bgr) {
+            fill: #9c755f;
+        }
 
-    :global(.South.America rect.bgr) {
-        fill: #59a14f;
-    }
+        :global(.Northern.America rect.bgr) {
+            fill: #af7aa1;
+        }
+        :global(.Central.America rect.bgr) {
+            fill: #e15759;
+        }
 
-    :global(.Caribbean rect.bgr) {
-        fill: #ff9da7;
-    }
-    :global(.Europe rect.bgr) {
-        fill: #76b7b2;
-    }
+        :global(.South.America rect.bgr) {
+            fill: #59a14f;
+        }
 
-    :global(.Asia rect.bgr) {
-        fill: #f28e2c;
-    }
+        :global(.Caribbean rect.bgr) {
+            fill: #ff9da7;
+        }
+        :global(.Europe rect.bgr) {
+            fill: #76b7b2;
+        }
 
-    :global(.Oceania rect.bgr) {
-        fill: #4e79a7;
-    }
-    :global(.Australia rect.bgr) {
-        fill: #edc949;
+        :global(.Asia rect.bgr) {
+            fill: #f28e2c;
+        }
+
+        :global(.Oceania rect.bgr) {
+            fill: #4e79a7;
+        }
+        :global(.Australia rect.bgr) {
+            fill: #edc949;
+        }
     }
 </style>

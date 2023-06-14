@@ -131,8 +131,4 @@
         stroke-width: 1px;
         stroke: currentColor;
     }
-    :global(.visible) {
-        opacity: 1;
-        transition: opacity 5s ease-in;
-    }
 </style>

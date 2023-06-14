@@ -118,7 +118,7 @@
 </g>
 
 <style lang="scss">
-    :global(.dataRect) {
+    g :global(.dataRect) {
         stroke: var(--color);
         stroke-width: 1px;
         stroke-linejoin: round;

@@ -170,13 +170,13 @@
         overflow-x: hidden;
         overflow-y: auto;
         display: block;
+        :global(.tileText) {
+            fill: navy;
+            mix-blend-mode: color-burn;
+        }
     }
     svg {
         width: 98vw;
-    }
-    :global(.tileText) {
-        fill: navy;
-        mix-blend-mode: color-burn;
     }
     .legend {
         float: right;
