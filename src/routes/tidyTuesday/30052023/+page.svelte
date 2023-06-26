@@ -127,8 +127,7 @@
                 .append('g')
                 .attr('transform', (c) => `translate(${c.pRE?.join()}) rotate(${-c.angle})`),
             ({ c }) => `${(+(c.exp_recent ?? 0.0)).toFixed(1)}`,
-            'recent label',
-            5
+            'recent label',5
         );
 
         makeLabel(
@@ -200,7 +199,7 @@
             .attr('transform', (d) => `translate(${d?.join()})`)
             .style('display', (d, i) => (i ? 'visible' : 'none'));
 
-        makeLabel(legend, (_, i) => `${i * 10}`, 'label');
+        makeLabel(legend, (_, i) => `${i * 10}`,'label');
     });
 </script>
 
@@ -285,144 +284,137 @@
 </section>
 
 <style global lang="scss">
-    section {
-        svg {
-            width: 100vmin;
-            height: 100vmin;
-            overflow: visible;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+    svg {
+        width: 100vmin;
+        height: 100vmin;
+        overflow: visible;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    :global(circle) {
+        fill: currentColor;
+    }
+    :global(path) {
+        stroke: #ccc2;
+        stroke-width: 0.5;
+        fill: transparent;
+    }
+    :global(path:nth-of-type(2n + 1)) {
+        stroke: #ccc;
+        stroke-opacity: 0.4;
+    }
+    :global(path:nth-of-type(10n + 1)) {
+        stroke: #ccc;
+        stroke-opacity: 0.6;
+    }
+    :global(path:nth-of-type(100n + 1)) {
+        stroke: #ccc;
+        stroke-opacity: 0.8;
+    }
+    :global(.person_contour.alive path) {
+        stroke-width: 1;
+    }
+
+    :global(.person_contour.deceased path) {
+        stroke-dasharray: 5 5;
+        animation: strokeDashoffset;
+        animation-timing-function: linear;
+        animation-duration: 200s;
+        animation-direction: reverse;
+        animation-iteration-count: infinite;
+
+        @media (prefers-reduced-motion) {
+            animation: none;
         }
+    }
+    :global(.person_contour.deceased.male path) {
+        animation-direction: normal;
+    }
+
+    :global(g.male path, g.male circle) {
+        stroke: teal;
+        color: teal;
+        stroke-dashoffset: 5;
+    }
+    :global(g.female path, g.female circle) {
+        stroke: magenta;
+        color: magenta;
+    }
+    :global(g.oldest path) {
+        stroke-width: 2 !important;
+    }
+    :global(g.avg_contour path) {
+        stroke-dasharray: 1 3;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5;
+    }
+    :global(#people_contours_rank) {
+        stroke: gray;
+    }
+
+    :global(.legend) {
+        opacity: 0.6;
+    }
+
+    :global(g text, a) {
+        font-size: 0.9em;
+        fill: #eee;
+        stroke: var(--bg-color, red);
+        paint-order: stroke fill;
+        stroke-width: 5;
+    }
+    :global(.side_legend path) {
+        animation: none !important;
+        stroke-width: 3;
+        stroke-linecap: butt;
+    }
+    :global(g.side_legend text) {
+        transform: translateX(33px);
+    }
+
+    :global(g.people_contours_labels) {
+        cursor: pointer;
         :global(circle) {
-            fill: currentColor;
-        }
-        :global(path) {
-            stroke: #ccc2;
-            stroke-width: 0.5;
-            fill: transparent;
-        }
-        :global(path:nth-of-type(2n + 1)) {
-            stroke: #ccc;
-            stroke-opacity: 0.4;
-        }
-        :global(path:nth-of-type(10n + 1)) {
-            stroke: #ccc;
-            stroke-opacity: 0.6;
-        }
-        :global(path:nth-of-type(100n + 1)) {
-            stroke: #ccc;
-            stroke-opacity: 0.8;
-        }
-        :global(.person_contour.alive path) {
-            stroke-width: 1;
-        }
-
-        :global(.person_contour.deceased path) {
-            stroke-dasharray: 5 5;
-            animation: strokeDashoffset;
-            animation-timing-function: linear;
-            animation-duration: 200s;
-            animation-direction: reverse;
-            animation-iteration-count: infinite;
-
-            @media (prefers-reduced-motion) {
-                animation: none;
-            }
-        }
-        :global(.person_contour.deceased.male path) {
-            animation-direction: normal;
-        }
-
-        :global(g.male path),
-        :global(g.male circle) {
-            stroke: teal;
-            color: teal;
-            stroke-dashoffset: 5;
-        }
-        :global(g.female path),
-        :global(g.female circle) {
-            stroke: magenta;
-            color: magenta;
-        }
-        :global(g.oldest path) {
-            stroke-width: 2 !important;
-        }
-        :global(g.avg_contour path) {
-            stroke-dasharray: 1 3;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 1.5;
-        }
-        :global(#people_contours_rank) {
-            stroke: gray;
-        }
-
-        :global(.legend) {
-            opacity: 0.6;
-        }
-
-        :global(g text),
-        :global(a) {
-            font-size: 0.9em;
-            fill: #eee;
-            stroke: var(--bg-color, red);
+            stroke-width: 3 !important;
+            stroke: var(--bg-color, black);
             paint-order: stroke fill;
-            stroke-width: 5;
         }
-        :global(.side_legend path) {
-            animation: none !important;
-            stroke-width: 3;
-            stroke-linecap: butt;
-        }
-        :global(g.side_legend text) {
-            transform: translateX(33px);
-        }
+    }
+    :global(text) {
+        dominant-baseline: middle;
+    }
 
-        :global(g.people_contours_labels) {
-            cursor: pointer;
-            :global(circle) {
-                stroke-width: 3 !important;
-                stroke: var(--bg-color, black);
-                paint-order: stroke fill;
-            }
-        }
-        :global(text) {
-            dominant-baseline: middle;
-        }
+    :global(.label) {
+        text-anchor: start;
+        font-size: 0.8em;
+    }
 
-        :global(.label) {
-            text-anchor: start;
-            font-size: 0.8em;
-        }
+    :global(g.expectation .label text) {
+        dominant-baseline: ideographic;
+        display: none;
+    }
+    :global(g.expectation:hover .label text) {
+        display: block;
+        opacity: 0.8;
+    }
 
-        :global(g.expectation .label text) {
-            dominant-baseline: ideographic;
-            display: none;
-        }
-        :global(g.expectation:hover .label text) {
-            display: block;
-            opacity: 0.8;
-        }
+    :global(g.expectation > path) {
+        opacity: 0.4;
+    }
 
-        :global(g.expectation > path) {
-            opacity: 0.4;
-        }
-
-        :global(g.expectation > path),
-        :global(.expectation.birth circle) {
-            stroke: #fffa;
-            stroke-width: 1 !important;
-            fill: var(--bg-color, none);
-        }
-        :global(g.expectation .recent circle),
-        :global(.expectation.recent circle) {
-            stroke: none;
-            fill: #fff6;
-        }
-        :global(.label.country text) {
-            // BEWARE text-anchor:end  causes stroke-fill troubles in safari
-            transform: translateX(-100%) translateX(-10px);
-        }
+    :global(g.expectation > path, .expectation.birth circle) {
+        stroke: #fffa;
+        stroke-width: 1 !important;
+        fill: var(--bg-color, none);
+    }
+    :global(g.expectation .recent circle, .expectation.recent circle) {
+        stroke: none;
+        fill: #fff6;
+    }
+    :global(.label.country text) {
+        // BEWARE text-anchor:end  causes stroke-fill troubles in safari
+        transform: translateX(-100%) translateX(-10px);
     }
 </style>

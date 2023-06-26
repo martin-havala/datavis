@@ -48,6 +48,15 @@
             </li>
         </ul>
     </div>
+
+    <h2>Tidy Tuesday</h2>
+    <div class="notes">
+        <ul>
+            <li>
+                <a href="{base}/tidyTuesday/30052023">30th of May 2023</a>
+            </li>
+        </ul>
+    </div>
 </section>
 
 <style>
