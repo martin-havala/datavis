@@ -9,7 +9,7 @@
         width = 1600 - margin.left - margin.right,
         height = 540 - margin.top - margin.bottom;
 
-    let svgElem: SVGGElement;
+    let svgElem: SVGGElement = $state();
     let svg: d3.Selection<SVGGElement, unknown, any, any>;
 
     onMount(() => {

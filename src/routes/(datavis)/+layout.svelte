@@ -1,16 +1,21 @@
-<script>
+<script lang="ts">
     import { goto } from '$app/navigation';
     import { base } from '$app/paths';
+    interface Props {
+        children?: import('svelte').Snippet;
+    }
+
+    let { children }: Props = $props();
 </script>
 
 <div class="body">
     <header>
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
         <a href={base || '/'}>← back home</a>
         <a href={base || '/'}>← back home</a>
     </header>
     <div class="content">
-        <slot />
+        {@render children?.()}
     </div>
 </div>
 
@@ -34,14 +39,13 @@
         background: #202022;
         border-bottom: #404044 1px solid;
 
-        a,
-        span {
+        a{
             padding: 0 1em;
             cursor: pointer;
             text-decoration: none;
         }
     }
-    .content {
+    :global(.content) {
         grid-area: content;
         overflow: auto;
 

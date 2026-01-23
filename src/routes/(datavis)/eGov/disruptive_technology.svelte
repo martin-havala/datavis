@@ -1,14 +1,21 @@
 <script lang="ts">
-    import { base } from '$app/paths';
-    import { I_17_4 } from '$lib/assets/eGov/e_gov.metadata';
+  import { asset } from "$app/paths";
 
-    export let areas: string | number | undefined;
-    $: focusAreas = `${areas ?? ''}`?.split(',') || [];
+    const I_17_4 = asset('$lib/assets/eGov/e_gov.metadata');
+    const eGovFont = asset('fonts/eGovFont.css');
+
+    interface Props {
+        areas: string | number | undefined;
+    }
+
+    let { areas }: Props = $props();
+    let focusAreas = $derived(`${areas ?? ''}`?.split(',') || []);
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="{base}/fonts/eGovFont.css" />
+    <link rel="stylesheet" href="{eGovFont}" />
 </svelte:head>
+
 {#if areas}
     <section>
         Government Disruptive Technology focus:

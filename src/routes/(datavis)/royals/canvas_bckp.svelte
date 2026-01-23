@@ -9,7 +9,7 @@
     const land = topojson.feature(europe, europe);
     const graticule = d3.geoGraticule10();
     const outline: d3.GeoSphere = { type: 'Sphere' };
-    let canvas: HTMLCanvasElement;
+    let canvas: HTMLCanvasElement = $state();
 
     let width: number, height: number;
 
@@ -118,7 +118,7 @@
 
 <section>
     <div class="page">
-        <canvas bind:this={canvas} />
+        <canvas bind:this={canvas}></canvas>
         <div class="notes">
             <div>
                 <h1>EU Tourism 2022</h1>

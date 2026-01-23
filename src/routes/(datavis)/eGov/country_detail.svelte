@@ -12,16 +12,20 @@
     import DisruptiveTechnology from './disruptive_technology.svelte';
     import TechBuildType from './tech_build_type.svelte';
 
-    export let row: eGov | null;
+    interface Props {
+        row: eGov | null;
+    }
 
-    $: mainCols = EGOV_COLS.map((col) => ({ col, year: row ? row[col] : null }))
+    let { row = $bindable() }: Props = $props();
+
+    let mainCols = $derived(EGOV_COLS.map((col) => ({ col, year: row ? row[col] : null }))
         .filter((r) => r.year)
-        .sort((a, b) => (a.year < b.year ? -1 : 1));
+        .sort((a, b) => (a.year < b.year ? -1 : 1)));
 </script>
 
 <section>
     {#key row}
-        <div class="wrapper" transition:fade|local={{ duration: 400 }}>
+        <div class="wrapper" transition:fade={{ duration: 400 }}>
             {#if !!row}
                 <h2>
                     {row.Economy || row.Code}
@@ -37,7 +41,7 @@
                             <div
                                 class="column__circle softType{row[EGOV_COL_INFO_CELLS[col.col]?.type]}"
                                 style="background: {COLOR_SCALE[EGOV_COLS.findIndex((c) => c == col.col)]};"
-                            />
+></div>
                             {EGOV_COL_LABELS[col.col]}
                             {#if !!row[EGOV_COL_INFO_CELLS[col.col].url]}
                                 <a

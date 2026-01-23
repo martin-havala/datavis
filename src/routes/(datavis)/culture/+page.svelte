@@ -4,9 +4,9 @@
     import europe from '$lib/assets/NUTS_RG_60M_2021_4326.json';
     import culture_ratio from '$lib/assets/culture/cult_emp_reg_tabular.tsv?url';
 
-    let svg: SVGElement;
+    let svg: SVGElement = $state();
     let mapDiv: HTMLDivElement;
-    let notesDiv: HTMLDivElement;
+    let notesDiv: HTMLDivElement = $state();
     let svgSelection: d3.Selection<SVGElement, unknown, any, any>;
     let path: d3.GeoPath;
     let projection: d3.GeoProjection;

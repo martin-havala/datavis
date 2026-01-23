@@ -5,8 +5,8 @@
     import { onMount } from 'svelte';
     import { LandUseLabels, type LandUsePlot } from '$lib/assets/land_use/land_use.model';
 
-    let grazingGroup: SVGGElement;
-    let croplandGroup: SVGGElement;
+    let grazingGroup: SVGGElement = $state();
+    let croplandGroup: SVGGElement = $state();
 
     let scaleCropland = 1;
     let scaleGrazing = 1;

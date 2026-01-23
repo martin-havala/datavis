@@ -1,15 +1,20 @@
-<script>
+<script lang="ts">
     import { base } from '$app/paths';
+    interface Props {
+        children?: import('svelte').Snippet;
+    }
+
+    let { children }: Props = $props();
 </script>
 
 <div class="body">
     <header>
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
         <a href={base || '/'}>← back home</a>
         <a href={base || '/'}>← back home</a>
     </header>
     <div class="content">
-        <slot />
+        {@render children?.()}
     </div>
 </div>
 

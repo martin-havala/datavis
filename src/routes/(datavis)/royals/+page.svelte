@@ -7,9 +7,9 @@
 
     const graticule = d3.geoGraticule10();
     const outline: d3.GeoSphere = { type: 'Sphere' };
-    let svg: SVGElement;
-    let mapDiv: HTMLDivElement;
-    let listDiv: HTMLDivElement;
+    let svg: SVGElement = $state();
+    let mapDiv: HTMLDivElement = $state();
+    let listDiv: HTMLDivElement = $state();
     let svgSelection: d3.Selection<SVGElement, unknown, any, any>;
     let mapDivSelection: d3.Selection<HTMLDivElement, unknown, any, any>;
     let path: d3.GeoPath;
@@ -140,7 +140,7 @@
                     </marker>
                 </defs>
             </svg>
-            <div class="mapDiv" bind:this={mapDiv} />
+            <div class="mapDiv" bind:this={mapDiv}></div>
         </div>
 
         <div class="notes">
@@ -151,7 +151,7 @@
             <div class="comments">
                 <div>data source - Wikipedia</div>
             </div>
-            <div class="list" bind:this={listDiv} />
+            <div class="list" bind:this={listDiv}></div>
         </div>
     </div>
 </section>

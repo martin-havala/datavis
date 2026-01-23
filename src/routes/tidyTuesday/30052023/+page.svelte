@@ -4,8 +4,13 @@
     import { catmulRomLine, contourIntersection, simpleLine } from './helpers';
     import type { AvgGroup, Centenarian, DataPageLoad } from './model';
 
-    /** @type {import('./$types').PageData} */
-    export let data: DataPageLoad;
+    
+    interface Props {
+        /** @type {import('./$types').PageData} */
+        data: DataPageLoad;
+    }
+
+    let { data }: Props = $props();
 
     export const aliveCentenarians = data.centenarians.filter((c) => c.still_alive === 'alive');
     const centenariansReduced = data.centenarians.reduce((a, c) => {
@@ -37,7 +42,7 @@
         //         .attr('d', `M0,0 h${distance - 5}`);
     }
 
-    let svgElem: SVGGElement;
+    let svgElem: SVGGElement = $state();
     let svg: Selection<SVGGElement, unknown, any, any>;
 
     onMount(() => {

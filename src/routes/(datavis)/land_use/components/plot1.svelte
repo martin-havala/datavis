@@ -15,7 +15,7 @@
         height = 380 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    let svgElem: SVGElement;
+    let svgElem: SVGElement = $state();
     let svg: d3.Selection<SVGGElement, unknown, any, any>;
     let xScaleSelection: d3.Selection<SVGGElement, unknown, any, any>;
     let yScaleSelection: d3.Selection<SVGGElement, unknown, any, any>;

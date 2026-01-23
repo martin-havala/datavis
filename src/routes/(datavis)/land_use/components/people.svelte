@@ -5,7 +5,7 @@
     import { PEOPLE_POSITIONS } from '$lib/assets/land_use/people_positions';
     import landUseUrl from '$lib/assets/land_use/land_use.csv?url';
     import { LandUseLabels, type LandUsePlot } from '$lib/assets/land_use/land_use.model';
-    let legend: SVGGElement;
+    let legend: SVGGElement = $state();
     onMount(() => {
         d3.csv(landUseUrl).then((landUse) => {
             let res: LandUsePlot = { key: 'any', values: [], max: 0, today: 0 };

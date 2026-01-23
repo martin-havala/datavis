@@ -2,11 +2,11 @@
     import { list, i18n } from '$lib/assets/16personalities/personalities';
     import * as d3 from 'd3';
 
-    const measures: { [id: string]: number } = { ...list };
+    const measures: { [id: string]: number } = $state({ ...list });
     const keys = Object.keys(measures);
-    const starts: { [id: string]: number } = {};
+    const starts: { [id: string]: number } = $state({});
     let start = 0;
-    let selectedKey: string;
+    let selectedKey: string = $state();
     keys.forEach((key) => {
         starts[key] = start;
         start = start + measures[key];
@@ -87,10 +87,10 @@
                             <path d={arc(starts[key], starts[key] + measures[key])} class={letter} />
                         {/each}
                         <path
-                            on:mouseover={highlight(key)}
-                            on:focus={highlight(key)}
-                            on:mouseout={highlight(key, false)}
-                            on:blur={highlight(key, false)}
+                            onmouseover={highlight(key)}
+                            onfocus={highlight(key)}
+                            onmouseout={highlight(key, false)}
+                            onblur={highlight(key, false)}
                             d={arc(starts[key], starts[key] + measures[key])}
                             class={key}
                             fill="#00000001"
@@ -112,10 +112,10 @@
                 {#each ['I', 'N', 'F', 'P', 'E', 'S', 'T', 'J'] as key, index}
                     <g
                         transform="translate({112.5 + (index % 4) * 75},{Math.floor(index / 4) * 50})"
-                        on:mouseover={highlight(key)}
-                        on:focus={highlight(key)}
-                        on:mouseout={highlight(key, false)}
-                        on:blur={highlight(key, false)}
+                        onmouseover={highlight(key)}
+                        onfocus={highlight(key)}
+                        onmouseout={highlight(key, false)}
+                        onblur={highlight(key, false)}
                         ><rect class={key} y="0" width="50" height="50" />
                         <text class="bgText" x="25" y="25">{key}</text>
                         <text x="25" y="25">{key}</text>

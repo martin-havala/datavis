@@ -3,8 +3,13 @@
     import { onMount } from 'svelte';
     import type { SafiRow } from './model';
 
-    /** @type {import('./$types').PageData} */
-    export let data: { safiRows: SafiRow[] };
+    
+    interface Props {
+        /** @type {import('./$types').PageData} */
+        data: { safiRows: SafiRow[] };
+    }
+
+    let { data }: Props = $props();
 
     let svgElem: SVGGElement;
     let svg: Selection<SVGGElement, unknown, any, any>;

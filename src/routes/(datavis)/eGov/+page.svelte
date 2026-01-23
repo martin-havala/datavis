@@ -9,9 +9,9 @@
         width = 1000 - margin.left - margin.right,
         height = 3500 - margin.top - margin.bottom;
 
-    let selectedCountry: eGov | null = null;
-    let svgElem: SVGGElement;
-    let svgXElem: SVGGElement;
+    let selectedCountry: eGov | null = $state(null);
+    let svgElem: SVGGElement = $state();
+    let svgXElem: SVGGElement = $state();
     let svgSelection: d3.Selection<SVGGElement, unknown, any, any>;
     let data: eGov[] = [];
 
@@ -200,7 +200,7 @@
 
 <section>
     <div class="page">
-        <div id="tooltip" />
+        <div id="tooltip"></div>
         <div class="chart">
             <div class="mainChartWrap">
                 <svg width="100%" height="15" class="topLegend">

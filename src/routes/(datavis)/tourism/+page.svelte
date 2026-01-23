@@ -20,7 +20,7 @@
     const chart1Margin = height * 0.03;
     const chart2Height = height * 0.35;
     // append the svg object to the body of the page
-    let svgElem: SVGElement;
+    let svgElem: SVGElement = $state();
     let svg;
     onMount(() => {
         // get the data
