@@ -1,0 +1,55 @@
+<script lang="ts">
+  import { base } from "$app/paths";
+  import "$lib/styles/calendar.css";
+  const days: number[] = Array.from({ length: 30 }, (_, i) => i + 1);
+  const weekdays: string[] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  // mappings for existing pages (add if you have some)
+  const dayNames: { [k: number]: string } = {};
+
+  // Render as a real April 2026 calendar (April has 30 days)
+  const year = 2026;
+  const month = 3; // April (0-based)
+  const firstDay = new Date(year, month, 1).getDay();
+  const firstDayAdjusted = (firstDay + 6) % 7; // Monday-first
+  const slots: (number | null)[] = Array.from(
+    { length: firstDayAdjusted + 30 },
+    (_, i) => (i < firstDayAdjusted ? null : i - firstDayAdjusted + 1),
+  );
+</script>
+
+<section class="page">
+  <h1>30 Day Chart Challenge — 2026</h1>
+  <p class="lead">
+    A place to collect my daily charts for the 30 Day Chart Challenge 2026.
+  </p>
+
+  <div class="calendar">
+    <div class="weekdays">
+      {#each weekdays as w}
+        <div class="wd">{w}</div>
+      {/each}
+    </div>
+
+    <div class="grid">
+      {#each slots as s}
+        {#if s === null}
+          <div class="cell empty"></div>
+        {:else if dayNames[s]}
+          <a class="cell" href="{base}/30dayChartChallenge2026/day-{s}">
+            <div class="daynum">{s}</div>
+            <div class="meta">{dayNames[s]}</div>
+          </a>
+        {:else}
+          <a
+            class="cell placeholder"
+            href="{base}/30dayChartChallenge2026/day-{s}"
+          >
+            <div class="daynum">{s}</div>
+            <div class="meta"></div>
+          </a>
+        {/if}
+      {/each}
+    </div>
+  </div>
+</section>

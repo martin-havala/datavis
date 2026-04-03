@@ -5,13 +5,24 @@
 <section>
   <h1>Datavis</h1>
   This is my little repo to gather data visualization ideas & side projects
+
+  <h2>30DayChartChallenge 2026</h2>
+  <div class="notes">
+    <ul>
+      <li>
+        <a href="{base}/30dayChartChallenge2026">2026 gallery</a>
+      </li>
+    </ul>
+  </div>
+
   <h2>30DayChartChallenge 2023</h2>
   <div class="notes">
     <ul>
-      Bit late, but I've participated this year in this nice dataviz challenge.
-      Here are my posts:
-
       <li>
+        <a href="{base}/30dayChartChallenge2023">2023 gallery</a>
+      </li>
+
+      <!-- <li>
         <span>Day 9- High Low:</span> <a href="{base}/tourism">Tourism </a>
       </li>
       <li>
@@ -53,7 +64,7 @@
       <li>
         <span>Day 30 - Worldbank:</span>
         <a href="{base}/eGov">Data Governance Maturity Indicators</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 
