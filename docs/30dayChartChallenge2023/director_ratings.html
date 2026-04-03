@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="https://martin-havala.github.io/datavis/styles.css" />
 		<meta name="viewport" content="width=device-width" />
 		
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/2.BR2MVm-r.css" rel="stylesheet">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/8.CnPeWiaQ.css" rel="stylesheet">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.CkbXvZ5l.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/C1aQT9VE.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/y3SsqMx3.js">
@@ -19,13 +21,20 @@
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/BHhAOI6m.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/B2XWtcMv.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/Cng4taj0.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/nodes/0.B2g9ylQV.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/DCka24IK.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/nodes/2.B36aEc7E.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/BBdJNdMr.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/nodes/8.C0g57ntz.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/VrPN1py7.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">
+		<div style="display: contents"><!--[--><!--[--><!----><!--[--><!----><div class="body svelte-1hlpr7b"><header class="svelte-1hlpr7b"><a href="./" class="svelte-1hlpr7b">← back home</a> <a href="./" class="svelte-1hlpr7b">← back home</a></header> <div class="content"><!----><section class="svelte-14yoztc"><h1>Director ratings</h1> <p>Some directors are able to keep constant rating on IMDB, some not. <br/> And others... others age like wine. Congrats to Pedro Almodóvar.</p> <img src="../images/director_ratings.png" alt="Chart comparing directors age to their average IMDB rating. Some age like wine, some not." class="svelte-14yoztc"/> <hr/> <p>Source worksheet can be founded on <a href="https://www.kaggle.com/code/sawio47/notebookdb38d3850f">kaggle.com</a>.</p> <p>Data source: <a href="http://imdb.com/interfaces/">imdb.com</a></p></section><!----><!----></div></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
 			<script>
 				{
 					__sveltekit_1mcu3ob = {
-						base: "/datavis",
+						base: new URL("..", location).pathname.slice(0, -1),
 						assets: "https://martin-havala.github.io/datavis"
 					};
 
@@ -35,7 +44,12 @@
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.CkbXvZ5l.js"),
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.D7NE6Cn8.js")
 					]).then(([kit, app]) => {
-						kit.start(app, element);
+						kit.start(app, element, {
+							node_ids: [0, 2, 8],
+							data: [null,null,null],
+							form: null,
+							error: null
+						});
 					});
 				}
 			</script>

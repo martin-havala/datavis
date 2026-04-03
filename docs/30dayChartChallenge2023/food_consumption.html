@@ -6,6 +6,8 @@
 		<link rel="stylesheet" href="https://martin-havala.github.io/datavis/styles.css" />
 		<meta name="viewport" content="width=device-width" />
 		
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/2.BR2MVm-r.css" rel="stylesheet">
+		<link href="https://martin-havala.github.io/datavis/app/immutable/assets/11.CT0QPy7_.css" rel="stylesheet">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/entry/start.CkbXvZ5l.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/C1aQT9VE.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/y3SsqMx3.js">
@@ -19,13 +21,20 @@
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/BHhAOI6m.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/B2XWtcMv.js">
 		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/Cng4taj0.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/nodes/0.B2g9ylQV.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/DCka24IK.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/nodes/2.B36aEc7E.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/BBdJNdMr.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/nodes/11.--ouF8eR.js">
+		<link rel="modulepreload" href="https://martin-havala.github.io/datavis/app/immutable/chunks/VrPN1py7.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">
+		<div style="display: contents"><!--[--><!--[--><!----><!--[--><!----><div class="body svelte-1hlpr7b"><header class="svelte-1hlpr7b"><a href="./" class="svelte-1hlpr7b">← back home</a> <a href="./" class="svelte-1hlpr7b">← back home</a></header> <div class="content"><!----><section class="svelte-unqssf"><h1>Food consumption in Slovakia</h1> <img src="../images/food_consumption.jpeg" alt="Chart displaying food in Slovakia. Animal vs plant production is almost 50:50" class="svelte-unqssf"/> <hr/> <p>Source worksheet can be founded on <a href="https://observablehq.com/d/0375fa66b155f997">observablehq.com</a>.</p> <p>Data source: <a href="https://datacube.statistics.sk/#!/view/en/VBD_SLOVSTAT/ps2040rs/v_ps2040rs_00_00_00_en">statistics.sk</a></p></section><!----><!----></div></div><!----><!--]--><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+			
 			<script>
 				{
 					__sveltekit_1mcu3ob = {
-						base: "/datavis",
+						base: new URL("..", location).pathname.slice(0, -1),
 						assets: "https://martin-havala.github.io/datavis"
 					};
 
@@ -35,7 +44,12 @@
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/start.CkbXvZ5l.js"),
 						import("https://martin-havala.github.io/datavis/app/immutable/entry/app.D7NE6Cn8.js")
 					]).then(([kit, app]) => {
-						kit.start(app, element);
+						kit.start(app, element, {
+							node_ids: [0, 2, 11],
+							data: [null,null,null],
+							form: null,
+							error: null
+						});
 					});
 				}
 			</script>
