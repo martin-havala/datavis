@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import {JSDOM} from 'jsdom';
-import {Birthplace, FamilyMember, PlaceLocation} from './family.model';
+import { Birthplace, FamilyMember, PlaceLocation } from './models/royals.model';
 const fs = require('fs');
 
 /**
