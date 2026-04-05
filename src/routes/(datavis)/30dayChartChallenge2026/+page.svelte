@@ -5,7 +5,10 @@
   const weekdays: string[] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   // mappings for existing pages (add if you have some)
-  const dayNames: { [k: number]: string } = {};
+  const dayNames: { [k: number]: string } = {
+    1: "2023",
+    2: "linkedin",
+  };
 
   // Render as a real April 2026 calendar (April has 30 days)
   const year = 2026;
@@ -18,7 +21,11 @@
   );
 </script>
 
-<section class="page">
+<svelte:head>
+  <title>30 Day Chart Challenge 2026</title>
+</svelte:head>
+
+<section class="page calendar">
   <h1>30 Day Chart Challenge — 2026</h1>
   <p class="lead">
     A place to collect my daily charts for the 30 Day Chart Challenge 2026.
@@ -36,18 +43,15 @@
         {#if s === null}
           <div class="cell empty"></div>
         {:else if dayNames[s]}
-          <a class="cell" href="{base}/30dayChartChallenge2026/day-{s}">
+          <a class="cell" href="{base}/30dayChartChallenge2026/{dayNames[s]}">
             <div class="daynum">{s}</div>
             <div class="meta">{dayNames[s]}</div>
           </a>
         {:else}
-          <a
-            class="cell placeholder"
-            href="{base}/30dayChartChallenge2026/day-{s}"
-          >
+          <div class="cell placeholder">
             <div class="daynum">{s}</div>
             <div class="meta"></div>
-          </a>
+          </div>
         {/if}
       {/each}
     </div>

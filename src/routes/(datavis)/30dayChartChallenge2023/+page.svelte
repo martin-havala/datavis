@@ -44,7 +44,7 @@
   );
 </script>
 
-<section class="page">
+<section class="page calendar">
   <h1>30 Day Chart Challenge — 2023</h1>
   <p class="lead">My entries for the 30 Day Chart Challenge 2023.</p>
 
@@ -65,13 +65,10 @@
             <div class="meta">{dayNames[s]}</div>
           </a>
         {:else}
-          <a
-            class="cell placeholder"
-            href="{base}/30dayChartChallenge2023/day-{s}"
-          >
+          <div class="cell placeholder">
             <div class="daynum">{s}</div>
             <div class="meta"></div>
-          </a>
+          </div>
         {/if}
       {/each}
     </div>

@@ -15,8 +15,8 @@
     height = 3500 - margin.top - margin.bottom;
 
   let selectedCountry: eGov | null = $state(null);
-  let svgElem: SVGGElement = $state();
-  let svgXElem: SVGGElement = $state();
+  let svgElem: SVGGElement = $state()!;
+  let svgXElem: SVGGElement = $state()!;
   let svgSelection: d3.Selection<SVGGElement, unknown, any, any>;
   let data: eGov[] = [];
 
