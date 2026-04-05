@@ -268,12 +268,12 @@
 </script>
 
 <svelte:head>
-  <title>Government budget of Slovakia</title>
+  <title>Government expenses of Slovakia</title>
 </svelte:head>
 
 <section>
   <div class="page">
-    <h1>Government budget of Slovakia</h1>
+    <h1>Government expenses of Slovakia</h1>
     <p style="text-align:center; line-height: 1.8em;">
       <b>30-day Chart Challenge 2026</b>
       <br />
@@ -282,7 +282,7 @@
 
     <p style="text-align:center; line-height: 1.8em;">
       The absolute change in government spending in between years.<br />
-      Highlighted changes are comparison of 2016 vs. 2024 governmental budget.
+      Highlighted changes are comparison of 2016 vs. 2024 governmental expenses.
     </p>
 
     <div class="charts" bind:this={chartContainer}></div>

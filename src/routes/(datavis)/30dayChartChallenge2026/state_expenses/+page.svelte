@@ -190,12 +190,12 @@
 </script>
 
 <svelte:head>
-  <title>Government budget of Slovakia</title>
+  <title>Government expenses of Slovakia</title>
 </svelte:head>
 
 <section>
   <div class="page">
-    <h1>Government budget of Slovakia</h1>
+    <h1>Government expenses of Slovakia</h1>
 
     <p style="text-align:center; line-height: 1.8em;">
       <b>30-day Chart Challenge 2026</b>
