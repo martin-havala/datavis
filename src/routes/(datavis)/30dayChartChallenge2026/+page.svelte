@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { base } from "$app/paths";
+  import { resolve } from "$app/paths";
+
   import "$lib/styles/calendar.css";
-  const days: number[] = Array.from({ length: 30 }, (_, i) => i + 1);
   const weekdays: string[] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   // mappings for existing pages (add if you have some)
@@ -51,7 +51,10 @@
         {#if s === null}
           <div class="cell empty"></div>
         {:else if dayNames[s]}
-          <a class="cell" href="{base}/30dayChartChallenge2026/{dayAliases[s]}">
+          <a
+            class="cell"
+            href={`${resolve(`/(datavis)/30dayChartChallenge2026`)}/${dayAliases[s]}`}
+          >
             <div class="daynum">{s}</div>
             <div class="meta">{dayNames[s]}</div>
           </a>
