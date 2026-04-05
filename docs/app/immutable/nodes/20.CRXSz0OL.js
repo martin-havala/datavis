@@ -1,1 +1,0 @@
-import{t as o,a as r}from"../chunks/DaIEOS_e.js";import"../chunks/VrPN1py7.js";import{d as a}from"../chunks/y3SsqMx3.js";const n=!0,m=Object.freeze(Object.defineProperty({__proto__:null,prerender:n},Symbol.toStringTag,{value:"Module"}));function c(e){a();var t=o("hey!");r(e,t)}export{c as component,m as universal};

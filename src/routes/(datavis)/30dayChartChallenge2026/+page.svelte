@@ -5,9 +5,17 @@
   const weekdays: string[] = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   // mappings for existing pages (add if you have some)
-  const dayNames: { [k: number]: string } = {
+  const dayAliases: { [k: number]: string } = {
     1: "2023",
     2: "linkedin",
+    3: "state_expenses",
+    4: "state_expenses2",
+  };
+  const dayNames: { [k: number]: string } = {
+    1: "2023",
+    2: "LinkedIn",
+    3: "State Expenses",
+    4: "State Expenses (part 2)",
   };
 
   // Render as a real April 2026 calendar (April has 30 days)
@@ -43,7 +51,7 @@
         {#if s === null}
           <div class="cell empty"></div>
         {:else if dayNames[s]}
-          <a class="cell" href="{base}/30dayChartChallenge2026/{dayNames[s]}">
+          <a class="cell" href="{base}/30dayChartChallenge2026/{dayAliases[s]}">
             <div class="daynum">{s}</div>
             <div class="meta">{dayNames[s]}</div>
           </a>

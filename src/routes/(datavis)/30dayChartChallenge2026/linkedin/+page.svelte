@@ -39,7 +39,12 @@
 <section>
   <div class="page">
     <h1>LinkedIn job search</h1>
-    <h4>30-day Chart Challenge 2026 - day 2: comparisons, pictogram</h4>
+    <p style="text-align:center; line-height: 1.8em;">
+      <b>30-day Chart Challenge 2026</b>
+      <br />
+      <i> day 2: comparisons - pictogram</i>
+    </p>
+
     <div class="intro">
       How many relevant job postings did you find?<br /> As an Angular
       developer, I feel quite overwhelmed <br />by the number of irrelevant

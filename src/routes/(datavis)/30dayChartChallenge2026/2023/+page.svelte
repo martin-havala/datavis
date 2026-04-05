@@ -64,8 +64,14 @@
 
 <section class="page calendar">
   <h1>30 Day Chart Challenge — 2023</h1>
+  <p style="text-align:center; line-height: 1.8em;">
+    <b>30-day Chart Challenge 2026</b>
+    <br />
+    <i> day 1: comparisons - part-to-whole</i>
+  </p>
   <p class="lead">
-    A little look back into my journey through the 30 Day Chart Challenge 2023.
+    A little look back into my journey through the 30 Day Chart Challenge 2023.<br
+    />
     I was not able to complete all the days, but I learned a lot along the way.
   </p>
 

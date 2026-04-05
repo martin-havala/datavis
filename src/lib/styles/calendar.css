@@ -14,13 +14,14 @@
   .weekdays {
     display: grid;
     grid-template-columns: repeat(7, 8em);
-    gap: 6px;
+    gap: 1rem;
     margin-bottom: 1rem;
   }
   .wd {
     font-weight: 700;
     color: #9aa;
     transition: opacity 1.2s ease-in-out;
+    text-align: center;
     &.transparent {
       opacity: 0;
     }
@@ -31,6 +32,7 @@
     gap: 1rem;
     &.show-empty {
       grid-template-columns: repeat(5, 8em);
+      margin-left: 9.5em;
     }
   }
   .cell {
@@ -44,12 +46,13 @@
     text-decoration: none;
     border-radius: 6px;
     border: 1px solid #aaa0;
+
     transition:
       transform 0.1s,
       box-shadow 0.1s,
-      border-color 1.2s ease-in-out,
+      border 1.2s ease-in-out,
       background 1.2s ease-in-out,
-      color 1.2s 0.5s ease-in-out,
+      color 1.2s ease-in-out,
       opacity 1.2s ease-in-out;
   }
 
@@ -60,6 +63,7 @@
   .cell.placeholder {
     background: transparent;
     color: var(--muted, #7f8791);
+    border: 1px solid #aaa0;
     background: rgb(from var(--card-bg, #0f1720) r g b / 20%);
   }
   .cell.placeholder:hover {
@@ -72,20 +76,19 @@
     box-shadow: none;
     transform: none;
     opacity: 0;
-    border-color: #aaaf;
   }
 
   .daynum {
     font-weight: 700;
     font-size: 0.95rem;
-    transition: opacity 1.2s ease-in-out;
+    transition: opacity 160ms ease;
   }
   .meta {
     font-size: 0.85rem;
     color: #9aa;
     margin-top: 6px;
     width: 100%;
-    transition: opacity 1.2s ease-in-out;
+    transition: opacity 160ms ease;
   }
   .cell.placeholder .meta {
     color: #6f7780;
@@ -100,6 +103,8 @@
   }
 
   .show-empty .cell.placeholder {
+    /* Keep layout stable — visually de-emphasize placeholders without
+       triggering long transitions on borders/backgrounds. */
     opacity: 1;
     color: rgb(from var(--muted, #7f8791) r g b / 0%);
     border-color: #aaa6;
