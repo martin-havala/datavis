@@ -76,7 +76,7 @@
   </p>
 
   <button
-    on:click={() => (asCalendar = !asCalendar)}
+    onclick={() => (asCalendar = !asCalendar)}
     class="toggle-view"
     style="margin-bottom: 2em;"
   >

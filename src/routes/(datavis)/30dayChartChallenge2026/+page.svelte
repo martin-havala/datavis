@@ -10,12 +10,14 @@
     2: "linkedin",
     3: "state_expenses",
     4: "state_expenses2",
+    6: "press_freedom",
   };
   const dayNames: { [k: number]: string } = {
     1: "2023",
     2: "LinkedIn",
     3: "State Expenses",
     4: "State Expenses (part 2)",
+    6: "Press freedom",
   };
 
   // Render as a real April 2026 calendar (April has 30 days)

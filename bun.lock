@@ -5,6 +5,7 @@
     "": {
       "name": "datavis",
       "dependencies": {
+        "accurate-beeswarm-plot": "1.0.12",
         "d3": "^7.9.0",
         "d3-geo-projection": "4.0.0",
         "dayjs": "^1.11.9",
@@ -254,6 +255,8 @@
     "@types/topojson-client": ["@types/topojson-client@3.1.5", "", { "dependencies": { "@types/geojson": "*", "@types/topojson-specification": "*" } }, "sha512-C79rySTyPxnQNNguTZNI1Ct4D7IXgvyAs3p9HPecnl6mNrJ5+UhvGNYcZfpROYV2lMHI48kJPxwR+F9C6c7nmw=="],
 
     "@types/topojson-specification": ["@types/topojson-specification@1.0.2", "", { "dependencies": { "@types/geojson": "*" } }, "sha512-SGc1NdX9g3UGDp6S+p+uyG+Z8CehS51sUJ9bejA25Xgn2kkAguILk6J9nxXK+0M/mbTBN7ypMA7+4HVLNMJ8ag=="],
+
+    "accurate-beeswarm-plot": ["accurate-beeswarm-plot@1.0.12", "", {}, "sha512-zgjj++7t2PxlXahd5cEM9TeMZRvxWzUCgLVWzX4ZcPkM+fpm2QI3gVMAWWsJNhH5WjHdL+T4aiESgx9vEeqJ9Q=="],
 
     "acorn": ["acorn@8.15.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg=="],
 

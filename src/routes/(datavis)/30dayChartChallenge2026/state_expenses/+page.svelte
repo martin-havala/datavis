@@ -17,12 +17,12 @@
   let expenses = $state<
     {
       year: number;
-      common_expenses: number;
-      wages_tariffs: number;
-      goods_services: number;
-      transfers: number;
-      interest_payments: number;
-      capital_expenses: number;
+      "Current expenses": number;
+      Wages: number;
+      "Goods and services": number;
+      "Regular transfers": number;
+      "Interest payments": number;
+      "Capital expenditure": number;
     }[]
   >([]);
 
@@ -135,7 +135,7 @@
         tooltip
           .style("opacity", 1)
           .html(
-            `${key}<br/>${(value * 100).toFixed(1)}%<br/>${d.data[key + "_abs"].toLocaleString()} mil EUR`,
+            `${key}<br/>${(value * 100).toFixed(1)}%<br/>${d.data[key + "_abs"].toLocaleString()} mln EUR`,
           )
           .style("left", event.pageX + 8 + "px")
           .style("top", event.pageY + 8 + "px");
@@ -160,10 +160,10 @@
       .enter()
       .append("g")
       .attr("class", "legend")
-      .attr("transform", (d) => `translate(${-8},${y((d[0] + d[1]) / 2)})`)
+      .attr("transform", (d: any) => `translate(${-8},${y((d[0] + d[1]) / 2)})`)
 
       .append("text")
-      .text((d, i) => keys[i])
+      .text((d: any, i: number) => keys[i])
       .attr("text-anchor", "end")
       .attr("dominant-baseline", "central")
       .style("font-size", "12px");

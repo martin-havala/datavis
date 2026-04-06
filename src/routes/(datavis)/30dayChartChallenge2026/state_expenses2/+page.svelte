@@ -2,16 +2,14 @@
   import expensesFile from "$lib/assets/state_expenses_2024.csv?url";
   import {
     autoType,
-    axisBottom,
     axisLeft,
+    axisRight,
     csvParse,
     extent,
-    scaleBand,
     scaleLinear,
     scaleOrdinal,
     schemeTableau10,
     select,
-    stack as stackKeys,
   } from "d3";
 
   import { onMount } from "svelte";
@@ -184,7 +182,7 @@
       .attr("y1", (d: any) => axis(d.value0))
       .attr("x2", 595)
       .attr("y2", (d: any) => axis(d.value1))
-      .attr("stroke", (d) => color(d.key))
+      .attr("stroke", (d: any) => color(d.key))
       .attr("opacity", 0.0)
       .attr("stroke-width", 20)
       .attr("stroke-linecap", "round")
@@ -194,10 +192,10 @@
           .html(
             `<b>${data.key}</b><br/>
             <table >
-            <tr><td>${data.year0}:</td><td style="text-align:right">${data.value0.toLocaleString()} mil EUR</td></tr>
-            <tr><td>${data.year1}:</td><td style="text-align:right">${data.value1.toLocaleString()} mil EUR</td></tr>
+            <tr><td>${data.year0}:</td><td style="text-align:right">${data.value0.toLocaleString()} mln EUR</td></tr>
+            <tr><td>${data.year1}:</td><td style="text-align:right">${data.value1.toLocaleString()} mln EUR</td></tr>
             </table>
-            <i>Change: ${(data.value1 - data.value0).toLocaleString()} mil Eur</i>
+            <i>Change: ${(data.value1 - data.value0).toLocaleString()} mln EUR</i>
             `,
           )
           .style("left", event.pageX + 8 + "px")
@@ -213,29 +211,39 @@
       .attr("y1", (d: any) => axis(d.value0))
       .attr("x2", 595)
       .attr("y2", (d: any) => axis(d.value1))
-      .attr("stroke", (d) => color(d.key))
-      .attr("opacity", (d) => (d.expenseIndex > 10 ? 1 : 0.05))
+      .attr("stroke", (d: any) => color(d.key))
+      .attr("opacity", (d: any) => (d.expenseIndex > 10 ? 1 : 0.05))
       .attr("stroke-width", 3)
       .attr("stroke-linecap", "round")
       .attr("pointer-events", "none");
 
     // axes
-    const leftAxis = axisLeft(axis as any);
+    const leftAxis = axisLeft(axis as any).ticks(3);
+    const rightAxis = axisRight(axis as any).ticks(3);
 
-    const xSvg = svg
+    const axisSvg = svg
       .append("g")
       .attr("transform", `translate(300,${0})`)
       .call(leftAxis);
+    const axisSvg2 = svg
+      .append("g")
+      .attr("transform", `translate(600,${0})`)
+      .call(rightAxis);
 
-    xSvg.selectAll("text").style("text-anchor", "center");
-    xSvg.selectAll("line").remove();
-    xSvg.selectAll("path").remove();
+    axisSvg.selectAll("text").style("text-anchor", "center");
 
     // legend (compact, top-right)
     const legend = svg
       .append("g")
       .attr("class", "legend")
       .attr("transform", `translate(${Math.max(0, width - 200)},${-8})`);
+
+    svg
+      .append("text")
+      .attr("transform", `translate(450,0)`)
+      .attr("font-size", `10`)
+      .attr("text-anchor", `middle`)
+      .text("mln EUR");
 
     keys.forEach((k, i) => {
       const g = legend

@@ -1,0 +1,1 @@
+import{c as s}from"./CMuldgh4.js";import{t as a}from"./Da0CYKNZ.js";function o(t){if(!t.ok)throw new Error(t.status+" "+t.statusText);return t.text()}function c(t,n){return fetch(t,n).then(o)}function u(t){return function(n,r,e){return arguments.length===2&&typeof r=="function"&&(e=r,r=void 0),c(n,r).then(function(f){return t(f,e)})}}var i=u(s),m=u(a);export{i as c,m as t};
