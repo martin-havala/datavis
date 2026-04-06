@@ -22,7 +22,7 @@
     --headerHeight: 2em;
     display: grid;
     grid-template-areas: "header" "content";
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     width: 100%;
     grid-template-rows: 2em auto;

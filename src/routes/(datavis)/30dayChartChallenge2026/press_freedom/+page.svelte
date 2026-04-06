@@ -245,8 +245,9 @@
 
     <div class="charts" bind:this={chartContainer}></div>
 
-    <div>
-      Data source: <a href="https://rsf.org/en/index?year=2025">
+    <div style="text-align: center; margin-bottom:2em">
+      <p>Freedom Index scores between years 2022 and 2025.</p>
+      Data source:<a href="https://rsf.org/en/index?year=2025">
         https://rsf.org
       </a>
     </div>
