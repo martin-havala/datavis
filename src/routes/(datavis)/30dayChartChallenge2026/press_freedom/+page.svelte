@@ -237,9 +237,10 @@
       <i> day 6: comparisons - Reporters without borders</i>
     </p>
     <p style="max-width:50%; text-align:center">
-      Here is a comparison of change in RSF World Press Freedom Index ranking
-      change in between years 2022 and 2025.<br /> Sadly, in the most countries of
-      the world being a journalist became harder, mostly due to political situation.
+      Here is a comparison of changes in RSF World Press Freedom Index scores
+      between years 2022 and 2025.<br />
+      Sadly, in the most countries of the world being a journalist became harder,
+      mostly due to political situation.
     </p>
 
     <div class="charts" bind:this={chartContainer}></div>
