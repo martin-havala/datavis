@@ -25,7 +25,7 @@
 
   let expenses$ = $state<
     {
-      year: number;
+      Year: number;
       [key: string]: number;
     }[]
   >([]);
@@ -38,7 +38,7 @@
       .then((res) => csvParse(res, autoType))
       .then((data) => {
         expenses$ = data.map((d: any) => ({
-          year: d.year,
+          Year: d.Year,
           "Current expenses": d["Current expenses"],
           Wages: d["Wages"],
           "Goods and services": d["Goods and services"],

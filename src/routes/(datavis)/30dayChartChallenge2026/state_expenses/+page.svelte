@@ -16,7 +16,7 @@
 
   let expenses = $state<
     {
-      year: number;
+      Year: number;
       "Current expenses": number;
       Wages: number;
       "Goods and services": number;
@@ -51,7 +51,7 @@
             d["Interest payments"] +
             d["Capital expenditure"];
           return {
-            year: d.year,
+            Year: d.Year,
             "Current expenses": d["Current expenses"] / total,
             Wages: d["Wages"] / total,
             "Goods and services": d["Goods and services"] / total,
@@ -98,7 +98,7 @@
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
     const x = scaleBand()
-      .domain(expenses.map((d) => String(d.year)))
+      .domain(expenses.map((d) => String(d.Year)))
       .range([0, width])
       .padding(0.0);
 
@@ -122,7 +122,7 @@
       .data((d: any) => d)
       .enter()
       .append("rect")
-      .attr("x", (d: any) => x(String(d.data.year)) || 0)
+      .attr("x", (d: any) => x(String(d.data.Year)) || 0)
       .attr("y", (d: any) => y(d[1]))
       .attr("height", (d: any) => Math.max(0, y(d[0]) - y(d[1])))
       .attr("width", x.bandwidth())
