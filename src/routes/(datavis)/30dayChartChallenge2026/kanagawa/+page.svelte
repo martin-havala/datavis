@@ -210,7 +210,7 @@
       })
       .attr("font-size", 8)
       .attr("dominant-baseline", "middle")
-      .attr("y", tileCenter - 8)
+      .attr("y", tileCenter - 9)
       .attr("x", tileCenter)
       .attr("fill", (d) => color(d.height));
 
@@ -273,8 +273,7 @@
       <i> day 11: distributions - physical</i>
     </p>
     <p style="max-width:50%; text-align:center">
-      Maximum sea wave height & wind direction aligned to lunar calendar.<br />
-      Under 2 metres? I see what you did there Mr. Hokusai.
+      Maximum sea wave height & wind direction aligned to lunar calendar.
     </p>
     <svg bind:this={svgElem}>
       <defs>
@@ -381,7 +380,6 @@
 
     :global(.day:hover .tileText) {
       opacity: 1;
-      transition: opacity 0.15s ease-in-out;
     }
 
     :global(.day .arrow) {
@@ -398,10 +396,14 @@
       text-anchor: middle;
       font-weight: 400;
       pointer-events: none;
-      opacity: 0.5;
+      opacity: 0.6;
+      transition: opacity 0.15s ease-in-out;
       text-shadow:
         0 0 5px black,
         0 0 5px black;
+    }
+    :global(.dateText) {
+      opacity: 0.4;
     }
     :global {
       .arrow {
@@ -416,7 +418,7 @@
       }
       .circle-background {
         fill: url(#gradient);
-        stroke: #999f;
+        stroke: #cccf;
         stroke-width: 2;
       }
     }
