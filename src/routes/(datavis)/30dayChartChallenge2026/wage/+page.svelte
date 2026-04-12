@@ -19,7 +19,7 @@
   console.log(bankData.wages);
   const scaleX = scaleLinear(
     extent(bankData.wages.map((a) => a.diff)) as number[],
-    [20, 980],
+    [220, 780],
   ).nice();
 
   let svg!: SVGElement;
@@ -44,7 +44,7 @@
     grp
       .append("rect")
       .attr("width", 2)
-      .attr("fill", (d) => (d.diff === 151 ? "white" : "orange"))
+      .attr("fill", (d) => (d.diff === 151 ? "orange" : "currentColor"))
       .attr("height", (d, i) => 50 - 40 * (ranks[i] / maxRank))
       .attr("y", (d, i) => +40 * (ranks[i] / maxRank) - 50)
       .attr("rx", 1)
@@ -52,8 +52,8 @@
     grp
       .filter((a) => a.diff === 151)
       .append("text")
-      .text("still waiting...")
-      .style("fill", "currentColor")
+      .text("still waiting!")
+      .style("fill", "orange")
       .style("text-anchor", "start")
       .attr("y", "-15")
       .attr("font-size", "12");
@@ -190,44 +190,12 @@
           text-anchor="end"
           class="worst"
         >
-          {data.superscale[1]}
-        </text>
-        <circle
-          cx="250"
-          cy="250"
-          r="200"
-          class="worst"
-          pathLength="1"
-          transform="rotate(-90 250 250)"
-          style="stroke-dasharray: {data.superscale[1] / 365} {1 -
-            data.superscale[0] / 365};"
-        ></circle>
-        <text x="245" y={250 - 210 + 4} font-size="10" text-anchor="end">
-          {data.superscale[0]}
-        </text>
-        <circle
-          cx="250"
-          cy="250"
-          r="210"
-          pathLength="1"
-          transform="rotate(-90 250 250)"
-          style="stroke-dasharray: {data.superscale[0] / 365} {1 -
-            data.superscale[0] / 365};"
-        ></circle>
-
-        <text
-          x="245"
-          y={250 - 230 + 4}
-          font-size="10"
-          text-anchor="end"
-          class="worst"
-        >
           {data.smarthead[1]}*
         </text>
         <circle
           cx="250"
           cy="250"
-          r="230"
+          r="200"
           class="worst"
           pathLength="1"
           transform="rotate(-90 250 250)"
@@ -245,8 +213,40 @@
             data.smarthead[0] / 365};"
         ></circle>
 
-        <text x="245" y={250 - 240 + 4} font-size="10" text-anchor="end">
+        <text x="245" y={250 - 210 + 4} font-size="10" text-anchor="end">
           {data.smarthead[0]}
+        </text>
+        <circle
+          cx="250"
+          cy="250"
+          r="210"
+          pathLength="1"
+          transform="rotate(-90 250 250)"
+          style="stroke-dasharray: {data.smarthead[0] / 365} {1 -
+            data.smarthead[0] / 365};"
+        ></circle>
+
+        <text
+          x="245"
+          y={250 - 230 + 4}
+          font-size="10"
+          text-anchor="end"
+          class="worst"
+        >
+          {data.superscale[1]}
+        </text>
+        <circle
+          cx="250"
+          cy="250"
+          r="230"
+          class="worst"
+          pathLength="1"
+          transform="rotate(-90 250 250)"
+          style="stroke-dasharray: {data.superscale[1] / 365} {1 -
+            data.superscale[0] / 365};"
+        ></circle>
+        <text x="245" y={250 - 240 + 4} font-size="10" text-anchor="end">
+          {data.superscale[0]}
         </text>
         <circle
           cx="250"
@@ -254,9 +254,19 @@
           r="240"
           pathLength="1"
           transform="rotate(-90 250 250)"
-          style="stroke-dasharray: {data.smarthead[0] / 365} {1 -
-            data.smarthead[0] / 365};"
+          style="stroke-dasharray: {data.superscale[0] / 365} {1 -
+            data.superscale[0] / 365};"
         ></circle>
+      </g>
+
+      <g transform="translate(317,75)">
+        <circle r="4" cx="-10" cy="-4" style="fill:green; stroke:none"></circle>
+        <text style="font-size:14">Median waiting time</text>
+      </g>
+      <g transform="translate(317,95)">
+        <circle r="4" cx="-10" cy="-4" style="fill:orange; stroke:none"
+        ></circle>
+        <text style="fill:orange;font-size:14">Longest waiting time</text>
       </g>
     </svg>
   </div>
@@ -277,7 +287,7 @@
     stroke: currentColor;
     fill: transparent;
     stroke-linecap: round;
-    stroke-width: 5;
+    stroke-width: 7;
     stroke: green;
 
     &.worst {

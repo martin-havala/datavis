@@ -13,6 +13,7 @@
     6: "press_freedom",
     7: "parallels",
     9: "wage",
+    11: "kanagawa",
   };
   const dayNames: { [k: number]: string } = {
     1: "2023",
@@ -22,6 +23,7 @@
     6: "Press freedom",
     7: "Parallel coordinates",
     9: "Wage arrival",
+    11: "Kanagawa",
   };
 
   // Render as a real April 2026 calendar (April has 30 days)
