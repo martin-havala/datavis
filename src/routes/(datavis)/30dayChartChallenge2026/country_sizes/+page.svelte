@@ -105,7 +105,7 @@
     // tooltip
     const tooltip = select(chartContainer)
       .append("div")
-      .style("position", "absolute")
+      .style("position", "fixed")
       .style("pointer-events", "none")
       .style("background", "rgba(0,0,0,0.8)")
       .style("color", "#fff")
