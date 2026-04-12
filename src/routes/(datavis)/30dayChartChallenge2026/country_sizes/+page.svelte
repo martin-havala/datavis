@@ -226,7 +226,7 @@
 
 <style lang="scss">
   .page {
-    background: #ddd;
+    background: #fff;
     color: #111;
     display: flex;
     flex-direction: column;
@@ -262,14 +262,18 @@
       color: #111;
     }
     :global(circle) {
-      fill: #555;
+      fill: #3335;
+      stroke: #3338;
+      stroke-width: 0.5;
     }
 
     :global(circle.major) {
-      fill: rgb(205, 172, 89);
+      fill: rgba(205, 172, 89, 0.4);
+      stroke: rgba(205, 172, 89, 1);
+      stroke-width: 0.5;
     }
     :global(.label) {
-      fill: #fafafa;
+      fill: #333;
       pointer-events: none;
       text-anchor: middle;
       dominant-baseline: middle;
