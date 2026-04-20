@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import type { EdiblePlant } from "./model";
   import { extent, scaleLinear } from "d3";
+  import type { EdiblePlant } from "./model";
 
   interface Props {
     /** @type {import('./$types').PageData} */

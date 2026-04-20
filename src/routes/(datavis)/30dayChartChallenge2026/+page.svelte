@@ -13,9 +13,10 @@
     6: "press_freedom",
     7: "parallels",
     9: "wage",
+    11: "kanagawa",
     12: "country_sizes",
+    14: "perfumes",
     15: "land_use",
-    21: "kanagawa",
   };
   const dayNames: { [k: number]: string } = {
     1: "2023",
@@ -25,9 +26,10 @@
     6: "Press freedom",
     7: "Parallel coordinates",
     9: "Wage arrival",
+    11: "Kanagawa",
     12: "Country sizes",
+    14: "Perfumes",
     15: "Land use",
-    21: "Kanagawa",
   };
 
   // Render as a real April 2026 calendar (April has 30 days)

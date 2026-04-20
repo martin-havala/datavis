@@ -83,11 +83,12 @@ export async function load({ fetch }) {
           }) as PesticidesAndLand,
       )
       .filter(
-        (a) =>
-          a.pesticides_t &&
-          a.country_land_km2 &&
-          (a.year === 2020 || a.year === 2015),
+        (a) => a.pesticides_t && a.country_land_km2 && a.year % 4 === 1,
+        // && (a.year === 2020 || a.year === 2015),
       )
-      .sort((a, b) => a.year - b.year),
+      .sort((a, b) => {
+        const lc = b.country.localeCompare(a.country);
+        return lc === 0 ? a.year - b.year : lc;
+      }),
   };
 }

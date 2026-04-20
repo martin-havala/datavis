@@ -5,7 +5,9 @@
     extent,
     interpolateRainbow,
     scaleBand,
+    scaleLinear,
     scaleLog,
+    scaleSqrt,
     select,
   } from "d3";
   import { onMount } from "svelte";
@@ -13,15 +15,20 @@
   import type { PesticidesAndLand } from "./model";
   export let data: { use: PesticidesAndLand[] };
 
-  console.log("landUse", data.use);
-
   let svgElement: SVGSVGElement | null = null;
-  const margins = { left: 120, right: 20, top: 20, bottom: 20 };
-  const width = 1000;
-  const height = 600;
+  const margins = { left: 80, right: 20, top: 20, bottom: 80 };
+  const width = 800;
+  const height = 530;
 
   onMount(() => {
     if (!svgElement) return;
+
+    const scaleYears = scaleLog()
+      .domain(extent(data.use.map((a) => a.year)) as [number, number])
+      .range([10, 5]);
+    const scaleYearsLog = scaleLog()
+      .domain(extent(data.use.map((a) => a.year)) as [number, number])
+      .range([0.2, 1]);
 
     const scaleX = scaleLog()
       .domain(extent(data.use.map((a) => a.land_ag_ha)) as [number, number])
@@ -47,27 +54,34 @@
       .attr("viewBox", [0, 0, width, height])
       .attr("style", "max-width: 100%; height: auto;");
 
-    svg
+    const xAxis = svg
       .append("g")
       .attr("transform", `translate(0,${height - margins.bottom})`)
       .call(axisBottom(scaleX).tickSizeOuter(0).ticks(5));
 
-    // y axis
-    svg
-      .append("g")
-      .attr("transform", `translate(${margins.left},0)`)
-      .call((g) => g.call(axisBottom as any));
+    xAxis
+      .append("text")
+      .attr("x", (margins.left + width - margins.right) / 2)
+      .attr("y", 40)
+      .attr("fill", "#aaa")
+      .attr("text-anchor", "middle")
+      .style("font-size", "12px")
+      .text("Agricultural land (ha) — log scale");
 
-    svg
+    const yAxis = svg
       .append("g")
       .attr("transform", `translate(${margins.left},0)`)
-      .call((g) => g.call((d) => {}));
+      .call(axisLeft(scaleY));
 
-    // proper y axis using axisLeft
-    svg
-      .append("g")
-      .attr("transform", `translate(${margins.left},0)`)
-      .call((g) => g.call(axisLeft(scaleY)));
+    yAxis
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("x", -height / 2)
+      .attr("y", -margins.left + 40)
+      .attr("fill", "#aaa")
+      .attr("text-anchor", "middle")
+      .style("font-size", "12px")
+      .text("Pesticides (t) — log scale");
 
     // tooltip container (HTML) appended to the charts wrapper
     const tooltip = select(svgElement.parentElement as any)
@@ -90,8 +104,9 @@
       .attr("cx", (d: PesticidesAndLand) => scaleX(d.land_ag_ha))
       .attr("cy", (d: PesticidesAndLand) => scaleY(d.pesticides_t))
       .attr("fill", (d) => color(d.country))
-      .attr("r", (d) => (d.year < 2020 ? 12 : 6))
-      .attr("opacity", (d) => (d.year < 2020 ? 0.5 : 1))
+      .attr("r", (d) => scaleYears(d.year))
+      .attr("opacity", (d) => scaleYearsLog(d.year))
+
       .on("mouseenter", function (event: any, d: PesticidesAndLand) {
         tooltip
           .html(
